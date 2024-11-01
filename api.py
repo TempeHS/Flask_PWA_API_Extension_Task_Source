@@ -51,8 +51,5 @@ def post():
     return response, 201
 
 
-#     except ValueError as _:
-#        return jsonify({"error": "Not a valid JSON"}), 400
-
 if __name__ == "__main__":
     api.run(debug=True, host="0.0.0.0", port=1000)

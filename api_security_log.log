@@ -1,738 +1,138 @@
-2024-11-01 13:08:41,230 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2024-11-01 19:39:37,739 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:1000
- * Running on http://10.185.240.241:1000
-2024-11-01 13:08:41,230 [33mPress CTRL+C to quit[0m
-2024-11-01 13:08:41,232  * Restarting with stat
-2024-11-01 13:08:41,725  * Debugger is active!
-2024-11-01 13:08:41,726  * Debugger PIN: 117-256-700
-2024-11-01 13:09:03,875 127.0.0.1 - - [01/Nov/2024 13:09:03] "[35m[1mGET / HTTP/1.1[0m" 500 -
-2024-11-01 13:09:03,992 127.0.0.1 - - [01/Nov/2024 13:09:03] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
-2024-11-01 13:09:04,009 127.0.0.1 - - [01/Nov/2024 13:09:04] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
-2024-11-01 13:09:04,059 127.0.0.1 - - [01/Nov/2024 13:09:04] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=iUPFDWQSEgwSRvXbu4Kf HTTP/1.1" 200 -
-2024-11-01 13:09:04,170 127.0.0.1 - - [01/Nov/2024 13:09:04] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
-2024-11-01 13:10:42,842  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
-2024-11-01 13:10:42,882  * Restarting with stat
-2024-11-01 13:10:43,409  * Debugger is active!
-2024-11-01 13:10:43,409  * Debugger PIN: 117-256-700
-2024-11-01 13:11:21,514  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\app.py', reloading
-2024-11-01 13:11:21,557  * Restarting with stat
-2024-11-01 13:11:22,227  * Debugger is active!
-2024-11-01 13:11:22,227  * Debugger PIN: 117-256-700
-2024-11-01 13:57:30,697  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
-2024-11-01 13:57:30,748  * Restarting with stat
-2024-11-01 13:57:31,278  * Debugger is active!
-2024-11-01 13:57:31,278  * Debugger PIN: 117-256-700
-2024-11-01 13:57:52,116  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
-2024-11-01 13:57:52,167  * Restarting with stat
-2024-11-01 13:57:52,724  * Debugger is active!
-2024-11-01 13:57:52,725  * Debugger PIN: 117-256-700
-2024-11-01 13:59:10,034  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
-2024-11-01 13:59:10,067  * Restarting with stat
-2024-11-01 13:59:10,666  * Debugger is active!
-2024-11-01 13:59:10,666  * Debugger PIN: 117-256-700
-2024-11-01 14:03:10,630  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
-2024-11-01 14:03:10,684  * Restarting with stat
-2024-11-01 14:03:11,305  * Debugger is active!
-2024-11-01 14:03:11,305  * Debugger PIN: 117-256-700
-2024-11-01 14:06:25,307  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
-2024-11-01 14:06:25,356  * Restarting with stat
-2024-11-01 14:06:25,994  * Debugger is active!
-2024-11-01 14:06:25,994  * Debugger PIN: 117-256-700
-2024-11-01 14:08:19,901  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
-2024-11-01 14:08:19,956  * Restarting with stat
-2024-11-01 14:17:49,272 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://10.1.1.199:1000
+2024-11-01 19:39:37,739 [33mPress CTRL+C to quit[0m
+2024-11-01 19:39:37,742  * Restarting with stat
+2024-11-01 19:39:38,281  * Debugger is active!
+2024-11-01 19:39:38,285  * Debugger PIN: 230-681-397
+2024-11-01 19:40:23,553  * Detected change in 'C:\\Users\\benpa\\OneDrive\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
+2024-11-01 19:40:23,609  * Restarting with stat
+2024-11-01 19:40:24,030  * Debugger is active!
+2024-11-01 19:40:24,032  * Debugger PIN: 230-681-397
+2024-11-01 19:41:22,280 127.0.0.1 - - [01/Nov/2024 19:41:22] "GET / HTTP/1.1" 200 -
+2024-11-01 19:41:48,491 127.0.0.1 - - [01/Nov/2024 19:41:48] "[31m[1mPOST /add_extension HTTP/1.1[0m" 400 -
+2024-11-01 19:41:56,437 127.0.0.1 - - [01/Nov/2024 19:41:56] "[31m[1mPOST /add_extension HTTP/1.1[0m" 400 -
+2024-11-01 19:42:04,055 127.0.0.1 - - [01/Nov/2024 19:42:04] "[35m[1mPOST /add_extension HTTP/1.1[0m" 201 -
+2024-11-01 19:42:36,713  * Detected change in 'C:\\Users\\benpa\\OneDrive\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
+2024-11-01 19:42:36,759  * Restarting with stat
+2024-11-01 19:42:37,232  * Debugger is active!
+2024-11-01 19:42:37,235  * Debugger PIN: 230-681-397
+2024-11-01 19:47:08,450 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:1000
- * Running on http://10.185.240.241:1000
-2024-11-01 14:17:49,273 [33mPress CTRL+C to quit[0m
-2024-11-01 14:17:49,274  * Restarting with stat
-2024-11-01 14:17:49,775  * Debugger is active!
-2024-11-01 14:17:49,777  * Debugger PIN: 117-256-700
-2024-11-01 14:18:04,258 127.0.0.1 - - [01/Nov/2024 14:18:04] "[35m[1mGET / HTTP/1.1[0m" 500 -
-2024-11-01 14:18:04,384 127.0.0.1 - - [01/Nov/2024 14:18:04] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 14:18:04,385 127.0.0.1 - - [01/Nov/2024 14:18:04] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 14:18:04,433 127.0.0.1 - - [01/Nov/2024 14:18:04] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=Q8q4gUrAt6Uk9wTna6ee HTTP/1.1" 200 -
-2024-11-01 14:18:21,444  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 14:18:21,486  * Restarting with stat
-2024-11-01 14:18:22,066  * Debugger is active!
-2024-11-01 14:18:22,068  * Debugger PIN: 117-256-700
-2024-11-01 14:18:36,267  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
-2024-11-01 14:18:36,303  * Restarting with stat
-2024-11-01 14:18:36,828  * Debugger is active!
-2024-11-01 14:18:36,830  * Debugger PIN: 117-256-700
-2024-11-01 14:18:40,997 127.0.0.1 - - [01/Nov/2024 14:18:40] "[35m[1mGET / HTTP/1.1[0m" 500 -
-2024-11-01 14:18:41,077 127.0.0.1 - - [01/Nov/2024 14:18:41] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 14:18:41,077 127.0.0.1 - - [01/Nov/2024 14:18:41] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 14:18:41,101 127.0.0.1 - - [01/Nov/2024 14:18:41] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=MBpCdskFu8Ym1EwsFn1H HTTP/1.1" 200 -
-2024-11-01 14:18:41,153 127.0.0.1 - - [01/Nov/2024 14:18:41] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-11-01 14:18:46,727 127.0.0.1 - - [01/Nov/2024 14:18:46] "[35m[1mGET / HTTP/1.1[0m" 500 -
-2024-11-01 14:18:46,757 127.0.0.1 - - [01/Nov/2024 14:18:46] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 14:18:46,759 127.0.0.1 - - [01/Nov/2024 14:18:46] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 14:18:46,768 127.0.0.1 - - [01/Nov/2024 14:18:46] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=MBpCdskFu8Ym1EwsFn1H HTTP/1.1[0m" 304 -
-2024-11-01 14:18:46,805 127.0.0.1 - - [01/Nov/2024 14:18:46] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-11-01 14:19:03,678  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
-2024-11-01 14:19:03,718  * Restarting with stat
-2024-11-01 14:19:04,306  * Debugger is active!
-2024-11-01 14:19:04,308  * Debugger PIN: 117-256-700
-2024-11-01 14:19:07,919 127.0.0.1 - - [01/Nov/2024 14:19:07] "[35m[1mGET / HTTP/1.1[0m" 500 -
-2024-11-01 14:19:07,993 127.0.0.1 - - [01/Nov/2024 14:19:07] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 14:19:07,995 127.0.0.1 - - [01/Nov/2024 14:19:07] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 14:19:08,013 127.0.0.1 - - [01/Nov/2024 14:19:08] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=atVGS4cbVUBg7XLa2UIq HTTP/1.1" 200 -
-2024-11-01 14:19:08,053 127.0.0.1 - - [01/Nov/2024 14:19:08] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-11-01 14:19:49,262  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 14:19:49,399  * Restarting with stat
-2024-11-01 14:19:49,974  * Debugger is active!
-2024-11-01 14:19:49,974  * Debugger PIN: 117-256-700
-2024-11-01 14:20:11,965  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 14:20:12,016  * Restarting with stat
-2024-11-01 14:20:12,546  * Debugger is active!
-2024-11-01 14:20:12,548  * Debugger PIN: 117-256-700
-2024-11-01 14:20:18,402 127.0.0.1 - - [01/Nov/2024 14:20:18] "GET / HTTP/1.1" 200 -
-2024-11-01 14:20:18,461 127.0.0.1 - - [01/Nov/2024 14:20:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2024-11-01 14:21:11,448  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 14:21:11,495  * Restarting with stat
-2024-11-01 14:21:12,083  * Debugger is active!
-2024-11-01 14:21:12,085  * Debugger PIN: 117-256-700
-2024-11-01 14:21:14,034 127.0.0.1 - - [01/Nov/2024 14:21:14] "GET / HTTP/1.1" 200 -
-2024-11-01 14:21:14,843 ratelimit 1 per 1 second (127.0.0.1) exceeded at endpoint: get
-2024-11-01 14:21:14,844 127.0.0.1 - - [01/Nov/2024 14:21:14] "[31m[1mGET / HTTP/1.1[0m" 429 -
-2024-11-01 14:21:15,021 ratelimit 1 per 1 second (127.0.0.1) exceeded at endpoint: get
-2024-11-01 14:21:15,022 127.0.0.1 - - [01/Nov/2024 14:21:15] "[31m[1mGET / HTTP/1.1[0m" 429 -
-2024-11-01 14:22:30,659  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 14:22:30,726  * Restarting with stat
-2024-11-01 14:22:31,406  * Debugger is active!
-2024-11-01 14:22:31,408  * Debugger PIN: 117-256-700
-2024-11-01 14:22:35,764 127.0.0.1 - - [01/Nov/2024 14:22:35] "GET / HTTP/1.1" 200 -
-2024-11-01 14:25:00,982  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 14:25:01,019  * Restarting with stat
-2024-11-01 14:25:01,631  * Debugger is active!
-2024-11-01 14:25:01,633  * Debugger PIN: 117-256-700
-2024-11-01 14:27:57,163  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 14:27:57,214  * Restarting with stat
-2024-11-01 14:27:57,749  * Debugger is active!
-2024-11-01 14:27:57,751  * Debugger PIN: 117-256-700
-2024-11-01 14:28:02,285 127.0.0.1 - - [01/Nov/2024 14:28:02] "[35m[1mGET / HTTP/1.1[0m" 500 -
-2024-11-01 14:28:02,366 127.0.0.1 - - [01/Nov/2024 14:28:02] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 14:28:02,367 127.0.0.1 - - [01/Nov/2024 14:28:02] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 14:28:02,409 127.0.0.1 - - [01/Nov/2024 14:28:02] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=X0JAjCo04j0i01fWzHa7 HTTP/1.1" 200 -
-2024-11-01 14:28:02,475 127.0.0.1 - - [01/Nov/2024 14:28:02] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-11-01 14:29:28,528  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 14:29:28,574  * Restarting with stat
-2024-11-01 14:29:29,215  * Debugger is active!
-2024-11-01 14:29:29,217  * Debugger PIN: 117-256-700
-2024-11-01 14:29:32,300 127.0.0.1 - - [01/Nov/2024 14:29:32] "[35m[1mGET / HTTP/1.1[0m" 500 -
-2024-11-01 14:29:32,382 127.0.0.1 - - [01/Nov/2024 14:29:32] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 14:29:32,382 127.0.0.1 - - [01/Nov/2024 14:29:32] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 14:29:32,398 127.0.0.1 - - [01/Nov/2024 14:29:32] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=XynGxvMm0TYxsWz8zDfV HTTP/1.1" 200 -
-2024-11-01 14:29:32,458 127.0.0.1 - - [01/Nov/2024 14:29:32] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-11-01 14:29:32,973 ratelimit 1 per 1 second (127.0.0.1) exceeded at endpoint: get
-2024-11-01 14:29:32,973 127.0.0.1 - - [01/Nov/2024 14:29:32] "[31m[1mGET / HTTP/1.1[0m" 429 -
-2024-11-01 14:29:36,904 127.0.0.1 - - [01/Nov/2024 14:29:36] "[35m[1mGET / HTTP/1.1[0m" 500 -
-2024-11-01 14:29:36,926 127.0.0.1 - - [01/Nov/2024 14:29:36] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 14:29:36,929 127.0.0.1 - - [01/Nov/2024 14:29:36] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 14:29:36,947 127.0.0.1 - - [01/Nov/2024 14:29:36] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=XynGxvMm0TYxsWz8zDfV HTTP/1.1[0m" 304 -
-2024-11-01 14:29:36,990 127.0.0.1 - - [01/Nov/2024 14:29:36] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-11-01 14:29:59,324  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 14:29:59,362  * Restarting with stat
-2024-11-01 14:29:59,864  * Debugger is active!
-2024-11-01 14:29:59,866  * Debugger PIN: 117-256-700
-2024-11-01 14:30:35,450  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 14:30:35,497  * Restarting with stat
-2024-11-01 14:30:36,109  * Debugger is active!
-2024-11-01 14:30:36,109  * Debugger PIN: 117-256-700
-2024-11-01 14:30:38,540 127.0.0.1 - - [01/Nov/2024 14:30:38] "[35m[1mGET / HTTP/1.1[0m" 500 -
-2024-11-01 14:30:38,620 127.0.0.1 - - [01/Nov/2024 14:30:38] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 14:30:38,621 127.0.0.1 - - [01/Nov/2024 14:30:38] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 14:30:38,643 127.0.0.1 - - [01/Nov/2024 14:30:38] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=1JGPHx1rJDnC0eFMPUNz HTTP/1.1" 200 -
-2024-11-01 14:30:38,689 127.0.0.1 - - [01/Nov/2024 14:30:38] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-11-01 14:32:55,081  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 14:32:55,129  * Restarting with stat
-2024-11-01 14:32:55,744  * Debugger is active!
-2024-11-01 14:32:55,744  * Debugger PIN: 117-256-700
-2024-11-01 14:32:57,735 127.0.0.1 - - [01/Nov/2024 14:32:57] "[35m[1mGET / HTTP/1.1[0m" 500 -
-2024-11-01 14:32:57,808 127.0.0.1 - - [01/Nov/2024 14:32:57] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 14:32:57,810 127.0.0.1 - - [01/Nov/2024 14:32:57] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 14:32:57,827 127.0.0.1 - - [01/Nov/2024 14:32:57] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=H8m2k9z2rvhBhDQUMDB2 HTTP/1.1" 200 -
-2024-11-01 14:32:57,870 127.0.0.1 - - [01/Nov/2024 14:32:57] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-11-01 14:32:58,645 ratelimit 1 per 1 second (127.0.0.1) exceeded at endpoint: get
-2024-11-01 14:32:58,645 127.0.0.1 - - [01/Nov/2024 14:32:58] "[31m[1mGET / HTTP/1.1[0m" 429 -
-2024-11-01 14:33:00,971 127.0.0.1 - - [01/Nov/2024 14:33:00] "[35m[1mGET / HTTP/1.1[0m" 500 -
-2024-11-01 14:33:00,988 127.0.0.1 - - [01/Nov/2024 14:33:00] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 14:33:00,989 127.0.0.1 - - [01/Nov/2024 14:33:00] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 14:33:01,004 127.0.0.1 - - [01/Nov/2024 14:33:01] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=H8m2k9z2rvhBhDQUMDB2 HTTP/1.1[0m" 304 -
-2024-11-01 14:33:01,046 127.0.0.1 - - [01/Nov/2024 14:33:01] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-11-01 14:33:37,893  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 14:33:37,938  * Restarting with stat
-2024-11-01 14:33:38,492  * Debugger is active!
-2024-11-01 14:33:38,492  * Debugger PIN: 117-256-700
-2024-11-01 14:33:40,088 127.0.0.1 - - [01/Nov/2024 14:33:40] "[35m[1mGET / HTTP/1.1[0m" 500 -
-2024-11-01 14:33:40,159 127.0.0.1 - - [01/Nov/2024 14:33:40] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 14:33:40,159 127.0.0.1 - - [01/Nov/2024 14:33:40] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 14:33:40,188 127.0.0.1 - - [01/Nov/2024 14:33:40] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=Mduwu2vhcfoHc3RNydKT HTTP/1.1" 200 -
-2024-11-01 14:33:40,234 127.0.0.1 - - [01/Nov/2024 14:33:40] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-11-01 14:34:33,012  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 14:34:33,067  * Restarting with stat
-2024-11-01 14:34:33,689  * Debugger is active!
-2024-11-01 14:34:33,692  * Debugger PIN: 117-256-700
-2024-11-01 14:34:35,048 127.0.0.1 - - [01/Nov/2024 14:34:35] "[35m[1mGET / HTTP/1.1[0m" 500 -
-2024-11-01 14:34:35,127 127.0.0.1 - - [01/Nov/2024 14:34:35] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 14:34:35,129 127.0.0.1 - - [01/Nov/2024 14:34:35] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 14:34:35,153 127.0.0.1 - - [01/Nov/2024 14:34:35] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=oslzsWJcl6gDdDOvIHtr HTTP/1.1" 200 -
-2024-11-01 14:34:35,191 127.0.0.1 - - [01/Nov/2024 14:34:35] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-11-01 14:35:16,420 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://10.1.1.199:1000
+2024-11-01 19:47:08,451 [33mPress CTRL+C to quit[0m
+2024-11-01 19:47:08,452  * Restarting with stat
+2024-11-01 19:47:09,087  * Debugger is active!
+2024-11-01 19:47:09,090  * Debugger PIN: 230-681-397
+2024-11-01 19:47:35,406 127.0.0.1 - - [01/Nov/2024 19:47:35] "GET / HTTP/1.1" 200 -
+2024-11-01 19:48:24,316 127.0.0.1 - - [01/Nov/2024 19:48:24] "[35m[1mPOST /add_extension HTTP/1.1[0m" 201 -
+2024-11-01 20:03:12,502 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:1000
- * Running on http://10.185.240.241:1000
-2024-11-01 14:35:16,420 [33mPress CTRL+C to quit[0m
-2024-11-01 14:35:16,421  * Restarting with stat
-2024-11-01 14:35:16,922  * Debugger is active!
-2024-11-01 14:35:16,923  * Debugger PIN: 117-256-700
-2024-11-01 14:35:19,877 127.0.0.1 - - [01/Nov/2024 14:35:19] "[35m[1mGET / HTTP/1.1[0m" 500 -
-2024-11-01 14:35:19,972 127.0.0.1 - - [01/Nov/2024 14:35:19] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 14:35:19,973 127.0.0.1 - - [01/Nov/2024 14:35:19] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 14:35:19,994 127.0.0.1 - - [01/Nov/2024 14:35:19] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=3ypfguzctxgAr87nHo8Y HTTP/1.1" 200 -
-2024-11-01 14:35:20,033 127.0.0.1 - - [01/Nov/2024 14:35:20] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-11-01 14:36:27,696  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 14:36:27,733  * Restarting with stat
-2024-11-01 14:36:28,259  * Debugger is active!
-2024-11-01 14:36:28,261  * Debugger PIN: 117-256-700
-2024-11-01 14:36:33,812  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 14:36:33,860  * Restarting with stat
-2024-11-01 14:36:34,364  * Debugger is active!
-2024-11-01 14:36:34,366  * Debugger PIN: 117-256-700
-2024-11-01 14:36:37,450 127.0.0.1 - - [01/Nov/2024 14:36:37] "[35m[1mGET / HTTP/1.1[0m" 500 -
-2024-11-01 14:36:37,543 127.0.0.1 - - [01/Nov/2024 14:36:37] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 14:36:37,544 127.0.0.1 - - [01/Nov/2024 14:36:37] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 14:36:37,565 127.0.0.1 - - [01/Nov/2024 14:36:37] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=jz0YSdtu68zno8Ii42BI HTTP/1.1" 200 -
-2024-11-01 14:36:37,607 127.0.0.1 - - [01/Nov/2024 14:36:37] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-11-01 14:36:59,516  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 14:36:59,563  * Restarting with stat
-2024-11-01 14:38:36,855 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://10.1.1.199:1000
+2024-11-01 20:03:12,537 [33mPress CTRL+C to quit[0m
+2024-11-01 20:03:12,575  * Restarting with stat
+2024-11-01 20:03:13,242  * Debugger is active!
+2024-11-01 20:03:13,249  * Debugger PIN: 230-681-397
+2024-11-01 20:03:41,669 127.0.0.1 - - [01/Nov/2024 20:03:41] "GET / HTTP/1.1" 200 -
+2024-11-01 20:04:27,045 127.0.0.1 - - [01/Nov/2024 20:04:27] "[35m[1mPOST /add_extension HTTP/1.1[0m" 201 -
+2024-11-01 20:49:50,627  * Detected change in 'C:\\Users\\benpa\\OneDrive\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
+2024-11-01 20:49:50,748  * Restarting with stat
+2024-11-01 20:49:51,741  * Debugger is active!
+2024-11-01 20:49:51,747  * Debugger PIN: 230-681-397
+2024-11-01 20:50:08,789 127.0.0.1 - - [01/Nov/2024 20:50:08] "[31m[1mGET /add_extension HTTP/1.1[0m" 405 -
+2024-11-01 20:50:24,747 127.0.0.1 - - [01/Nov/2024 20:50:24] "GET / HTTP/1.1" 200 -
+2024-11-01 20:50:26,535 127.0.0.1 - - [01/Nov/2024 20:50:26] "GET / HTTP/1.1" 200 -
+2024-11-01 20:51:08,065  * Detected change in 'C:\\Users\\benpa\\OneDrive\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
+2024-11-01 20:51:08,130  * Restarting with stat
+2024-11-01 20:51:08,672  * Debugger is active!
+2024-11-01 20:51:08,677  * Debugger PIN: 230-681-397
+2024-11-01 20:51:09,974 127.0.0.1 - - [01/Nov/2024 20:51:09] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2024-11-01 20:51:25,755  * Detected change in 'C:\\Users\\benpa\\OneDrive\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
+2024-11-01 20:51:25,798  * Restarting with stat
+2024-11-01 20:51:26,263  * Debugger is active!
+2024-11-01 20:51:26,265  * Debugger PIN: 230-681-397
+2024-11-01 20:51:28,223 127.0.0.1 - - [01/Nov/2024 20:51:28] "GET / HTTP/1.1" 200 -
+2024-11-01 20:52:34,747 127.0.0.1 - - [01/Nov/2024 20:52:34] "GET / HTTP/1.1" 200 -
+2024-11-01 21:25:16,775  * Detected change in 'C:\\Users\\benpa\\OneDrive\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
+2024-11-01 21:25:16,862  * Restarting with stat
+2024-11-01 21:25:17,868  * Debugger is active!
+2024-11-01 21:25:17,873  * Debugger PIN: 230-681-397
+2024-11-01 21:25:36,877 127.0.0.1 - - [01/Nov/2024 21:25:36] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2024-11-01 21:26:17,126  * Detected change in 'C:\\Users\\benpa\\OneDrive\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
+2024-11-01 21:26:17,170  * Restarting with stat
+2024-11-01 21:26:17,582  * Debugger is active!
+2024-11-01 21:26:17,585  * Debugger PIN: 230-681-397
+2024-11-01 21:26:24,130 127.0.0.1 - - [01/Nov/2024 21:26:24] "GET / HTTP/1.1" 200 -
+2024-11-01 21:26:38,826 language = BASH
+2024-11-01 21:26:38,830 127.0.0.1 - - [01/Nov/2024 21:26:38] "GET /?lang=bash HTTP/1.1" 200 -
+2024-11-01 21:26:44,359 language = SQL
+2024-11-01 21:26:44,360 127.0.0.1 - - [01/Nov/2024 21:26:44] "GET /?lang=sql HTTP/1.1" 200 -
+2024-11-01 21:27:04,877  * Detected change in 'C:\\Users\\benpa\\OneDrive\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
+2024-11-01 21:27:04,936  * Restarting with stat
+2024-11-01 21:27:05,383  * Debugger is active!
+2024-11-01 21:27:05,386  * Debugger PIN: 230-681-397
+2024-11-01 21:27:44,382 127.0.0.1 - - [01/Nov/2024 21:27:44] "GET / HTTP/1.1" 200 -
+2024-11-01 21:27:58,854 language = BASH
+2024-11-01 21:27:58,857 127.0.0.1 - - [01/Nov/2024 21:27:58] "GET /?lang=bash HTTP/1.1" 200 -
+2024-11-01 21:28:08,853 language = SQL
+2024-11-01 21:28:08,855 127.0.0.1 - - [01/Nov/2024 21:28:08] "GET /?lang=sql HTTP/1.1" 200 -
+2024-11-01 21:33:26,232  * Detected change in 'C:\\Users\\benpa\\OneDrive\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
+2024-11-01 21:33:26,301  * Restarting with stat
+2024-11-01 21:33:27,025  * Debugger is active!
+2024-11-01 21:33:27,030  * Debugger PIN: 230-681-397
+2024-11-01 21:34:01,248  * Detected change in 'C:\\Users\\benpa\\OneDrive\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
+2024-11-01 21:34:01,305  * Restarting with stat
+2024-11-01 21:34:01,754  * Debugger is active!
+2024-11-01 21:34:01,758  * Debugger PIN: 230-681-397
+2024-11-01 21:34:46,942  * Detected change in 'C:\\Users\\benpa\\OneDrive\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
+2024-11-01 21:34:47,020  * Restarting with stat
+2024-11-01 21:34:47,432  * Debugger is active!
+2024-11-01 21:34:47,435  * Debugger PIN: 230-681-397
+2024-11-01 21:35:19,575  * Detected change in 'C:\\Users\\benpa\\OneDrive\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
+2024-11-01 21:35:19,625  * Restarting with stat
+2024-11-01 21:35:20,087  * Debugger is active!
+2024-11-01 21:35:20,091  * Debugger PIN: 230-681-397
+2024-11-01 21:35:25,119  * Detected change in 'C:\\Users\\benpa\\OneDrive\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
+2024-11-01 21:35:25,160  * Restarting with stat
+2024-11-01 21:35:25,552  * Debugger is active!
+2024-11-01 21:35:25,554  * Debugger PIN: 230-681-397
+2024-11-01 21:36:13,575 127.0.0.1 - - [01/Nov/2024 21:36:13] "[35m[1mPOST /add_extension HTTP/1.1[0m" 201 -
+2024-11-01 21:42:10,236  * Detected change in 'C:\\Users\\benpa\\OneDrive\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
+2024-11-01 21:42:10,288  * Restarting with stat
+2024-11-01 21:42:10,718  * Debugger is active!
+2024-11-01 21:42:10,722  * Debugger PIN: 230-681-397
+2024-11-01 21:42:42,646 127.0.0.1 - - [01/Nov/2024 21:42:42] "[31m[1mGET /add_extension HTTP/1.1[0m" 405 -
+2024-11-01 21:43:51,044 127.0.0.1 - - [01/Nov/2024 21:43:51] "[35m[1mPOST /add_extension HTTP/1.1[0m" 201 -
+2024-11-01 21:49:26,763  * Detected change in 'C:\\Users\\benpa\\OneDrive\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager copy.py', reloading
+2024-11-01 21:49:26,818  * Restarting with stat
+2024-11-01 21:49:27,318  * Debugger is active!
+2024-11-01 21:49:27,321  * Debugger PIN: 230-681-397
+2024-11-01 21:49:30,344  * Detected change in 'C:\\Users\\benpa\\OneDrive\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
+2024-11-01 21:49:30,400  * Restarting with stat
+2024-11-01 21:49:30,835  * Debugger is active!
+2024-11-01 21:49:30,840  * Debugger PIN: 230-681-397
+2024-11-01 21:52:53,652  * Detected change in 'C:\\Users\\benpa\\OneDrive\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
+2024-11-01 21:52:53,706  * Restarting with stat
+2024-11-01 21:56:53,245 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:1000
- * Running on http://10.185.240.241:1000
-2024-11-01 14:38:36,855 [33mPress CTRL+C to quit[0m
-2024-11-01 14:38:36,856  * Restarting with stat
-2024-11-01 14:38:37,392  * Debugger is active!
-2024-11-01 14:38:37,393  * Debugger PIN: 117-256-700
-2024-11-01 14:38:37,482 127.0.0.1 - - [01/Nov/2024 14:38:37] "GET / HTTP/1.1" 200 -
-2024-11-01 14:38:41,816 127.0.0.1 - - [01/Nov/2024 14:38:41] "GET / HTTP/1.1" 200 -
-2024-11-01 14:42:04,418  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 14:42:04,469  * Restarting with stat
-2024-11-01 14:42:05,067  * Debugger is active!
-2024-11-01 14:42:05,067  * Debugger PIN: 117-256-700
-2024-11-01 14:42:21,492  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
-2024-11-01 14:42:21,533  * Restarting with stat
-2024-11-01 14:42:22,044  * Debugger is active!
-2024-11-01 14:42:22,045  * Debugger PIN: 117-256-700
-2024-11-01 14:43:30,950  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 14:43:31,017  * Restarting with stat
-2024-11-01 14:43:31,788  * Debugger is active!
-2024-11-01 14:43:31,788  * Debugger PIN: 117-256-700
-2024-11-01 14:44:02,486  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 14:44:02,521  * Restarting with stat
-2024-11-01 14:44:03,139  * Debugger is active!
-2024-11-01 14:44:03,142  * Debugger PIN: 117-256-700
-2024-11-01 14:44:33,684  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 14:44:33,736  * Restarting with stat
-2024-11-01 14:44:34,420  * Debugger is active!
-2024-11-01 14:44:34,422  * Debugger PIN: 117-256-700
-2024-11-01 14:45:00,822  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
-2024-11-01 14:45:00,877  * Restarting with stat
-2024-11-01 14:45:01,443  * Debugger is active!
-2024-11-01 14:45:01,447  * Debugger PIN: 117-256-700
-2024-11-01 14:45:10,254  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 14:45:10,314  * Restarting with stat
-2024-11-01 14:45:51,767 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:1000
- * Running on http://10.185.240.241:1000
-2024-11-01 14:45:51,768 [33mPress CTRL+C to quit[0m
-2024-11-01 14:45:51,768  * Restarting with stat
-2024-11-01 14:45:52,221  * Debugger is active!
-2024-11-01 14:45:52,222  * Debugger PIN: 117-256-700
-2024-11-01 14:45:56,314 127.0.0.1 - - [01/Nov/2024 14:45:56] "GET / HTTP/1.1" 200 -
-2024-11-01 14:46:08,129 127.0.0.1 - - [01/Nov/2024 14:46:08] "GET /?lan=bash HTTP/1.1" 200 -
-2024-11-01 14:46:14,225 127.0.0.1 - - [01/Nov/2024 14:46:14] "GET /?lan="bash" HTTP/1.1" 200 -
-2024-11-01 14:46:21,721 127.0.0.1 - - [01/Nov/2024 14:46:21] "GET /?lang="bash" HTTP/1.1" 200 -
-2024-11-01 14:46:50,350 127.0.0.1 - - [01/Nov/2024 14:46:50] "GET /?lang="bash" HTTP/1.1" 200 -
-2024-11-01 14:46:51,508 127.0.0.1 - - [01/Nov/2024 14:46:51] "GET /?lang="bash" HTTP/1.1" 200 -
-2024-11-01 14:46:59,243 127.0.0.1 - - [01/Nov/2024 14:46:59] "GET /?lang=" HTTP/1.1" 200 -
-2024-11-01 14:47:26,372  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
-2024-11-01 14:47:26,415  * Restarting with stat
-2024-11-01 14:47:57,394 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:1000
- * Running on http://10.185.240.241:1000
-2024-11-01 14:47:57,394 [33mPress CTRL+C to quit[0m
-2024-11-01 14:47:57,396  * Restarting with stat
-2024-11-01 14:47:57,887  * Debugger is active!
-2024-11-01 14:47:57,889  * Debugger PIN: 117-256-700
-2024-11-01 14:48:21,199 127.0.0.1 - - [01/Nov/2024 14:48:21] "[35m[1mGET /?lang=" HTTP/1.1[0m" 500 -
-2024-11-01 14:48:21,284 127.0.0.1 - - [01/Nov/2024 14:48:21] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 14:48:21,286 127.0.0.1 - - [01/Nov/2024 14:48:21] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 14:48:21,330 127.0.0.1 - - [01/Nov/2024 14:48:21] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=VUiK8OOACLd9Qk8Ht4un HTTP/1.1" 200 -
-2024-11-01 14:48:21,389 127.0.0.1 - - [01/Nov/2024 14:48:21] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-11-01 14:49:42,412  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
-2024-11-01 14:49:42,465  * Restarting with stat
-2024-11-01 14:49:43,083  * Debugger is active!
-2024-11-01 14:49:43,093  * Debugger PIN: 117-256-700
-2024-11-01 14:49:46,810 127.0.0.1 - - [01/Nov/2024 14:49:46] "GET /?lang=" HTTP/1.1" 200 -
-2024-11-01 14:50:05,535  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
-2024-11-01 14:50:05,571  * Restarting with stat
-2024-11-01 14:50:06,076  * Debugger is active!
-2024-11-01 14:50:06,076  * Debugger PIN: 117-256-700
-2024-11-01 14:50:09,701 127.0.0.1 - - [01/Nov/2024 14:50:09] "[35m[1mGET /?lang=" HTTP/1.1[0m" 500 -
-2024-11-01 14:50:09,768 127.0.0.1 - - [01/Nov/2024 14:50:09] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 14:50:09,769 127.0.0.1 - - [01/Nov/2024 14:50:09] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 14:50:09,785 127.0.0.1 - - [01/Nov/2024 14:50:09] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=jm9evnTYom1K45kCMNr2 HTTP/1.1" 200 -
-2024-11-01 14:50:09,823 127.0.0.1 - - [01/Nov/2024 14:50:09] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-11-01 14:50:48,134  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
-2024-11-01 14:50:48,202  * Restarting with stat
-2024-11-01 14:50:48,773  * Debugger is active!
-2024-11-01 14:50:48,776  * Debugger PIN: 117-256-700
-2024-11-01 14:51:11,044 127.0.0.1 - - [01/Nov/2024 14:51:11] "[35m[1mGET /?lang="bash" HTTP/1.1[0m" 500 -
-2024-11-01 14:51:11,128 127.0.0.1 - - [01/Nov/2024 14:51:11] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 14:51:11,128 127.0.0.1 - - [01/Nov/2024 14:51:11] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 14:51:11,163 127.0.0.1 - - [01/Nov/2024 14:51:11] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=vz9V2PHc9BTPLl0YGqMW HTTP/1.1" 200 -
-2024-11-01 14:51:50,529  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 14:51:50,562  * Restarting with stat
-2024-11-01 14:51:51,214  * Debugger is active!
-2024-11-01 14:51:51,216  * Debugger PIN: 117-256-700
-2024-11-01 14:52:08,118  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 14:52:08,168  * Restarting with stat
-2024-11-01 14:52:08,705  * Debugger is active!
-2024-11-01 14:52:08,707  * Debugger PIN: 117-256-700
-2024-11-01 14:52:11,463 127.0.0.1 - - [01/Nov/2024 14:52:11] "[35m[1mGET /?lang="bash" HTTP/1.1[0m" 500 -
-2024-11-01 14:52:11,539 127.0.0.1 - - [01/Nov/2024 14:52:11] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 14:52:11,539 127.0.0.1 - - [01/Nov/2024 14:52:11] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 14:52:11,551 127.0.0.1 - - [01/Nov/2024 14:52:11] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=4gWdFoqF1yOLE3BrUzr6 HTTP/1.1" 200 -
-2024-11-01 14:52:11,603 127.0.0.1 - - [01/Nov/2024 14:52:11] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-11-01 14:52:12,238 ratelimit 1 per 1 second (127.0.0.1) exceeded at endpoint: get
-2024-11-01 14:52:12,238 127.0.0.1 - - [01/Nov/2024 14:52:12] "[31m[1mGET /?lang="bash" HTTP/1.1[0m" 429 -
-2024-11-01 14:52:14,363 127.0.0.1 - - [01/Nov/2024 14:52:14] "[35m[1mGET /?lang="bash" HTTP/1.1[0m" 500 -
-2024-11-01 14:52:14,382 127.0.0.1 - - [01/Nov/2024 14:52:14] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 14:52:14,384 127.0.0.1 - - [01/Nov/2024 14:52:14] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 14:52:14,395 127.0.0.1 - - [01/Nov/2024 14:52:14] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=4gWdFoqF1yOLE3BrUzr6 HTTP/1.1[0m" 304 -
-2024-11-01 14:52:14,442 127.0.0.1 - - [01/Nov/2024 14:52:14] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-11-01 14:52:58,010  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 14:52:58,033  * Restarting with stat
-2024-11-01 14:52:58,582  * Debugger is active!
-2024-11-01 14:52:58,582  * Debugger PIN: 117-256-700
-2024-11-01 14:53:03,220 127.0.0.1 - - [01/Nov/2024 14:53:03] "[35m[1mGET /?lang="bash" HTTP/1.1[0m" 500 -
-2024-11-01 14:53:03,292 127.0.0.1 - - [01/Nov/2024 14:53:03] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 14:53:03,293 127.0.0.1 - - [01/Nov/2024 14:53:03] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 14:53:03,308 127.0.0.1 - - [01/Nov/2024 14:53:03] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=d6kqueXzQIKVmgdd8ere HTTP/1.1" 200 -
-2024-11-01 14:53:03,358 127.0.0.1 - - [01/Nov/2024 14:53:03] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-11-01 14:53:04,450 127.0.0.1 - - [01/Nov/2024 14:53:04] "[35m[1mGET /?lang="bash" HTTP/1.1[0m" 500 -
-2024-11-01 14:53:04,476 127.0.0.1 - - [01/Nov/2024 14:53:04] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 14:53:04,477 127.0.0.1 - - [01/Nov/2024 14:53:04] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 14:53:04,493 127.0.0.1 - - [01/Nov/2024 14:53:04] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=d6kqueXzQIKVmgdd8ere HTTP/1.1[0m" 304 -
-2024-11-01 14:53:04,529 127.0.0.1 - - [01/Nov/2024 14:53:04] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-11-01 14:54:05,367  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 14:54:05,409  * Restarting with stat
-2024-11-01 14:54:05,955  * Debugger is active!
-2024-11-01 14:54:05,967  * Debugger PIN: 117-256-700
-2024-11-01 14:54:20,257 127.0.0.1 - - [01/Nov/2024 14:54:20] "[35m[1mGET /?lang="bash" HTTP/1.1[0m" 500 -
-2024-11-01 14:54:20,339 127.0.0.1 - - [01/Nov/2024 14:54:20] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 14:54:20,340 127.0.0.1 - - [01/Nov/2024 14:54:20] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 14:54:20,360 127.0.0.1 - - [01/Nov/2024 14:54:20] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=Mtxs766S1Jgko9PLJOBM HTTP/1.1" 200 -
-2024-11-01 14:54:20,400 127.0.0.1 - - [01/Nov/2024 14:54:20] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-11-01 15:16:45,301 127.0.0.1 - - [01/Nov/2024 15:16:45] "[35m[1mGET /?lang="bash" HTTP/1.1[0m" 500 -
-2024-11-01 15:16:45,328 127.0.0.1 - - [01/Nov/2024 15:16:45] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 15:16:45,329 127.0.0.1 - - [01/Nov/2024 15:16:45] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 15:16:45,348 127.0.0.1 - - [01/Nov/2024 15:16:45] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=Mtxs766S1Jgko9PLJOBM HTTP/1.1[0m" 304 -
-2024-11-01 15:16:45,395 127.0.0.1 - - [01/Nov/2024 15:16:45] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-11-01 15:16:46,378 127.0.0.1 - - [01/Nov/2024 15:16:46] "[35m[1mGET /?lang="bash" HTTP/1.1[0m" 500 -
-2024-11-01 15:16:46,405 127.0.0.1 - - [01/Nov/2024 15:16:46] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 15:16:46,413 127.0.0.1 - - [01/Nov/2024 15:16:46] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 15:16:46,430 127.0.0.1 - - [01/Nov/2024 15:16:46] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=Mtxs766S1Jgko9PLJOBM HTTP/1.1[0m" 304 -
-2024-11-01 15:16:46,482 127.0.0.1 - - [01/Nov/2024 15:16:46] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-11-01 15:17:03,122  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 15:17:03,186  * Restarting with stat
-2024-11-01 15:17:03,822  * Debugger is active!
-2024-11-01 15:17:03,824  * Debugger PIN: 117-256-700
-2024-11-01 15:17:05,054 127.0.0.1 - - [01/Nov/2024 15:17:05] "GET /?lang="bash" HTTP/1.1" 200 -
-2024-11-01 15:17:59,944  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 15:17:59,985  * Restarting with stat
-2024-11-01 15:18:00,602  * Debugger is active!
-2024-11-01 15:18:00,602  * Debugger PIN: 117-256-700
-2024-11-01 15:18:02,936 127.0.0.1 - - [01/Nov/2024 15:18:02] "[35m[1mGET /?lang="bash" HTTP/1.1[0m" 500 -
-2024-11-01 15:18:03,002 127.0.0.1 - - [01/Nov/2024 15:18:03] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 15:18:03,002 127.0.0.1 - - [01/Nov/2024 15:18:03] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 15:18:03,026 127.0.0.1 - - [01/Nov/2024 15:18:03] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=8MUVPrp3D3uYmHet7OlT HTTP/1.1" 200 -
-2024-11-01 15:18:03,078 127.0.0.1 - - [01/Nov/2024 15:18:03] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-11-01 15:18:12,840  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 15:18:12,887  * Restarting with stat
-2024-11-01 15:18:13,412  * Debugger is active!
-2024-11-01 15:18:13,413  * Debugger PIN: 117-256-700
-2024-11-01 15:18:13,591 127.0.0.1 - - [01/Nov/2024 15:18:13] "[35m[1mGET /?lang="bash" HTTP/1.1[0m" 500 -
-2024-11-01 15:18:13,663 127.0.0.1 - - [01/Nov/2024 15:18:13] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 15:18:13,663 127.0.0.1 - - [01/Nov/2024 15:18:13] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 15:18:13,681 127.0.0.1 - - [01/Nov/2024 15:18:13] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=BoMeIgHh2BhrtosRJNut HTTP/1.1" 200 -
-2024-11-01 15:18:13,715 127.0.0.1 - - [01/Nov/2024 15:18:13] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-11-01 15:18:14,486 ratelimit 1 per 1 second (127.0.0.1) exceeded at endpoint: get
-2024-11-01 15:18:14,486 127.0.0.1 - - [01/Nov/2024 15:18:14] "[31m[1mGET /?lang="bash" HTTP/1.1[0m" 429 -
-2024-11-01 15:18:16,548 127.0.0.1 - - [01/Nov/2024 15:18:16] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-11-01 15:18:17,389 127.0.0.1 - - [01/Nov/2024 15:18:17] "[35m[1mGET /?lang=" HTTP/1.1[0m" 500 -
-2024-11-01 15:18:17,409 127.0.0.1 - - [01/Nov/2024 15:18:17] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 15:18:17,409 127.0.0.1 - - [01/Nov/2024 15:18:17] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 15:18:17,427 127.0.0.1 - - [01/Nov/2024 15:18:17] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=BoMeIgHh2BhrtosRJNut HTTP/1.1[0m" 304 -
-2024-11-01 15:18:17,465 127.0.0.1 - - [01/Nov/2024 15:18:17] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-11-01 15:18:48,687  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 15:18:48,728  * Restarting with stat
-2024-11-01 15:18:49,339  * Debugger is active!
-2024-11-01 15:18:49,341  * Debugger PIN: 117-256-700
-2024-11-01 15:18:56,057 127.0.0.1 - - [01/Nov/2024 15:18:56] "[35m[1mGET /?lang=" HTTP/1.1[0m" 500 -
-2024-11-01 15:18:56,137 127.0.0.1 - - [01/Nov/2024 15:18:56] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 15:18:56,137 127.0.0.1 - - [01/Nov/2024 15:18:56] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 15:18:56,158 127.0.0.1 - - [01/Nov/2024 15:18:56] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=I3NCFc6QQZTpWU1vX9ar HTTP/1.1" 200 -
-2024-11-01 15:18:56,199 127.0.0.1 - - [01/Nov/2024 15:18:56] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-11-01 15:19:35,286  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 15:19:35,345  * Restarting with stat
-2024-11-01 15:19:35,973  * Debugger is active!
-2024-11-01 15:19:35,973  * Debugger PIN: 117-256-700
-2024-11-01 15:19:40,611 127.0.0.1 - - [01/Nov/2024 15:19:40] "[35m[1mGET /?lang=" HTTP/1.1[0m" 500 -
-2024-11-01 15:19:40,697 127.0.0.1 - - [01/Nov/2024 15:19:40] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 15:19:40,701 127.0.0.1 - - [01/Nov/2024 15:19:40] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 15:19:40,727 127.0.0.1 - - [01/Nov/2024 15:19:40] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=v9AwW7eE2zGUxD9EZ257 HTTP/1.1" 200 -
-2024-11-01 15:19:40,774 127.0.0.1 - - [01/Nov/2024 15:19:40] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-11-01 15:22:28,566 127.0.0.1 - - [01/Nov/2024 15:22:28] "[35m[1mGET /?lang=" HTTP/1.1[0m" 500 -
-2024-11-01 15:22:28,588 127.0.0.1 - - [01/Nov/2024 15:22:28] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 15:22:28,589 127.0.0.1 - - [01/Nov/2024 15:22:28] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 15:22:28,609 127.0.0.1 - - [01/Nov/2024 15:22:28] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=v9AwW7eE2zGUxD9EZ257 HTTP/1.1[0m" 304 -
-2024-11-01 15:22:28,665 127.0.0.1 - - [01/Nov/2024 15:22:28] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-11-01 15:22:31,830 127.0.0.1 - - [01/Nov/2024 15:22:31] "[35m[1mGET /?lang=" HTTP/1.1[0m" 500 -
-2024-11-01 15:22:31,851 127.0.0.1 - - [01/Nov/2024 15:22:31] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 15:22:31,852 127.0.0.1 - - [01/Nov/2024 15:22:31] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 15:22:31,866 127.0.0.1 - - [01/Nov/2024 15:22:31] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=v9AwW7eE2zGUxD9EZ257 HTTP/1.1[0m" 304 -
-2024-11-01 15:22:31,904 127.0.0.1 - - [01/Nov/2024 15:22:31] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-11-01 15:22:37,058 127.0.0.1 - - [01/Nov/2024 15:22:37] "[35m[1mGET /?lang="bash" HTTP/1.1[0m" 500 -
-2024-11-01 15:22:37,083 127.0.0.1 - - [01/Nov/2024 15:22:37] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 15:22:37,087 127.0.0.1 - - [01/Nov/2024 15:22:37] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 15:22:37,105 127.0.0.1 - - [01/Nov/2024 15:22:37] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=v9AwW7eE2zGUxD9EZ257 HTTP/1.1[0m" 304 -
-2024-11-01 15:22:43,526 127.0.0.1 - - [01/Nov/2024 15:22:43] "[35m[1mGET /?lang="bash" HTTP/1.1[0m" 500 -
-2024-11-01 15:22:43,543 127.0.0.1 - - [01/Nov/2024 15:22:43] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 15:22:43,543 127.0.0.1 - - [01/Nov/2024 15:22:43] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 15:22:43,559 127.0.0.1 - - [01/Nov/2024 15:22:43] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=v9AwW7eE2zGUxD9EZ257 HTTP/1.1[0m" 304 -
-2024-11-01 15:22:43,599 127.0.0.1 - - [01/Nov/2024 15:22:43] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-11-01 15:23:08,777  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 15:23:08,826  * Restarting with stat
-2024-11-01 15:23:09,451  * Debugger is active!
-2024-11-01 15:23:09,453  * Debugger PIN: 117-256-700
-2024-11-01 15:23:13,349 127.0.0.1 - - [01/Nov/2024 15:23:13] "[35m[1mGET /?lang="bash" HTTP/1.1[0m" 500 -
-2024-11-01 15:23:13,424 127.0.0.1 - - [01/Nov/2024 15:23:13] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 15:23:13,424 127.0.0.1 - - [01/Nov/2024 15:23:13] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 15:23:13,442 127.0.0.1 - - [01/Nov/2024 15:23:13] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=BKSm0kYRCeFAIbuOdOr8 HTTP/1.1" 200 -
-2024-11-01 15:23:13,488 127.0.0.1 - - [01/Nov/2024 15:23:13] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-11-01 15:23:14,281 ratelimit 1 per 1 second (127.0.0.1) exceeded at endpoint: get
-2024-11-01 15:23:14,281 127.0.0.1 - - [01/Nov/2024 15:23:14] "[31m[1mGET /?lang="bash" HTTP/1.1[0m" 429 -
-2024-11-01 15:23:16,042 127.0.0.1 - - [01/Nov/2024 15:23:16] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-11-01 15:23:21,042 127.0.0.1 - - [01/Nov/2024 15:23:21] "[35m[1mGET /?lang="bash" HTTP/1.1[0m" 500 -
-2024-11-01 15:23:21,072 127.0.0.1 - - [01/Nov/2024 15:23:21] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 15:23:21,078 127.0.0.1 - - [01/Nov/2024 15:23:21] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 15:23:21,100 127.0.0.1 - - [01/Nov/2024 15:23:21] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=BKSm0kYRCeFAIbuOdOr8 HTTP/1.1[0m" 304 -
-2024-11-01 15:23:30,977 127.0.0.1 - - [01/Nov/2024 15:23:30] "[35m[1mGET /?lang="bash" HTTP/1.1[0m" 500 -
-2024-11-01 15:23:30,994 127.0.0.1 - - [01/Nov/2024 15:23:30] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 15:23:30,999 127.0.0.1 - - [01/Nov/2024 15:23:30] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 15:23:31,016 127.0.0.1 - - [01/Nov/2024 15:23:31] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=BKSm0kYRCeFAIbuOdOr8 HTTP/1.1[0m" 304 -
-2024-11-01 15:23:31,067 127.0.0.1 - - [01/Nov/2024 15:23:31] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-11-01 15:23:38,288  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 15:23:38,341  * Restarting with stat
-2024-11-01 15:23:38,996  * Debugger is active!
-2024-11-01 15:23:38,998  * Debugger PIN: 117-256-700
-2024-11-01 15:23:43,395 127.0.0.1 - - [01/Nov/2024 15:23:43] "[35m[1mGET /?lang="bash" HTTP/1.1[0m" 500 -
-2024-11-01 15:23:43,476 127.0.0.1 - - [01/Nov/2024 15:23:43] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 15:23:43,479 127.0.0.1 - - [01/Nov/2024 15:23:43] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 15:23:43,499 127.0.0.1 - - [01/Nov/2024 15:23:43] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=LV905fpqp8m1tRXgBjFT HTTP/1.1" 200 -
-2024-11-01 15:23:43,536 127.0.0.1 - - [01/Nov/2024 15:23:43] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-11-01 15:23:44,735 127.0.0.1 - - [01/Nov/2024 15:23:44] "[35m[1mGET /?lang="bash" HTTP/1.1[0m" 500 -
-2024-11-01 15:23:44,765 127.0.0.1 - - [01/Nov/2024 15:23:44] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 15:23:44,768 127.0.0.1 - - [01/Nov/2024 15:23:44] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 15:23:44,787 127.0.0.1 - - [01/Nov/2024 15:23:44] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=LV905fpqp8m1tRXgBjFT HTTP/1.1[0m" 304 -
-2024-11-01 15:23:44,830 127.0.0.1 - - [01/Nov/2024 15:23:44] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-11-01 15:24:09,339 127.0.0.1 - - [01/Nov/2024 15:24:09] "[35m[1mGET /?lang="bash" HTTP/1.1[0m" 500 -
-2024-11-01 15:24:09,362 127.0.0.1 - - [01/Nov/2024 15:24:09] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 15:24:09,363 127.0.0.1 - - [01/Nov/2024 15:24:09] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 15:24:09,381 127.0.0.1 - - [01/Nov/2024 15:24:09] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=LV905fpqp8m1tRXgBjFT HTTP/1.1[0m" 304 -
-2024-11-01 15:24:09,420 127.0.0.1 - - [01/Nov/2024 15:24:09] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-11-01 15:24:58,863  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 15:24:58,910  * Restarting with stat
-2024-11-01 15:24:59,491  * Debugger is active!
-2024-11-01 15:24:59,494  * Debugger PIN: 117-256-700
-2024-11-01 15:25:01,599 127.0.0.1 - - [01/Nov/2024 15:25:01] "GET /?lang="bash" HTTP/1.1" 200 -
-2024-11-01 15:25:08,446  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 15:25:08,492  * Restarting with stat
-2024-11-01 15:25:09,184  * Debugger is active!
-2024-11-01 15:25:09,186  * Debugger PIN: 117-256-700
-2024-11-01 15:25:09,623 127.0.0.1 - - [01/Nov/2024 15:25:09] "GET /?lang="bash" HTTP/1.1" 200 -
-2024-11-01 15:25:13,503 127.0.0.1 - - [01/Nov/2024 15:25:13] "GET /?lang="bash" HTTP/1.1" 200 -
-2024-11-01 15:26:13,697  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 15:26:13,750  * Restarting with stat
-2024-11-01 15:26:14,394  * Debugger is active!
-2024-11-01 15:26:14,411  * Debugger PIN: 117-256-700
-2024-11-01 15:26:17,836 127.0.0.1 - - [01/Nov/2024 15:26:17] "GET /?lang="bash" HTTP/1.1" 200 -
-2024-11-01 15:26:18,877 127.0.0.1 - - [01/Nov/2024 15:26:18] "GET /?lang="bash" HTTP/1.1" 200 -
-2024-11-01 15:26:25,606  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 15:26:25,646  * Restarting with stat
-2024-11-01 15:26:26,248  * Debugger is active!
-2024-11-01 15:26:26,253  * Debugger PIN: 117-256-700
-2024-11-01 15:26:31,167 127.0.0.1 - - [01/Nov/2024 15:26:31] "GET /?lang="bash" HTTP/1.1" 200 -
-2024-11-01 15:26:33,928 127.0.0.1 - - [01/Nov/2024 15:26:33] "GET /?lang="bash" HTTP/1.1" 200 -
-2024-11-01 15:26:40,029  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 15:26:40,084  * Restarting with stat
-2024-11-01 15:26:40,697  * Debugger is active!
-2024-11-01 15:26:40,697  * Debugger PIN: 117-256-700
-2024-11-01 15:26:41,780 127.0.0.1 - - [01/Nov/2024 15:26:41] "GET /?lang="bash" HTTP/1.1" 200 -
-2024-11-01 15:27:24,496  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 15:27:24,543  * Restarting with stat
-2024-11-01 15:27:25,143  * Debugger is active!
-2024-11-01 15:27:25,147  * Debugger PIN: 117-256-700
-2024-11-01 15:27:27,503 127.0.0.1 - - [01/Nov/2024 15:27:27] "GET /?lang="bash" HTTP/1.1" 200 -
-2024-11-01 15:29:19,111  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 15:29:19,159  * Restarting with stat
-2024-11-01 15:29:19,698  * Debugger is active!
-2024-11-01 15:29:19,698  * Debugger PIN: 117-256-700
-2024-11-01 15:29:24,559 127.0.0.1 - - [01/Nov/2024 15:29:24] "GET /?lang="bash" HTTP/1.1" 200 -
-2024-11-01 15:29:25,354 ratelimit 1 per 1 second (127.0.0.1) exceeded at endpoint: get
-2024-11-01 15:29:25,355 127.0.0.1 - - [01/Nov/2024 15:29:25] "[31m[1mGET /?lang="bash" HTTP/1.1[0m" 429 -
-2024-11-01 15:29:32,782 127.0.0.1 - - [01/Nov/2024 15:29:32] "GET /?lang="bash" HTTP/1.1" 200 -
-2024-11-01 15:29:53,626 127.0.0.1 - - [01/Nov/2024 15:29:53] "GET /?lang="bas" HTTP/1.1" 200 -
-2024-11-01 15:30:05,194 127.0.0.1 - - [01/Nov/2024 15:30:05] "GET /?lang=bash HTTP/1.1" 200 -
-2024-11-01 15:30:06,824 127.0.0.1 - - [01/Nov/2024 15:30:06] "GET /?lang=bash HTTP/1.1" 200 -
-2024-11-01 15:30:10,305 127.0.0.1 - - [01/Nov/2024 15:30:10] "GET /?lang=bash HTTP/1.1" 200 -
-2024-11-01 15:30:37,200  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 15:30:37,262  * Restarting with stat
-2024-11-01 15:30:37,816  * Debugger is active!
-2024-11-01 15:30:37,816  * Debugger PIN: 117-256-700
-2024-11-01 15:30:45,570  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
-2024-11-01 15:30:45,645  * Restarting with stat
-2024-11-01 15:30:46,259  * Debugger is active!
-2024-11-01 15:30:46,265  * Debugger PIN: 117-256-700
-2024-11-01 15:30:47,375 127.0.0.1 - - [01/Nov/2024 15:30:47] "GET /?lang=bash HTTP/1.1" 200 -
-2024-11-01 15:31:08,899  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
-2024-11-01 15:31:08,941  * Restarting with stat
-2024-11-01 15:31:09,430  * Debugger is active!
-2024-11-01 15:31:09,432  * Debugger PIN: 117-256-700
-2024-11-01 15:31:12,273 127.0.0.1 - - [01/Nov/2024 15:31:12] "GET /?lang=bash HTTP/1.1" 200 -
-2024-11-01 15:31:13,019 ratelimit 1 per 1 second (127.0.0.1) exceeded at endpoint: get
-2024-11-01 15:31:13,020 127.0.0.1 - - [01/Nov/2024 15:31:13] "[31m[1mGET /?lang=bash HTTP/1.1[0m" 429 -
-2024-11-01 15:31:15,098 127.0.0.1 - - [01/Nov/2024 15:31:15] "GET /?lang=bash HTTP/1.1" 200 -
-2024-11-01 15:31:44,620  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
-2024-11-01 15:31:44,660  * Restarting with stat
-2024-11-01 15:31:45,185  * Debugger is active!
-2024-11-01 15:31:45,187  * Debugger PIN: 117-256-700
-2024-11-01 15:33:05,062  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 15:33:05,085  * Restarting with stat
-2024-11-01 15:33:05,637  * Debugger is active!
-2024-11-01 15:33:05,639  * Debugger PIN: 117-256-700
-2024-11-01 15:33:09,451 127.0.0.1 - - [01/Nov/2024 15:33:09] "[35m[1mGET /?lang=bash HTTP/1.1[0m" 500 -
-2024-11-01 15:33:09,539 127.0.0.1 - - [01/Nov/2024 15:33:09] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 15:33:09,539 127.0.0.1 - - [01/Nov/2024 15:33:09] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 15:33:09,554 127.0.0.1 - - [01/Nov/2024 15:33:09] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=t6Po1MAL8MdVyr8opjqr HTTP/1.1" 200 -
-2024-11-01 15:33:09,595 127.0.0.1 - - [01/Nov/2024 15:33:09] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-11-01 15:33:39,757  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 15:33:39,784  * Restarting with stat
-2024-11-01 15:33:40,363  * Debugger is active!
-2024-11-01 15:33:40,365  * Debugger PIN: 117-256-700
-2024-11-01 15:33:44,213 127.0.0.1 - - [01/Nov/2024 15:33:44] "[35m[1mGET /?lang=bash HTTP/1.1[0m" 500 -
-2024-11-01 15:33:44,285 127.0.0.1 - - [01/Nov/2024 15:33:44] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 15:33:44,285 127.0.0.1 - - [01/Nov/2024 15:33:44] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 15:33:44,318 127.0.0.1 - - [01/Nov/2024 15:33:44] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=8QtJJfCkJ7VDcivV9rpQ HTTP/1.1" 200 -
-2024-11-01 15:33:44,363 127.0.0.1 - - [01/Nov/2024 15:33:44] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-11-01 15:33:45,137 ratelimit 1 per 1 second (127.0.0.1) exceeded at endpoint: get
-2024-11-01 15:33:45,137 127.0.0.1 - - [01/Nov/2024 15:33:45] "[31m[1mGET /?lang=bash HTTP/1.1[0m" 429 -
-2024-11-01 15:33:46,935 127.0.0.1 - - [01/Nov/2024 15:33:46] "[35m[1mGET /?lang=bash HTTP/1.1[0m" 500 -
-2024-11-01 15:33:46,956 127.0.0.1 - - [01/Nov/2024 15:33:46] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2024-11-01 15:33:46,956 127.0.0.1 - - [01/Nov/2024 15:33:46] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2024-11-01 15:33:46,973 127.0.0.1 - - [01/Nov/2024 15:33:46] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=8QtJJfCkJ7VDcivV9rpQ HTTP/1.1[0m" 304 -
-2024-11-01 15:33:47,011 127.0.0.1 - - [01/Nov/2024 15:33:47] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2024-11-01 15:35:02,894  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 15:35:02,936  * Restarting with stat
-2024-11-01 15:35:03,468  * Debugger is active!
-2024-11-01 15:35:03,471  * Debugger PIN: 117-256-700
-2024-11-01 15:36:09,643  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
-2024-11-01 15:36:09,684  * Restarting with stat
-2024-11-01 15:36:10,183  * Debugger is active!
-2024-11-01 15:36:10,186  * Debugger PIN: 117-256-700
-2024-11-01 15:36:24,552  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 15:36:24,595  * Restarting with stat
-2024-11-01 15:36:25,103  * Debugger is active!
-2024-11-01 15:36:25,103  * Debugger PIN: 117-256-700
-2024-11-01 15:36:34,071 None
-2024-11-01 15:36:34,073 127.0.0.1 - - [01/Nov/2024 15:36:34] "GET /?lang=bash HTTP/1.1" 200 -
-2024-11-01 15:36:54,973 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:1000
- * Running on http://10.185.240.241:1000
-2024-11-01 15:36:54,973 [33mPress CTRL+C to quit[0m
-2024-11-01 15:36:54,973  * Restarting with stat
-2024-11-01 15:36:55,454  * Debugger is active!
-2024-11-01 15:36:55,454  * Debugger PIN: 117-256-700
-2024-11-01 15:36:58,518 None
-2024-11-01 15:36:58,522 127.0.0.1 - - [01/Nov/2024 15:36:58] "GET /?lang=bash HTTP/1.1" 200 -
-2024-11-01 15:37:11,628 127.0.0.1 - - [01/Nov/2024 15:37:11] "GET / HTTP/1.1" 200 -
-2024-11-01 15:38:15,905  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
-2024-11-01 15:38:15,939  * Restarting with stat
-2024-11-01 15:38:16,447  * Debugger is active!
-2024-11-01 15:38:16,450  * Debugger PIN: 117-256-700
-2024-11-01 15:38:18,606 language = None
-2024-11-01 15:38:18,608 127.0.0.1 - - [01/Nov/2024 15:38:18] "GET /?lang=bash HTTP/1.1" 200 -
-2024-11-01 15:38:36,918 language = None
-2024-11-01 15:38:36,919 127.0.0.1 - - [01/Nov/2024 15:38:36] "GET /?lang="bash" HTTP/1.1" 200 -
-2024-11-01 15:38:49,824 language = None
-2024-11-01 15:38:49,824 127.0.0.1 - - [01/Nov/2024 15:38:49] "GET /?lang="bash" HTTP/1.1" 200 -
-2024-11-01 15:39:12,407  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
-2024-11-01 15:39:12,459  * Restarting with stat
-2024-11-01 15:39:12,940  * Debugger is active!
-2024-11-01 15:39:12,940  * Debugger PIN: 117-256-700
-2024-11-01 15:39:17,607 language = "bash"
-2024-11-01 15:39:17,607 127.0.0.1 - - [01/Nov/2024 15:39:17] "GET /?lang="bash" HTTP/1.1" 200 -
-2024-11-01 15:40:10,080  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 15:40:10,207  * Restarting with stat
-2024-11-01 15:40:10,759  * Debugger is active!
-2024-11-01 15:40:10,759  * Debugger PIN: 117-256-700
-2024-11-01 15:40:18,541  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
-2024-11-01 15:40:18,582  * Restarting with stat
-2024-11-01 15:40:19,090  * Debugger is active!
-2024-11-01 15:40:19,094  * Debugger PIN: 117-256-700
-2024-11-01 15:40:21,484 language = "bash"
-2024-11-01 15:40:21,486 127.0.0.1 - - [01/Nov/2024 15:40:21] "GET /?lang="bash" HTTP/1.1" 200 -
-2024-11-01 15:40:22,383 ratelimit 1 per 1 second (127.0.0.1) exceeded at endpoint: get
-2024-11-01 15:40:22,383 127.0.0.1 - - [01/Nov/2024 15:40:22] "[31m[1mGET /?lang="bash" HTTP/1.1[0m" 429 -
-2024-11-01 15:40:24,401 127.0.0.1 - - [01/Nov/2024 15:40:24] "GET / HTTP/1.1" 200 -
-2024-11-01 15:40:32,511 language = "bash"
-2024-11-01 15:40:32,512 127.0.0.1 - - [01/Nov/2024 15:40:32] "GET /?lang="bash" HTTP/1.1" 200 -
-2024-11-01 15:41:48,926  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
-2024-11-01 15:41:48,980  * Restarting with stat
-2024-11-01 15:41:49,535  * Debugger is active!
-2024-11-01 15:41:49,538  * Debugger PIN: 117-256-700
-2024-11-01 15:41:50,667 language = "BASH"
-2024-11-01 15:41:50,669 127.0.0.1 - - [01/Nov/2024 15:41:50] "GET /?lang="bash" HTTP/1.1" 200 -
-2024-11-01 15:41:51,397 ratelimit 1 per 1 second (127.0.0.1) exceeded at endpoint: get
-2024-11-01 15:41:51,397 127.0.0.1 - - [01/Nov/2024 15:41:51] "[31m[1mGET /?lang="bash" HTTP/1.1[0m" 429 -
-2024-11-01 15:42:24,587  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 15:42:24,610  * Restarting with stat
-2024-11-01 15:42:25,113  * Debugger is active!
-2024-11-01 15:42:25,115  * Debugger PIN: 117-256-700
-2024-11-01 15:42:28,283 language = "BASH"
-2024-11-01 15:42:28,286 127.0.0.1 - - [01/Nov/2024 15:42:28] "GET /?lang="bash" HTTP/1.1" 200 -
-2024-11-01 15:42:48,465  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 15:42:48,525  * Restarting with stat
-2024-11-01 15:42:49,138  * Debugger is active!
-2024-11-01 15:42:49,141  * Debugger PIN: 117-256-700
-2024-11-01 15:42:51,006 language = "BASH"
-2024-11-01 15:42:51,008 127.0.0.1 - - [01/Nov/2024 15:42:51] "GET /?lang="bash" HTTP/1.1" 200 -
-2024-11-01 15:43:07,760  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 15:43:07,810  * Restarting with stat
-2024-11-01 15:43:08,358  * Debugger is active!
-2024-11-01 15:43:08,360  * Debugger PIN: 117-256-700
-2024-11-01 15:43:43,194  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
-2024-11-01 15:43:43,239  * Restarting with stat
-2024-11-01 15:43:43,775  * Debugger is active!
-2024-11-01 15:43:43,778  * Debugger PIN: 117-256-700
-2024-11-01 15:43:44,961 127.0.0.1 - - [01/Nov/2024 15:43:44] "GET /?lang="bash" HTTP/1.1" 200 -
-2024-11-01 15:43:45,941 ratelimit 1 per 1 second (127.0.0.1) exceeded at endpoint: get
-2024-11-01 15:43:45,943 127.0.0.1 - - [01/Nov/2024 15:43:45] "[31m[1mGET /?lang="bash" HTTP/1.1[0m" 429 -
-2024-11-01 15:43:47,504 127.0.0.1 - - [01/Nov/2024 15:43:47] "GET /?lang="bash" HTTP/1.1" 200 -
-2024-11-01 15:44:16,792 127.0.0.1 - - [01/Nov/2024 15:44:16] "GET /?lang="bash" HTTP/1.1" 200 -
-2024-11-01 15:44:29,914 language = BASH
-2024-11-01 15:44:29,915 127.0.0.1 - - [01/Nov/2024 15:44:29] "GET /?lang=bash HTTP/1.1" 200 -
-2024-11-01 15:50:06,409  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
-2024-11-01 15:50:06,482  * Restarting with stat
-2024-11-01 15:50:07,210  * Debugger is active!
-2024-11-01 15:50:07,210  * Debugger PIN: 117-256-700
-2024-11-01 15:51:41,971  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
-2024-11-01 15:51:42,007  * Restarting with stat
-2024-11-01 15:51:42,535  * Debugger is active!
-2024-11-01 15:51:42,535  * Debugger PIN: 117-256-700
-2024-11-01 15:53:19,721  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
-2024-11-01 15:53:19,762  * Restarting with stat
-2024-11-01 15:53:20,291  * Debugger is active!
-2024-11-01 15:53:20,293  * Debugger PIN: 117-256-700
-2024-11-01 15:54:00,721  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
-2024-11-01 15:54:00,782  * Restarting with stat
-2024-11-01 15:59:30,560 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:1000
- * Running on http://10.185.240.241:1000
-2024-11-01 15:59:30,560 [33mPress CTRL+C to quit[0m
-2024-11-01 15:59:30,562  * Restarting with stat
-2024-11-01 15:59:31,126  * Debugger is active!
-2024-11-01 15:59:31,127  * Debugger PIN: 117-256-700
-2024-11-01 16:00:55,004  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
-2024-11-01 16:00:55,043  * Restarting with stat
-2024-11-01 16:00:55,570  * Debugger is active!
-2024-11-01 16:00:55,573  * Debugger PIN: 117-256-700
-2024-11-01 16:01:09,928  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
-2024-11-01 16:01:09,969  * Restarting with stat
-2024-11-01 16:01:10,492  * Debugger is active!
-2024-11-01 16:01:10,492  * Debugger PIN: 117-256-700
-2024-11-01 16:01:17,914 127.0.0.1 - - [01/Nov/2024 16:01:17] "[31m[1mPOST /add_extension HTTP/1.1[0m" 400 -
-2024-11-01 16:01:34,620 127.0.0.1 - - [01/Nov/2024 16:01:34] "[35m[1mPOST /add_extension HTTP/1.1[0m" 500 -
-2024-11-01 16:02:04,947  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
-2024-11-01 16:02:04,996  * Restarting with stat
-2024-11-01 16:02:05,610  * Debugger is active!
-2024-11-01 16:02:05,626  * Debugger PIN: 117-256-700
-2024-11-01 16:02:11,760 127.0.0.1 - - [01/Nov/2024 16:02:11] "[35m[1mPOST /add_extension HTTP/1.1[0m" 500 -
-2024-11-01 16:02:26,249 127.0.0.1 - - [01/Nov/2024 16:02:26] "[31m[1mPOST /add_extension HTTP/1.1[0m" 400 -
-2024-11-01 16:02:32,330 127.0.0.1 - - [01/Nov/2024 16:02:32] "[35m[1mPOST /add_extension HTTP/1.1[0m" 500 -
-2024-11-01 16:03:44,261 127.0.0.1 - - [01/Nov/2024 16:03:44] "OPTIONS /add_extension HTTP/1.1" 200 -
-2024-11-01 16:03:44,262 127.0.0.1 - - [01/Nov/2024 16:03:44] "[35m[1mPOST /add_extension HTTP/1.1[0m" 500 -
-2024-11-01 16:03:47,324 127.0.0.1 - - [01/Nov/2024 16:03:47] "OPTIONS /add_extension HTTP/1.1" 200 -
-2024-11-01 16:03:47,337 127.0.0.1 - - [01/Nov/2024 16:03:47] "[35m[1mPOST /add_extension HTTP/1.1[0m" 500 -
-2024-11-01 16:03:48,005 127.0.0.1 - - [01/Nov/2024 16:03:48] "OPTIONS /add_extension HTTP/1.1" 200 -
-2024-11-01 16:03:48,005 ratelimit 1 per 1 second (127.0.0.1) exceeded at endpoint: post
-2024-11-01 16:03:48,012 127.0.0.1 - - [01/Nov/2024 16:03:48] "[31m[1mPOST /add_extension HTTP/1.1[0m" 429 -
-2024-11-01 16:03:48,305 127.0.0.1 - - [01/Nov/2024 16:03:48] "OPTIONS /add_extension HTTP/1.1" 200 -
-2024-11-01 16:03:48,305 ratelimit 1 per 1 second (127.0.0.1) exceeded at endpoint: post
-2024-11-01 16:03:48,312 127.0.0.1 - - [01/Nov/2024 16:03:48] "[31m[1mPOST /add_extension HTTP/1.1[0m" 429 -
-2024-11-01 16:03:48,480 127.0.0.1 - - [01/Nov/2024 16:03:48] "OPTIONS /add_extension HTTP/1.1" 200 -
-2024-11-01 16:03:48,502 127.0.0.1 - - [01/Nov/2024 16:03:48] "[35m[1mPOST /add_extension HTTP/1.1[0m" 500 -
-2024-11-01 16:03:57,158 127.0.0.1 - - [01/Nov/2024 16:03:57] "OPTIONS /add_extension HTTP/1.1" 200 -
-2024-11-01 16:03:57,171 127.0.0.1 - - [01/Nov/2024 16:03:57] "[35m[1mPOST /add_extension HTTP/1.1[0m" 500 -
-2024-11-01 16:04:10,083 127.0.0.1 - - [01/Nov/2024 16:04:10] "GET / HTTP/1.1" 200 -
-2024-11-01 16:05:16,797  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
-2024-11-01 16:05:16,850  * Restarting with stat
-2024-11-01 16:05:17,329  * Debugger is active!
-2024-11-01 16:05:17,332  * Debugger PIN: 117-256-700
-2024-11-01 16:05:18,066 127.0.0.1 - - [01/Nov/2024 16:05:18] "[35m[1mPOST /add_extension HTTP/1.1[0m" 500 -
-2024-11-01 16:05:38,161  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
-2024-11-01 16:05:38,204  * Restarting with stat
-2024-11-01 16:05:38,708  * Debugger is active!
-2024-11-01 16:05:38,710  * Debugger PIN: 117-256-700
-2024-11-01 16:05:39,445 127.0.0.1 - - [01/Nov/2024 16:05:39] "[35m[1mPOST /add_extension HTTP/1.1[0m" 500 -
-2024-11-01 16:05:40,391 ratelimit 1 per 1 second (127.0.0.1) exceeded at endpoint: post
-2024-11-01 16:05:40,392 127.0.0.1 - - [01/Nov/2024 16:05:40] "[31m[1mPOST /add_extension HTTP/1.1[0m" 429 -
-2024-11-01 16:05:44,712 127.0.0.1 - - [01/Nov/2024 16:05:44] "[35m[1mPOST /add_extension HTTP/1.1[0m" 500 -
-2024-11-01 16:13:00,847  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
-2024-11-01 16:13:00,891  * Restarting with stat
-2024-11-01 16:13:01,397  * Debugger is active!
-2024-11-01 16:13:01,399  * Debugger PIN: 117-256-700
-2024-11-01 16:13:01,951 127.0.0.1 - - [01/Nov/2024 16:13:01] "[35m[1mPOST /add_extension HTTP/1.1[0m" 201 -
-2024-11-01 16:13:27,692  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
-2024-11-01 16:13:27,742  * Restarting with stat
-2024-11-01 16:14:49,254 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:1000
- * Running on http://10.185.240.241:1000
-2024-11-01 16:14:49,254 [33mPress CTRL+C to quit[0m
-2024-11-01 16:14:49,254  * Restarting with stat
-2024-11-01 16:14:49,748  * Debugger is active!
-2024-11-01 16:14:49,748  * Debugger PIN: 117-256-700
-2024-11-01 16:14:52,095 127.0.0.1 - - [01/Nov/2024 16:14:52] "[35m[1mPOST /add_extension HTTP/1.1[0m" 500 -
-2024-11-01 16:14:52,937 ratelimit 1 per 1 second (127.0.0.1) exceeded at endpoint: post
-2024-11-01 16:14:52,937 127.0.0.1 - - [01/Nov/2024 16:14:52] "[31m[1mPOST /add_extension HTTP/1.1[0m" 429 -
-2024-11-01 16:15:38,121  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
-2024-11-01 16:15:38,157  * Restarting with stat
-2024-11-01 16:15:38,752  * Debugger is active!
-2024-11-01 16:15:38,755  * Debugger PIN: 117-256-700
-2024-11-01 16:15:44,317  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
-2024-11-01 16:15:44,359  * Restarting with stat
-2024-11-01 16:15:44,916  * Debugger is active!
-2024-11-01 16:15:44,916  * Debugger PIN: 117-256-700
-2024-11-01 16:15:46,740 127.0.0.1 - - [01/Nov/2024 16:15:46] "[35m[1mPOST /add_extension HTTP/1.1[0m" 500 -
-2024-11-01 16:15:47,759 127.0.0.1 - - [01/Nov/2024 16:15:47] "[35m[1mPOST /add_extension HTTP/1.1[0m" 500 -
-2024-11-01 16:18:07,193  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
-2024-11-01 16:18:07,232  * Restarting with stat
+ * Running on http://10.1.1.199:1000
+2024-11-01 21:56:53,247 [33mPress CTRL+C to quit[0m
+2024-11-01 21:56:53,249  * Restarting with stat
+2024-11-01 21:56:53,665  * Debugger is active!
+2024-11-01 21:56:53,668  * Debugger PIN: 230-681-397
+2024-11-01 21:56:57,658 127.0.0.1 - - [01/Nov/2024 21:56:57] "[31m[1mPOST /add_extension HTTP/1.1[0m" 415 -
+2024-11-01 21:57:19,995 127.0.0.1 - - [01/Nov/2024 21:57:19] "[35m[1mPOST /add_extension HTTP/1.1[0m" 500 -
+2024-11-01 21:58:04,945  * Detected change in 'C:\\Users\\benpa\\OneDrive\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
+2024-11-01 21:58:04,991  * Restarting with stat
+2024-11-01 21:58:05,520  * Debugger is active!
+2024-11-01 21:58:05,525  * Debugger PIN: 230-681-397
+2024-11-01 21:58:31,644  * Detected change in 'C:\\Users\\benpa\\OneDrive\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
+2024-11-01 21:58:31,705  * Restarting with stat
+2024-11-01 21:58:32,139  * Debugger is active!
+2024-11-01 21:58:32,142  * Debugger PIN: 230-681-397
+2024-11-01 21:58:44,982 127.0.0.1 - - [01/Nov/2024 21:58:44] "[35m[1mPOST /add_extension HTTP/1.1[0m" 201 -
+2024-11-01 21:59:25,888 127.0.0.1 - - [01/Nov/2024 21:59:25] "[35m[1mPOST /add_extension HTTP/1.1[0m" 500 -
