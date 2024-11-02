@@ -32,7 +32,6 @@ limiter = Limiter(
 @api.route("/", methods=["GET"])
 @limiter.limit("1/second", override_defaults=False)
 def get():
-    # For security data is validated on entry
     if request.args.get("lang") and request.args.get("lang").isalpha():
         lang = request.args.get("lang")
         lang = lang.upper()
@@ -48,7 +47,7 @@ def get():
 def post():
     data = request.get_json()
     response = dbHandler.extension_add(data)
-    return response, 201
+    return response
 
 
 if __name__ == "__main__":

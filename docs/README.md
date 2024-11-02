@@ -2,6 +2,9 @@
 
 This task is to build a safe API that extends the [Flask PWA - Programming for the Web Task](https://github.com/TempeHS/Flask_PWA_Programming_For_The_Web_Task_Template). From the parent task students will abstract the database and management to an API. The website will then be retooled to GET request the data from the API and POST request data to to API.
 
+> [!important]
+> The template for this project has been pre-populated with assets from the Flask PWA task including the logo, icons and .database. Students can migrate their own assets if they wish.
+
 ## Dependencies
 
 - VSCode, docker, or GitHub Codespaces
@@ -17,18 +20,21 @@ This task is to build a safe API that extends the [Flask PWA - Programming for t
     pip install flask_wtf
     pip install flask_csp
     pip install jsonschema
+    pip install requests
 ```
 
 > [!Note]
 > These instructions are not as verbose as the parent task because students are expected to be familiar with Bash, Flask & SQLite3
 
-## Instructions
+## Instructions for building the API
 
 ### Step 1: Learn the basics of implementing an API in Flask
 
 Watch: [Build a Flask API in 12 Minutes](https://www.youtube.com/watch?v=zsYIw6RXjfM)
 
 ### Step 2: Create the Directory Structure
+
+Students can create files as they are needed. This structure defines the correct directory structure for all files. As students `touch` each files they should refer to this structure to ensure the file path is correct.
 
 ```text
 ├── .database
@@ -40,14 +46,27 @@ Watch: [Build a Flask API in 12 Minutes](https://www.youtube.com/watch?v=zsYIw6R
 │   │   ├──bootstrap.min.css
 │   │   └──style.css
 │   ├── icons
+│   │   ├──desktop_screenshot.png
+│   │   ├──icon-128x128.png
+│   │   ├──icon-192x192.png
+│   │   ├──icon-384x384.png
+│   │   ├──icon-512x512.png
+│   │   └──mobile_screenshot.png
 │   ├── images
 │   │   ├──favicon.png
 │   │   └──logo.png
-│   └── js
+│   ├─── js
 │   │   ├──app.js
 │   │   ├──bootstrap.bundle.min.js
 │   │   └──serviceWorker.js
+│   └── manifest.json
 ├── templates
+│   ├── partials
+│   │   ├──footer.html
+│   │   └──menu.html
+│   ├──index.html
+│   ├──layout.html
+│   └──privacy.html
 ├── LICENSE
 ├── api.py
 ├── app.py
@@ -58,12 +77,11 @@ Watch: [Build a Flask API in 12 Minutes](https://www.youtube.com/watch?v=zsYIw6R
 
 This Python implementation:
 
-1. Imports all the required dependencies
-2. Configures the logger to log to api_security_log.log\
-3. Configures the 'Cross Origin Request policy
-4. Configures the rate limiter
-5. Sets a API route GET method to return a string and 200 response
-6. Sets a API route POST method to return the POST data and a 201 response
+1. Imports all the required dependencies for the whole project
+2. Configures the 'Cross Origin Request policy
+3. Configures the rate limiter
+4. Sets a API route GET method to return a string and 200 response
+5. Sets a API route POST method to return the POST data and a 201 response
 
 ```python
 from flask import Flask
@@ -75,15 +93,6 @@ from flask_limiter.util import get_remote_address
 import logging
 
 import database_manager as dbHandler
-
-
-app_log = logging.getLogger(__name__)
-logging.basicConfig(
-    filename="api_security_log.log",
-    encoding="utf-8",
-    level=logging.DEBUG,
-    format="%(asctime)s %(message)s",
-)
 
 
 api = Flask(__name__)
@@ -141,6 +150,7 @@ from flask import jsonify
 import sqlite3 as sql
 import json
 from jsonschema import validate
+from flask import current_app
 
 
 def extension_get():
@@ -227,7 +237,7 @@ Extend /add_extension POST request to pass the POST data to teh DB Handler and r
 def post():
     data = request.get_json()
     response = dbHandler.extension_add(data)
-    return response, 201
+    return response
 ```
 
 Extend the dbHandler to pass the data back to the POST request.
@@ -235,13 +245,431 @@ Extend the dbHandler to pass the data back to the POST request.
 ```python
 def extension_add(response):
     data = response
-    return data
+    return data, 200
 ```
 
 ### Step 9: Test your basic POST response
 
 ![Screen recording testing a API basic POST with Thunder Client](README_resources\test_basic_POST_API.gif "Follow these steps to test your basic POST API")
 
+### Step 10: Extend the dbHandler to validate the JSON
+
+Update the extension_add method to validate the JSON and return a message and response code. The schema validates the JSON with the following rules:
+
+1. All 5 properties are required.
+2. No extra properties are allowed.
+3. The data type for all 5 properties are string.
+4. The hyperlink pattern enforces the URL to start with `https://marketplace.visualstudio.com/items?itemName=` and the characters `<` and `>` are not allowed to prevent XXS attacks.
+5. The image pattern requires a URL but `<` and `>` are not allowed to prevent XXS attacks.
+6. Languages must enumerate with the list of languages.
+
+Use [https://regex101.com/](https://regex101.com/) to design and test patterns for your own database design.
+
+```python
+    if validate_json(data):
+        return jsonify({"message": "Extension added successfully"}), 201
+    else:
+        return jsonify({"error": "Invalid JSON"}), 400
+
+schema = {
+    "type": "object",
+    "validationLevel": "strict",
+    "required": [
+        "name",
+        "hyperlink",
+        "about",
+        "image",
+        "language",
+    ],
+    "properties": {
+        "name": {"type": "string"},
+        "hyperlink": {
+            "type": "string",
+            "pattern": "^https:\/\/marketplace\.visualstudio\.com\/items\?itemName=(?!.*[<>])[a-zA-Z0-9\-\._~:\/\?#\[\]@!$&'\(\)\*\+,;\=]*$",
+        },
+        "about": {"type": "string"},
+        "image": {
+            "type": "string",
+            "pattern": "^(ht|f)tp(s?)\:\/\/[0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*(:(0-9)*)*(\/?)(?!.*[<>])([a-zA-Z0-9\-\.\?\,'\/\\\+&amp;%\$#_]*)?$",
+        },
+        "language": {
+            "type": "string",
+            "enum": ["PYTHON", "C++", "BASH", "SQL", "HTML", "CSS", "JAVASCRIPT"],
+        },
+    },
+    "additionalProperties": False,
+}
+
+def validate_json(json_data):
+    try:
+        validate(instance=json_data, schema=schema)
+        return True
+    except:
+        return False
+```
+
+Sample JSON data to test the API:
+
 ```text
-{"extID": 4, "name": "test", "hyperlink": "http://test", "about": "This is a test", "image": "http://test.jpg", "language": "TEST"}
+{"name": "test", "hyperlink": "https://marketplace.visualstudio.com/items?itemName=123.html", "about": "This is a test", "image": "https://test.jpg", "language": "BASH"}
+```
+
+### Step 10: Test your validation POST response
+
+![Screen recording testing a API basic POST with Thunder Client](README_resources\test_basic_POST_API.gif "Follow these steps to test your basic POST API")
+
+### Step 11: Insert the POST data to the database
+
+Update the extension_add() method to INSERT the JSON data into the database. The extID not included as it has been configured to auto increment.
+
+```python
+def extension_add(data):
+    if validate_json(data):
+        con = sql.connect(".database/data_source.db")
+        cur = con.cursor()
+        cur.execute(
+            "INSERT INTO extension (name, hyperlink, about, image, language) VALUES (?, ?, ?, ?, ?);",
+            [
+                data["name"],
+                data["hyperlink"],
+                data["about"],
+                data["image"],
+                data["language"],
+            ],
+        )
+        con.commit()
+        con.close()
+        return jsonify({"message": "Extension added successfully"}), 201
+    else:
+        return jsonify({"error": "Invalid JSON"}), 400
+```
+
+### 12: Configure the logger to log to api_security_log.log
+
+Add this Python to the api.py directly below the imports to configure the logger to log to a log file for security analysis.
+
+```python
+app_log = logging.getLogger(__name__)
+logging.basicConfig(
+    filename="api_security_log.log",
+    encoding="utf-8",
+    level=logging.DEBUG,
+    format="%(asctime)s %(message)s",
+)
+```
+
+## Instructions for building the APP
+
+> [!Note]
+> This implementation uses the [Bootstrap](https://getbootstrap.com/) frontend CSS & JS design framework. Version 5.3.3 has been included in the static files.
+
+### Step 1: Setup the Jinga2 template engine file structure
+
+```text
+├── templates
+│   ├── partials
+│   │   ├──footer.html
+│   │   └──menu.html
+│   ├──index.html
+│   ├──layout.html
+│   └──privacy.html
+```
+
+### Step 2: Setup the layout template
+
+This template is includes the following features:
+
+1. The menu and footer is defined in a partial for easy maintenance
+2. The body will be defined by the block content which will be inherited
+3. Security features are defined in the head
+4. Bootstrap components (CSS & JavaScript) are included
+5. JS Components including the PWA service worker are included
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv=”Content-Security-Policy” content=” default-src 'self' ;
+    style-src 'self' ; script-src 'self' ; media-src 'self' ; font-src *;
+    frame-src 'self' ; connect-src * ; img-src 'self' ; ”>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="static/css/style.css" />
+    <title>Bootstrap demo</title>
+    <link rel="manifest" href="static/manifest.json" />
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.png" />
+    <meta name="theme-color" content="" />
+    <link href="static/css/bootstrap.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    {% include "partials/menu.html" %} {% block content %}{% endblock %} {%
+    include "partials/footer.html" %}
+    <script src="static/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/serviceWorker.js"></script>
+    <script src="static/js/app.js"></script>
+  </body>
+</html>
+```
+
+### Step 3: Setup the footer.html
+
+This is a simple footer that provides a link to the privacy page.
+
+```html
+<div class="container-fluid">
+  <hr />
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</div>
+```
+
+### Step 4: Setup the menu.html and add some advanced features
+
+> [!note]
+> This is an adaption of the basic [Bootstrap Navbar](https://getbootstrap.com/docs/5.3/components/navbar/).
+
+Insert the HTML structure for the Navbar
+
+```html
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <img src="static/images/logo.png" alt="logo" height="80" />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="/index.html" aria-current="page"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/add.html">Add Extension</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/privacy.html">Privacy</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search" id="search-form">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+          id="search-input"
+        />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+```
+
+Add a script that toggles the active menu and the `aria-current="page"` attribute for the current URL to the app.js.
+
+```js
+document.addEventListener("DOMContentLoaded", function () {
+  const navLinks = document.querySelectorAll(".nav-link");
+  const currentUrl = window.location.pathname;
+
+  navLinks.forEach((link) => {
+    const linkUrl = link.getAttribute("href");
+    if (linkUrl === currentUrl) {
+      link.classList.add("active");
+      link.setAttribute("aria-current", "page");
+    } else {
+      link.classList.remove("active");
+      link.removeAttribute("aria-current");
+    }
+  });
+});
+```
+
+Add a script that adds search functionality to the search button
+
+```js
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("search-form");
+  const input = document.getElementById("search-input");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    const searchTerm = input.value.trim().toLowerCase();
+    if (searchTerm) {
+      highlightText(searchTerm);
+    }
+  });
+
+  function highlightText(searchTerm) {
+    const bodyText = document.body.innerHTML;
+    const regex = new RegExp(`(${searchTerm})`, "gi");
+    const highlightedText = bodyText.replace(
+      regex,
+      '<span class="highlight">$1</span>'
+    );
+    document.body.innerHTML = highlightedText;
+  }
+});
+```
+
+Add the CSS to style.css as required by the search JS script.
+
+```css
+.highlight {
+  background-color: yellow;
+  border-radius: 20px;
+  border: 1px yellow solid;
+}
+```
+
+### Step 5: Inherit the layout to the /index.html
+
+Insert the index HTML into index.html then test teh page to see if it loads correctly.
+
+```html
+{% extends 'layout.html' %} {% block content %}
+<div class="container">
+  <div class="row"></div>
+  <div class="row"></div>
+</div>
+{% endblock %}
+```
+
+### Step 6: Setup the app.py
+
+This Python Flask implementation:
+
+1. Imports all dependencies required for the whole project.
+2. Sets up CSRFProtect to provide asynchronous keys that protect the app from a CSRF attack. Students will need to generate their own basic 16 secret key with [https://acte.ltd/utils/randomkeygen](https://acte.ltd/utils/randomkeygen.)
+3. Define a secure Content Secure Policy (CSP) head
+4. Configures the flask APP
+5. Redirects the root to /index.html
+6. Renders the /index.html
+
+```python
+from flask import Flask
+from flask import redirect
+from flask import render_template
+import requests
+from flask_wtf import CSRFProtect
+from flask_csp.csp import csp_header
+import logging
+
+
+# Generate a basic 16 key: https://acte.ltd/utils/randomkeygen
+app = Flask(__name__)
+csrf = CSRFProtect(app)
+app.secret_key = b"6HlQfWhu03PttohW;apl"
+
+
+@app.route("/", methods=["GET"])
+def root():
+    return redirect("/index.html", 302)
+
+
+@app.route("/index.html", methods=["GET"])
+@csp_header(
+    {
+        "default-src": "'self'",
+        "script-src": "'self'",
+        "img-src": "http: https: data:",
+        "object-src": "'self'",
+        "style-src": "'self'",
+        "media-src": "'self'",
+        "child-src": "'self'",
+        "connect-src": "'self'",
+        "base-uri": "",
+        "report-uri": "/csp_report",
+        "frame-ancestors": "none",
+    }
+)
+def index():
+    return render_template("/index.html")
+
+
+if __name__ == "__main__":
+    app.run(debug=True, host="0.0.0.0", port=5000)
+
+```
+
+### Step 7: Test the APP
+
+```bash
+python app.py
+```
+
+![A render of the basic index.html](README_resources\basic_index.png "The basic index.html should load like this")
+
+### Step 8: Setup the Privacy Policy
+
+```html
+{% extends 'layout.html' %} {% block content %}
+<div class="container">
+  <div class="row">
+    <h1 class="display-1">Privacy Policy</h1>
+    <p>Policy here...</p>
+  </div>
+  <div class="row"></div>
+</div>
+{% endblock %}
+```
+
+```python
+@app.route("/privacy.html", methods=["GET"])
+def privacy():
+    return render_template("/privacy.html")
+```
+
+### Step 9: Setup the cards and request the data from the API
+
+> [!note]
+> This is an implementation of the [Bootstrap Card](https://getbootstrap.com/docs/5.3/components/card/) in a responsive[Bootstrap Column Layout](https://getbootstrap.com/docs/5.3/layout/columns/).
+
+```python
+def index():
+    url = "http://127.0.0.1:1000"
+    response = requests.get(url)
+    data = response.json()
+    return render_template("/index.html", data=data)
+```
+
+```html
+{% extends 'layout.html' %} {% block content %}
+<div class="container">
+  <div class="row">
+    {% for row in data %}
+    <div class="col-sm-12 col-lg-4">
+      <div class="card" style="width: 18rem">
+        <img
+          src="{{ row.image }}"
+          class="card-img-top"
+          alt="Product image for the {{ row.name }} VSCode extension."
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ row.name }}</h5>
+          <p class="card-text">{{ row.about }}</p>
+          <a href="{{ row.hyperlink }}" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
 ```
