@@ -45,3 +45,64 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.innerHTML = highlightedText;
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const allButton = document.getElementById("all");
+
+  allButton.addEventListener("click", function () {
+    window.location.href = "/";
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const allButton = document.getElementById("python");
+
+  allButton.addEventListener("click", function () {
+    window.location.href = "?lang=python";
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const allButton = document.getElementById("c++");
+
+  allButton.addEventListener("click", function () {
+    window.location.href = "?lang=c++";
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const allButton = document.getElementById("bash");
+
+  allButton.addEventListener("click", function () {
+    window.location.href = "?lang=bash";
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const allButton = document.getElementById("sql");
+
+  allButton.addEventListener("click", function () {
+    window.location.href = "?lang=sql";
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const allButton = document.getElementById("html");
+
+  allButton.addEventListener("click", function () {
+    window.location.href = "?lang=html";);
+
+document.addEventListener("DOMContentLoaded", function () {
+  const allButton = document.getElementById("css");
+
+  allButton.addEventListener("click", function () {
+    window.location.href = "?lang=css";
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const allButton = document.getElementById("js");
+
+  allButton.addEventListener("click", function () {
+    window.location.href = "?lang=javascript";
+  });
+});

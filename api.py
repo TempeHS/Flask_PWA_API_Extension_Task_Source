@@ -30,7 +30,7 @@ limiter = Limiter(
 
 
 @api.route("/", methods=["GET"])
-@limiter.limit("1/second", override_defaults=False)
+@limiter.limit("3/second", override_defaults=False)
 def get():
     if request.args.get("lang") and request.args.get("lang").isalpha():
         lang = request.args.get("lang")

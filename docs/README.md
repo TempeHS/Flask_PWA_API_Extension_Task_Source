@@ -107,7 +107,7 @@ limiter = Limiter(
 
 
 @api.route("/", methods=["GET"])
-@limiter.limit("1/second", override_defaults=False)
+@limiter.limit("3/second", override_defaults=False)
 def get():
     return ("API Works"), 200
 
