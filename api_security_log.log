@@ -86,3 +86,90 @@
 2024-11-03 16:15:26,630  * Restarting with stat
 2024-11-03 16:15:27,180  * Debugger is active!
 2024-11-03 16:15:27,185  * Debugger PIN: 230-681-397
+2024-11-03 21:13:23,981 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:1000
+ * Running on http://10.1.1.199:1000
+2024-11-03 21:13:23,982 [33mPress CTRL+C to quit[0m
+2024-11-03 21:13:23,985  * Restarting with stat
+2024-11-03 21:13:24,603  * Debugger is active!
+2024-11-03 21:13:24,607  * Debugger PIN: 230-681-397
+2024-11-03 21:13:28,557 127.0.0.1 - - [03/Nov/2024 21:13:28] "GET / HTTP/1.1" 200 -
+2024-11-03 21:14:48,966  * Detected change in 'C:\\Users\\benpa\\OneDrive\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
+2024-11-03 21:14:49,037  * Restarting with stat
+2024-11-03 21:14:49,939  * Debugger is active!
+2024-11-03 21:14:49,944  * Debugger PIN: 230-681-397
+2024-11-03 21:15:06,307 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:1000
+ * Running on http://10.1.1.199:1000
+2024-11-03 21:15:06,307 [33mPress CTRL+C to quit[0m
+2024-11-03 21:15:06,309  * Restarting with stat
+2024-11-03 21:15:07,088  * Debugger is active!
+2024-11-03 21:15:07,092  * Debugger PIN: 230-681-397
+2024-11-03 21:15:14,134  * Detected change in 'C:\\Users\\benpa\\OneDrive\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
+2024-11-03 21:15:14,209  * Restarting with stat
+2024-11-03 21:15:15,016  * Debugger is active!
+2024-11-03 21:15:15,022  * Debugger PIN: 230-681-397
+2024-11-03 21:15:17,055  * Detected change in 'C:\\Users\\benpa\\OneDrive\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
+2024-11-03 21:15:17,125  * Restarting with stat
+2024-11-03 21:15:17,783  * Debugger is active!
+2024-11-03 21:15:17,789  * Debugger PIN: 230-681-397
+2024-11-03 21:15:38,962  * Detected change in 'C:\\Users\\benpa\\OneDrive\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
+2024-11-03 21:15:39,031  * Restarting with stat
+2024-11-03 21:15:39,650  * Debugger is active!
+2024-11-03 21:15:39,656  * Debugger PIN: 230-681-397
+2024-11-03 21:16:13,423 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:1000
+ * Running on http://10.1.1.199:1000
+2024-11-03 21:16:13,423 [33mPress CTRL+C to quit[0m
+2024-11-03 21:16:13,426  * Restarting with stat
+2024-11-03 21:16:14,200  * Debugger is active!
+2024-11-03 21:16:14,209  * Debugger PIN: 230-681-397
+2024-11-03 22:48:26,470 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:1000
+ * Running on http://10.1.1.199:1000
+2024-11-03 22:48:26,471 [33mPress CTRL+C to quit[0m
+2024-11-03 22:48:26,473  * Restarting with stat
+2024-11-03 22:48:26,876  * Debugger is active!
+2024-11-03 22:48:26,878  * Debugger PIN: 230-681-397
+2024-11-03 22:48:32,953 127.0.0.1 - - [03/Nov/2024 22:48:32] "GET / HTTP/1.1" 200 -
+2024-11-03 22:49:54,253  * Detected change in 'C:\\Users\\benpa\\OneDrive\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
+2024-11-03 22:49:54,311  * Restarting with stat
+2024-11-03 22:49:54,698  * Debugger is active!
+2024-11-03 22:49:54,701  * Debugger PIN: 230-681-397
+2024-11-03 22:50:21,815  * Detected change in 'C:\\Users\\benpa\\OneDrive\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
+2024-11-03 22:50:21,871  * Restarting with stat
+2024-11-03 22:50:22,288  * Debugger is active!
+2024-11-03 22:50:22,291  * Debugger PIN: 230-681-397
+2024-11-03 22:50:37,116 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:1000
+ * Running on http://10.1.1.199:1000
+2024-11-03 22:50:37,117 [33mPress CTRL+C to quit[0m
+2024-11-03 22:50:37,120  * Restarting with stat
+2024-11-03 22:50:37,493  * Debugger is active!
+2024-11-03 22:50:37,496  * Debugger PIN: 230-681-397
+2024-11-03 22:52:01,847  * Detected change in 'C:\\Users\\benpa\\OneDrive\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
+2024-11-03 22:52:01,922  * Restarting with stat
+2024-11-03 22:52:02,333  * Debugger is active!
+2024-11-03 22:52:02,336  * Debugger PIN: 230-681-397
+2024-11-03 22:52:16,981 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:1000
+ * Running on http://10.1.1.199:1000
+2024-11-03 22:52:16,982 [33mPress CTRL+C to quit[0m
+2024-11-03 22:52:16,983  * Restarting with stat
+2024-11-03 22:52:17,372  * Debugger is active!
+2024-11-03 22:52:17,374  * Debugger PIN: 230-681-397
+2024-11-03 22:52:43,388 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:1000
+ * Running on http://10.1.1.199:1000
+2024-11-03 22:52:43,388 [33mPress CTRL+C to quit[0m
+2024-11-03 22:52:43,390  * Restarting with stat
+2024-11-03 22:52:43,790  * Debugger is active!
+2024-11-03 22:52:43,793  * Debugger PIN: 230-681-397
+2024-11-03 22:52:53,126 127.0.0.1 - - [03/Nov/2024 22:52:53] "[35m[1mPOST /add_extension HTTP/1.1[0m" 201 -

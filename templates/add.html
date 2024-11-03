@@ -27,7 +27,7 @@
           class="form-control"
           id="hyperlink"
           placeholder="https://marketplace.visualstudio.com/items?itemName="
-          pattern="^https:\/\/marketplace\.visualstudio\.com\/items\?itemName=(?!.*[<>])[a-zA-Z0-9\-\._~:\/\?#\[\]@!$&'\(\)\*\+,;\=]*$"
+          pattern="^https:\/\/marketplace\.visualstudio\.com\/items\?itemName=(?!.*[<>])[a-zA-Z0-9\-._~:\/?#\[\]@!$&'()*+,;=]*$"
         />
       </div>
       <div class="col-auto">
@@ -47,7 +47,7 @@
           type="url"
           class="form-control"
           id="image"
-          pattern="^https:\/\/(?!.*[<>])[a-zA-Z0-9\-\._~:\/\?#\[\]@!$&'\(\)\*\+,;\=]*$"
+          pattern="^https:\/\/(?!.*[<>])[a-zA-Z0-9\-._~:\/?#\[\]@!$&'()*+,;=]*$"
           placeholder="https://"
         />
       </div>
@@ -63,6 +63,7 @@
         >
           <option selected>Select a language from this menu</option>
           <option value="1">Python</option>
+          <option value="2">CPP</option>
           <option value="2">Bash</option>
           <option value="3">SQL</option>
           <option value="4">HTML/option></option>

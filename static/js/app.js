@@ -36,14 +36,66 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function highlightText(searchTerm) {
-    const bodyText = document.body.innerHTML;
-    const regex = new RegExp(`(${searchTerm})`, "gi");
-    const highlightedText = bodyText.replace(
-      regex,
-      '<span class="highlight">$1</span>'
-    );
-    document.body.innerHTML = highlightedText;
+    const mainContent = document.querySelector("main");
+    removeHighlights(mainContent);
+    highlightTextNodes(mainContent, searchTerm);
   }
+
+  function removeHighlights(element) {
+    const highlightedElements = element.querySelectorAll("span.highlight");
+    highlightedElements.forEach((el) => {
+      el.replaceWith(el.textContent);
+    });
+  }
+
+  function highlightTextNodes(element, searchTerm) {
+    const regex = new RegExp(`(${searchTerm})`, "gi");
+    const walker = document.createTreeWalker(
+      element,
+      NodeFilter.SHOW_TEXT,
+      null,
+      false
+    );
+    let node;
+    while ((node = walker.nextNode())) {
+      const parent = node.parentNode;
+      if (
+        parent &&
+        parent.nodeName !== "SCRIPT" &&
+        parent.nodeName !== "STYLE"
+      ) {
+        const text = node.nodeValue;
+        const highlightedText = text.replace(
+          regex,
+          '<span class="highlight">$1</span>'
+        );
+        if (highlightedText !== text) {
+          const tempDiv = document.createElement("div");
+          tempDiv.innerHTML = highlightedText;
+          while (tempDiv.firstChild) {
+            parent.insertBefore(tempDiv.firstChild, node);
+          }
+          parent.removeChild(node);
+        }
+      }
+    }
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const allButton = document.getElementById("all");
+
+  allButton.addEventListener("click", function () {
+    window.location.href = "/";
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const allButton = document.getElementById("python");
+
+  allButton.addEventListener("click", function () {
+    window.location.href = "?lang=python";
+  });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -66,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const allButton = document.getElementById("c++");
 
   allButton.addEventListener("click", function () {
-    window.location.href = "?lang=c++";
+    window.location.href = "?lang=cpp";
   });
 });
 
@@ -83,13 +135,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   allButton.addEventListener("click", function () {
     window.location.href = "?lang=sql";
+  });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
   const allButton = document.getElementById("html");
 
   allButton.addEventListener("click", function () {
-    window.location.href = "?lang=html";);
+    window.location.href = "?lang=html";
+  });
+});
 
 document.addEventListener("DOMContentLoaded", function () {
   const allButton = document.getElementById("css");

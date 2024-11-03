@@ -267,6 +267,7 @@ Update the `extension_add():` method in `database_manager.py` to validate the JS
     else:
         return jsonify({"error": "Invalid JSON"}), 400
 
+
 schema = {
     "type": "object",
     "validationLevel": "strict",
@@ -281,20 +282,21 @@ schema = {
         "name": {"type": "string"},
         "hyperlink": {
             "type": "string",
-            "pattern": "^https:\/\/marketplace\.visualstudio\.com\/items\?itemName=(?!.*[<>])[a-zA-Z0-9\-\._~:\/\?#\[\]@!$&'\(\)\*\+,;\=]*$",
+            "pattern": "^https:\\/\\/marketplace\\.visualstudio\\.com\\/items\\?itemName=(?!.*[<>])[a-zA-Z0-9\\-._~:\/?#\\[\\]@!$&'()*+,;=]*$",
         },
         "about": {"type": "string"},
         "image": {
             "type": "string",
-            "pattern": "^https:\/\/(?!.*[<>])[a-zA-Z0-9\-\._~:\/\?#\[\]@!$&'\(\)\*\+,;\=]*$",
+            "pattern": "^https:\\/\\/(?!.*[<>])[a-zA-Z0-9\\-._~:\/?#\\[\\]@!$&'()*+,;=]*$",
         },
         "language": {
             "type": "string",
-            "enum": ["PYTHON", "C++", "BASH", "SQL", "HTML", "CSS", "JAVASCRIPT"],
+            "enum": ["PYTHON", "CPP", "BASH", "SQL", "HTML", "CSS", "JAVASCRIPT"],
         },
     },
     "additionalProperties": False,
 }
+
 
 def validate_json(json_data):
     try:
@@ -354,7 +356,7 @@ logging.basicConfig(
 )
 ```
 
-## Instructions for building the APP
+## Instructions for building the PWA user interface to the API.
 
 > [!Note]
 > This implementation uses the [Bootstrap](https://getbootstrap.com/) frontend CSS & JS design framework. Version 5.3.3 has been included in the static files.
@@ -371,15 +373,15 @@ logging.basicConfig(
 │   └──privacy.html
 ```
 
-### Step 2: Setup the layout template
+### Step 2: Setup the Jinga2 template
 
-This template is includes the following features:
+This Jinga2/HTML implementation in layout.html:
 
-1. The menu and footer is defined in a partial for easy maintenance
-2. The body will be defined by the block content which will be inherited
-3. Security features are defined in the head
-4. Bootstrap components (CSS & JavaScript) are included
-5. JS Components including the PWA service worker are included
+1. Security features are defined in the head
+2. The menu and footer is defined in a partial for easy maintenance
+3. The body will be defined by the block content when the `layout.html` is inherited
+4. Bootstrap components (CSS & JavaScript) are linked
+5. JS Components including the PWA service worker are linked
 
 ```html
 <!DOCTYPE html>
@@ -391,7 +393,7 @@ This template is includes the following features:
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="static/css/style.css" />
-    <title>Bootstrap demo</title>
+    <title>VS Code Extensions for Software Engineering</title>
     <link rel="manifest" href="static/manifest.json" />
     <link rel="icon" type="image/x-icon" href="static/images/favicon.png" />
     <meta name="theme-color" content="" />
@@ -409,7 +411,7 @@ This template is includes the following features:
 
 ### Step 3: Setup the footer.html
 
-This is a simple footer that provides a link to the privacy page.
+This HTML implementation provides full width horizontal rule and a Bootstrap column containing a link to the privacy page.
 
 ```html
 <div class="container-fluid">
@@ -426,15 +428,12 @@ This is a simple footer that provides a link to the privacy page.
 
 ### Step 4: Setup the menu.html and add some UX/accessibility advanced features using JS.
 
-> [!note]
-> This is an adaption of the basic [Bootstrap Navbar](https://getbootstrap.com/docs/5.3/components/navbar/).
-
-Insert the HTML structure for the Navbar
+This HTML implementation is an adaption of the basic [Bootstrap Navbar](https://getbootstrap.com/docs/5.3/components/navbar/).
 
 ```html
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.html">
+    <a class="navbar-brand" href="/">
       <img src="static/images/logo.png" alt="logo" height="80" />
     </a>
     <button
@@ -451,9 +450,7 @@ Insert the HTML structure for the Navbar
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" href="/index.html" aria-current="page"
-            >Home</a
-          >
+          <a class="nav-link active" href="/" aria-current="page">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/add.html">Add Extension</a>
@@ -477,7 +474,7 @@ Insert the HTML structure for the Navbar
 </nav>
 ```
 
-Add a script that toggles the active class and the `aria-current="page"` attribute for the current URL to the app.js. The active class improves UX by styling the current page in the menu differently and adding the [aria-current attribute](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-current) to the current page improves the context understanding of screen readers.
+Extend the `app.js` with this script that toggles the active class and the `aria-current="page"` attribute for the current page menu item. The active class improves UX by styling the current page in the menu differently and adding the [aria-current attribute](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-current) to the current page which improves the context understanding of screen readers for enhanced accessibility.
 
 ```js
 document.addEventListener("DOMContentLoaded", function () {
@@ -497,7 +494,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 ```
 
-Add a script that adds search functionality to the search button
+Extend the `app.js` with this script that adds basic search functionality to the search button in the menu by searching the current page and highlighting matching words.
 
 ```js
 document.addEventListener("DOMContentLoaded", function () {
@@ -513,18 +510,54 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function highlightText(searchTerm) {
-    const bodyText = document.body.innerHTML;
+    const mainContent = document.querySelector("main");
+    removeHighlights(mainContent);
+    highlightTextNodes(mainContent, searchTerm);
+  }
+
+  function removeHighlights(element) {
+    const highlightedElements = element.querySelectorAll("span.highlight");
+    highlightedElements.forEach((el) => {
+      el.replaceWith(el.textContent);
+    });
+  }
+
+  function highlightTextNodes(element, searchTerm) {
     const regex = new RegExp(`(${searchTerm})`, "gi");
-    const highlightedText = bodyText.replace(
-      regex,
-      '<span class="highlight">$1</span>'
+    const walker = document.createTreeWalker(
+      element,
+      NodeFilter.SHOW_TEXT,
+      null,
+      false
     );
-    document.body.innerHTML = highlightedText;
+    let node;
+    while ((node = walker.nextNode())) {
+      const parent = node.parentNode;
+      if (
+        parent &&
+        parent.nodeName !== "SCRIPT" &&
+        parent.nodeName !== "STYLE"
+      ) {
+        const text = node.nodeValue;
+        const highlightedText = text.replace(
+          regex,
+          '<span class="highlight">$1</span>'
+        );
+        if (highlightedText !== text) {
+          const tempDiv = document.createElement("div");
+          tempDiv.innerHTML = highlightedText;
+          while (tempDiv.firstChild) {
+            parent.insertBefore(tempDiv.firstChild, node);
+          }
+          parent.removeChild(node);
+        }
+      }
+    }
   }
 });
 ```
 
-Add the CSS to style.css as required by the search JS script.
+Extend style.css to add the class required by the search script.
 
 ```css
 .highlight {
@@ -534,9 +567,9 @@ Add the CSS to style.css as required by the search JS script.
 }
 ```
 
-### Step 5: Inherit the layout to the /index.html
+### Step 5: Inherit the layout to the /index.html and setup the app route.
 
-Insert the index HTML into index.html then test teh page to see if it loads correctly.
+Insert the index HTML into index.html.
 
 ```html
 {% extends 'layout.html' %} {% block content %}
@@ -547,16 +580,14 @@ Insert the index HTML into index.html then test teh page to see if it loads corr
 {% endblock %}
 ```
 
-### Step 6: Setup the app.py
-
-This Python Flask implementation:
+This Python Flask implementation in `main.py`
 
 1. Imports all dependencies required for the whole project.
-2. Sets up CSRFProtect to provide asynchronous keys that protect the app from a CSRF attack. Students will need to generate their own basic 16 secret key with [https://acte.ltd/utils/randomkeygen](https://acte.ltd/utils/randomkeygen.)
+2. Sets up CSRFProtect to provide asynchronous keys that protect the app from a CSRF attack. Students will need to generate a unique basic 16 secret key with [https://acte.ltd/utils/randomkeygen](https://acte.ltd/utils/randomkeygen.)
 3. Define a secure Content Secure Policy (CSP) head
 4. Configures the flask APP
-5. Redirects the root to /index.html
-6. Renders the /index.html
+5. Redirects the /index.html to the domain root for a consistent user experience
+6. Renders the index.html for a GET app route.
 
 ```python
 from flask import Flask
@@ -568,18 +599,18 @@ from flask_csp.csp import csp_header
 import logging
 
 
-# Generate a basic 16 key: https://acte.ltd/utils/randomkeygen
+# Generate a unique basic 16 key: https://acte.ltd/utils/randomkeygen
 app = Flask(__name__)
 csrf = CSRFProtect(app)
 app.secret_key = b"6HlQfWhu03PttohW;apl"
 
 
-@app.route("/", methods=["GET"])
-def root():
-    return redirect("/index.html", 302)
-
-
 @app.route("/index.html", methods=["GET"])
+def root():
+    return redirect("/", 302)
+
+
+@app.route("/", methods=["GET"])
 @csp_header(
     {
         "default-src": "'self'",
@@ -604,10 +635,10 @@ if __name__ == "__main__":
 
 ```
 
-### Step 7: Test the APP
+### Step 7: Test the basic index.html
 
 ```bash
-python app.py
+python main.py
 ```
 
 ![A render of the basic index.html](README_resources\basic_index.png "The basic index.html should load like this")
@@ -626,29 +657,77 @@ python app.py
 {% endblock %}
 ```
 
+Extend `main.py` to include an app route to privacy.html
+
 ```python
 @app.route("/privacy.html", methods=["GET"])
 def privacy():
     return render_template("/privacy.html")
 ```
 
-### Step 9: Setup the cards and request the data from the API
+### Step 9: Test privacy.html and search functionality.
 
-> [!note]
-> This is an implementation of the [Bootstrap Card](https://getbootstrap.com/docs/5.3/components/card/) in a responsive[Bootstrap Column Layout](https://getbootstrap.com/docs/5.3/layout/columns/).
+![A render of the privacy.html](README_resources\privacy_search.png "The privacy index.html should load like this")
+
+Ensure your page renders correctly with the following features:
+
+1. The page loads
+2. The privacy menu item is darker than the other menu items
+3. A search for 'priv' highlights the correct letters in the main body.
+
+### Step 10: Setup the cards and request the data from the API
+
+Extend the `index():` method in `main.py` so it requests data from the API and handles the exception that the API did not response with a error message.
 
 ```python
 def index():
     url = "http://127.0.0.1:1000"
-    response = requests.get(url)
-    data = response.json()
-    return render_template("/index.html", data=data)
+    try:
+        response = requests.get(url)
+        response.raise_for_status()  # Raise an exception for HTTP errors
+        data = response.json()
+    except requests.exceptions.RequestException as e:
+        data = {"error": "Failed to retrieve data from the API"}
+    return render_template("index.html", data=data)
 ```
+
+Extend the html in 'index.html` template that:
+
+1. Implements a [Bootstrap jumbotron heading](https://getbootstrap.com/docs/5.3/examples/jumbotron/)
+2. Implements a [Bootstrap button group](https://getbootstrap.com/docs/5.3/components/button-group/) that will later allow users to filter the extensions by language.
+3. Implements the database items as [Bootstrap cards](https://getbootstrap.com/docs/5.3/components/card/) in a responsive[Bootstrap Column Layout](https://getbootstrap.com/docs/5.3/layout/columns/).
+4. Provides API error feedback to the user
 
 ```html
 {% extends 'layout.html' %} {% block content %}
+<div class="container py-4"">
+  <div class="p-4 bg-body-tertiary rounded-3">
+    <div class="container-fluid py-2">
+      <h1 class="display-4">VS Code Extensions for Software Engineering</h1>
+      <p class="lead">
+        This is a collection of Visual Studio Code extensions that are useful
+        for software engineering.
+      </p>
+    </div>
+  </div>
+</div>
 <div class="container">
   <div class="row">
+    <div class="btn-group" role="group" aria-label="Filter by language">
+      <button type="button" class="btn btn-primary" id="all">All</button>
+      <button type="button" class="btn btn-primary" id="python">Python</button>
+      <button type="button" class="btn btn-primary" id="c++">C++</button>
+      <button type="button" class="btn btn-primary" id="bash">BASH</button>
+      <button type="button" class="btn btn-primary" id="sql">SQL</button>
+      <button type="button" class="btn btn-primary" id="html">HTML</button>
+      <button type="button" class="btn btn-primary" id="css">CSS</button>
+      <button type="button" class="btn btn-primary" id="js">JAVASCRIPT</button>
+    </div>
+  </div>
+</div>
+<div class="container p-4">
+  <div class="row">
+    <div class="error"><h5>{{ data.error }}</h5></div>
     {% for row in data %}
     <div class="col-sm-12 col-lg-4">
       <div class="card" style="width: 18rem">
@@ -669,3 +748,5 @@ def index():
 </div>
 {% endblock %}
 ```
+
+### Step 11: Test the index.html and API integration

@@ -1,7 +1,18 @@
 {% extends 'layout.html' %} {% block content %}
+<div class="container py-4"">
+  <div class="p-4 bg-body-tertiary rounded-3">
+    <div class="container-fluid py-2">
+      <h1 class="display-4">VS Code Extensions for Software Engineering</h1>
+      <p class="lead">
+        This is a collection of Visual Studio Code extensions that are useful
+        for software engineering.
+      </p>
+    </div>
+  </div>
+</div>
 <div class="container">
   <div class="row">
-    <div class="btn-group p-4" role="group" aria-label="Filter by language">
+    <div class="btn-group" role="group" aria-label="Filter by language">
       <button type="button" class="btn btn-primary" id="all">All</button>
       <button type="button" class="btn btn-primary" id="python">Python</button>
       <button type="button" class="btn btn-primary" id="c++">C++</button>
@@ -13,7 +24,7 @@
     </div>
   </div>
 </div>
-<div class="container">
+<div class="container p-4">
   <div class="row">
     <div class="error"><h5>{{ data.error }}</h5></div>
     {% for row in data %}

@@ -12,18 +12,18 @@ import logging
 # app.logger.critical("message")
 
 
-# Generate a basic 16 key: https://acte.ltd/utils/randomkeygen
+# Generate a unique basic 16 key: https://acte.ltd/utils/randomkeygen
 app = Flask(__name__)
 csrf = CSRFProtect(app)
 app.secret_key = b"6HlQfWhu03PttohW;apl"
 
 
-@app.route("/", methods=["GET"])
-def root():
-    return redirect("/index.html", 302)
-
-
 @app.route("/index.html", methods=["GET"])
+def root():
+    return redirect("/", 302)
+
+
+@app.route("/", methods=["GET"])
 @csp_header(
     {
         "default-src": "'self'",
