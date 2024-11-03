@@ -258,8 +258,8 @@ Update the `extension_add():` method in `database_manager.py` to validate the JS
 5. The image pattern requires https but `<` and `>` are not allowed to prevent XXS attacks.
 6. Languages must enumerate with the list of languages.
 
-> [!note]
-> You can use [https://regex101.com/](https://regex101.com/) to design and test patterns for your own database design.
+> [!Important]
+> You can use [https://regex101.com/](https://regex101.com/) to design and test patterns for your own database design. It is important to understand a regular expression may look slightly different between languages due to the way characters need to be escaped.
 
 ```python
     if validate_json(data):
@@ -750,3 +750,5 @@ Extend the html in 'index.html` template that:
 ```
 
 ### Step 11: Test the index.html and API integration
+
+![Screen recording testing a the index and the API integration](/docs/README_resources/test_index_and_API.gif "Follow these steps to test your index.html and API")
