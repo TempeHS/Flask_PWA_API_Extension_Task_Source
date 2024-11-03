@@ -11,10 +11,7 @@ from flask import current_app
 def extension_get(lang):
     con = sql.connect(".database/data_source.db")
     cur = con.cursor()
-    if lang == "*":
-        cur.execute("SELECT * FROM extension")
-    else:
-        cur.execute("SELECT * FROM extension WHERE language LIKE ?;", [lang])
+    cur.execute("SELECT * FROM extension WHERE language LIKE ?;", [lang])
     migrate_data = [
         dict(
             extID=row[0],
@@ -69,7 +66,7 @@ schema = {
         "about": {"type": "string"},
         "image": {
             "type": "string",
-            "pattern": "^(ht|f)tp(s?)\:\/\/[0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*(:(0-9)*)*(\/?)(?!.*[<>])([a-zA-Z0-9\-\.\?\,'\/\\\+&amp;%\$#_]*)?$",
+            "pattern": "^https:\/\/(?!.*[<>])[a-zA-Z0-9\-\._~:\/\?#\[\]@!$&'\(\)\*\+,;\=]*$",
         },
         "language": {
             "type": "string",

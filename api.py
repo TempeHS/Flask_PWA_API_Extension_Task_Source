@@ -38,10 +38,9 @@ def get():
     if request.args.get("lang") and request.args.get("lang").isalpha():
         lang = request.args.get("lang")
         lang = lang.upper()
-        api.logger.critical(f"language = {lang}")
         content = dbHandler.extension_get(lang)
     else:
-        content = dbHandler.extension_get("*")
+        content = dbHandler.extension_get("%")
     return (content), 200
 
 

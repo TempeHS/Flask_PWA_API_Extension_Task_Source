@@ -1,8 +1,8 @@
 # Flask PWA - API Extension Task
 
-This task is to build a safe API that extends the [Flask PWA - Programming for the Web Task](https://github.com/TempeHS/Flask_PWA_Programming_For_The_Web_Task_Template). From the parent task students will abstract the database and management to an API. The website will then be retooled to GET request the data from the API and POST request data to to API.
+This task is to build a safe API that extends the [Flask PWA - Programming for the Web Task](https://github.com/TempeHS/Flask_PWA_Programming_For_The_Web_Task_Template). From the parent task students will abstract the database and management to an API. The PWA will then be retooled to GET request the data from the API and POST request data to to API. The PWA will also use the [Bootstrap](https://getbootstrap.com/) frontend framework.
 
-> [!important]
+> [!note]
 > The template for this project has been pre-populated with assets from the Flask PWA task including the logo, icons and .database. Students can migrate their own assets if they wish.
 
 ## Dependencies
@@ -23,8 +23,8 @@ This task is to build a safe API that extends the [Flask PWA - Programming for t
     pip install requests
 ```
 
-> [!Note]
-> These instructions are not as verbose as the parent task because students are expected to be familiar with Bash, Flask & SQLite3. The focus of the instructions is to model how to incrementally build and test an API and PWA.
+> [!Important]
+> These instructions are not as verbose as the parent task because students are expected to be familiar with Bash, Flask & SQLite3. The focus of the API instructions are to model how to incrementally build and test an API. The focus of the PWA instructions are how to use the [Bootstrap](https://getbootstrap.com/) frontend framework to rapidly prototype an enhanced UI/UX frontend.
 
 ## Instructions for building the API
 
@@ -32,15 +32,16 @@ This task is to build a safe API that extends the [Flask PWA - Programming for t
 
 Watch: [Build a Flask API in 12 Minutes](https://www.youtube.com/watch?v=zsYIw6RXjfM)
 
+> [!Note]
+> The video uses [Postman](https://www.postman.com/), this tutorial uses [Thunder Client](https://www.thunderclient.com/) a VS Code extension that has similar functionality.
+
 ### Step 2: Create the Directory Structure
 
-Students can create files as they are needed. This structure defines the correct directory structure for all files. As students `touch` each files they should refer to this structure to ensure the file path is correct.
+Students can create files as they are needed. This structure defines the correct directory structure for all files. As students `touch` each file they should refer to this structure to ensure the file path is correct.
 
 ```text
 ├── .database
-│   ├── data_source.db
-│   └── my_queries.sqlite3-query
-├── .workingdocuments
+│   └─── data_source.db
 ├── static
 │   ├── css
 │   │   ├──bootstrap.min.css
@@ -67,21 +68,21 @@ Students can create files as they are needed. This structure defines the correct
 │   ├──index.html
 │   ├──layout.html
 │   └──privacy.html
-├── LICENSE
 ├── api.py
-├── app.py
-└── database_manager.py
+├── database_manager.py
+├── LICENSE
+└── main.py
 ```
 
 ### Step 3 setup a basic API in api.py
 
-This Python implementation:
+This Python implementation in 'api.py':
 
 1. Imports all the required dependencies for the whole project
-2. Configures the 'Cross Origin Request policy
+2. Configures the 'Cross Origin Request' policy
 3. Configures the rate limiter
-4. Sets a API route GET method to return a string and 200 response
-5. Sets a API route POST method to return the POST data and a 201 response
+4. Configure a route for the root `/` with a GET method to return stub data and 200 response
+5. Configure a route to /add_extension with a POST method to return stub data and a 201 response
 
 ```python
 from flask import Flask
@@ -128,7 +129,7 @@ if __name__ == "__main__":
 
 ### Step 4: Build a basic GET response
 
-Extend the GET request in `api.py` to get data from the database from the bdHandler and return it to the request with the status `200`.
+Extend the `get():` method in `api.py` to get data from the database via the `dbHandler` and return it to the request with the status `200`.
 
 ```python
 def get():
@@ -136,9 +137,9 @@ def get():
     return (content), 200
 ```
 
-Implement a database query that returns JSON data in `database_manager.py` to the request GET method that:
+This Python implementation in 'database_manager.py'
 
-1. Imports all the required dependencies
+1. Imports all the required dependencies for the project
 2. Connects to the SQLite3 database
 3. Executes a query
 4. Converts the query data to a JSON structure
@@ -167,48 +168,44 @@ def extension_get():
         for row in cur.fetchall()
     ]
     return jsonify(migrate_data)
-
 ```
 
 ### Step 5: Test your basic GET Response
 
 ![Screen recording testing a API GET with Thunder Client](README_resources\test_basic_GET_API.gif "Follow these steps to test your basic GET API")
 
-### Step 6 Add a language argument to filter extensions by language
+### Step 6 Add a GET request argument to filter extensions by language
 
-Extend the GET request in `api.py` to either get all data or data that matches a language parameter from the database that
+Extend the `get():` method in `api.py` to either get all data or data that matches a language parameter from the database by
 
 1. Validating the argument is "lang" and that the "lang" is only alpha characters for security
 2. Passing the language request to the dbHandler
-3. Return the data from dbHandler to the request
-4. return the status `200`
+3. If no language is specified the wildcard `%` will be passed
+4. Return the data from dbHandler to the request
+5. Return the status `200`
 
 ```python
 def get():
     # For security data is validated on entry
     if request.args.get("lang") and request.args.get("lang").isalpha():
         lang = request.args.get("lang")
-        lang = lang.upper()
-        api.logger.critical(f"language = {lang}")
+        lang = lang.upper()*
         content = dbHandler.extension_get(lang)
     else:
-        content = dbHandler.extension_get("*")
+        content = dbHandler.extension_get("%")
     return (content), 200
 ```
 
-Extend the database query to filter the SQL query based on the argument parameter and return it as JSON data to the request GET method that:
+Extend the database query in the `extension_get():` method in the `database_manager.py` to filter the SQL query based on the argument parameter and return it as JSON data where:
 
-1. If no parameter or a invalid parameter is passed the function will return the entire database in a JSON format.
-2. If a valid parameter is passed the database will be queried with with a LIKE and all matching (if any) will be returned
+1. If no valid parameter is passed the function will return the entire database in a JSON format because of the `%` wildcard.
+2. If a valid parameter is passed the database will be queried with with a `WHERE language LIKE' SQL query so all matching languages (if any) will be returned in a JSON format.
 
 ```python
 def extension_get(lang):
     con = sql.connect(".database/data_source.db")
     cur = con.cursor()
-    if lang == "*":
-        cur.execute("SELECT * FROM extension")
-    else:
-        cur.execute("SELECT * FROM extension WHERE language LIKE ?;", [lang])
+    cur.execute("SELECT * FROM extension WHERE language LIKE ?;", [lang])
     migrate_data = [
         dict(
             extID=row[0],
@@ -229,7 +226,7 @@ def extension_get(lang):
 
 ### Step 8: Setup your basic POST response
 
-Extend /add_extension POST request to pass the POST data to teh DB Handler and return the response with a 201 status code.
+Extend `/add_extension` route in `api.py` to pass the POST data to the 'dbHandler' and setup a driver to return the response with a 201 status code.
 
 ```python
 def post():
@@ -238,7 +235,7 @@ def post():
     return response
 ```
 
-Extend the dbHandler to pass the data back to the POST request.
+Extend the `extension_add():` method in the `database_manager.py` to be a driver that returns the received data back to the POST request.
 
 ```python
 def extension_add(response):
@@ -252,16 +249,17 @@ def extension_add(response):
 
 ### Step 10: Extend the dbHandler to validate the JSON
 
-Update the extension_add method to validate the JSON and return a message and response code. The schema validates the JSON with the following rules:
+Update the `extension_add():` method in `database_manager.py` to validate the JSON and return a message and response code. The schema provided validates the JSON with the following rules:
 
 1. All 5 properties are required.
 2. No extra properties are allowed.
 3. The data type for all 5 properties are string.
 4. The hyperlink pattern enforces the URL to start with `https://marketplace.visualstudio.com/items?itemName=` and the characters `<` and `>` are not allowed to prevent XXS attacks.
-5. The image pattern requires a URL but `<` and `>` are not allowed to prevent XXS attacks.
+5. The image pattern requires https but `<` and `>` are not allowed to prevent XXS attacks.
 6. Languages must enumerate with the list of languages.
 
-Use [https://regex101.com/](https://regex101.com/) to design and test patterns for your own database design.
+> [!note]
+> You can use [https://regex101.com/](https://regex101.com/) to design and test patterns for your own database design.
 
 ```python
     if validate_json(data):
@@ -288,7 +286,7 @@ schema = {
         "about": {"type": "string"},
         "image": {
             "type": "string",
-            "pattern": "^(ht|f)tp(s?)\:\/\/[0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*(:(0-9)*)*(\/?)(?!.*[<>])([a-zA-Z0-9\-\.\?\,'\/\\\+&amp;%\$#_]*)?$",
+            "pattern": "^https:\/\/(?!.*[<>])[a-zA-Z0-9\-\._~:\/\?#\[\]@!$&'\(\)\*\+,;\=]*$",
         },
         "language": {
             "type": "string",
@@ -318,7 +316,7 @@ Sample JSON data to test the API:
 
 ### Step 11: Insert the POST data to the database
 
-Update the extension_add() method to INSERT the JSON data into the database. The extID not included as it has been configured to auto increment.
+Update the `extension_add():` method in database_manager.py`to INSERT the JSON data into the database. The`extID` is not required as it has been configured to auto increment in the database.
 
 ```python
 def extension_add(data):
@@ -344,7 +342,7 @@ def extension_add(data):
 
 ### 12: Configure the logger to log to api_security_log.log
 
-Add this Python to the api.py directly below the imports to configure the logger to log to a log file for security analysis.
+Extend the `api.py` with the below implementation that should inserted directly below the `imports`. This will to configure the logger to log to a log file for security analysis.
 
 ```python
 app_log = logging.getLogger(__name__)
