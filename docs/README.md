@@ -125,7 +125,7 @@ if __name__ == "__main__":
 
 ### Step 3: Test your basic API with Thunder Client
 
-![Screen recording testing an API with Thunder Client](README_resources\test_basic_API.gif "Follow these steps to test your basic API")
+![Screen recording testing an API with Thunder Client](/docs/README_resources/test_basic_API.gif "Follow these steps to test your basic API")
 
 ### Step 4: Build a basic GET response
 
@@ -172,7 +172,7 @@ def extension_get():
 
 ### Step 5: Test your basic GET Response
 
-![Screen recording testing a API GET with Thunder Client](README_resources\test_basic_GET_API.gif "Follow these steps to test your basic GET API")
+![Screen recording testing a API GET with Thunder Client](/docs/README_resources/test_basic_GET_API.gif "Follow these steps to test your basic GET API")
 
 ### Step 6 Add a GET request argument to filter extensions by language
 
@@ -222,7 +222,7 @@ def extension_get(lang):
 
 ### Step 7: Test your GET Response
 
-![Screen recording testing a API GET with Thunder Client](README_resources\test_GET_API.gif "Follow these steps to test your GET API")
+![Screen recording testing a API GET with Thunder Client](/docs/README_resources/test_GET_API.gif "Follow these steps to test your GET API")
 
 ### Step 8: Setup your basic POST response
 
@@ -245,7 +245,7 @@ def extension_add(response):
 
 ### Step 9: Test your basic POST response
 
-![Screen recording testing a API basic POST with Thunder Client](README_resources\test_basic_POST_API.gif "Follow these steps to test your basic POST API")
+![Screen recording testing a API basic POST with Thunder Client](/docs/README_resources/test_basic_POST_API.gif "Follow these steps to test your basic POST API")
 
 ### Step 10: Extend the dbHandler to validate the JSON
 
@@ -312,7 +312,7 @@ Sample JSON data to test the API:
 
 ### Step 10: Test your validation POST response
 
-![Screen recording testing a API basic POST with Thunder Client](README_resources\test_basic_POST_API.gif "Follow these steps to test your basic POST API")
+![Screen recording testing a API basic POST with Thunder Client](/docs/README_resources/test_basic_POST_API.gif "Follow these steps to test your basic POST API")
 
 ### Step 11: Insert the POST data to the database
 
