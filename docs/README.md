@@ -86,8 +86,7 @@ This Python implementation:
 ```python
 from flask import Flask
 from flask import request
-from flask import jsonify
-from flask_cors import CORS, cross_origin
+from flask_cors import CORS
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 import logging
@@ -148,7 +147,6 @@ Implement a database query that returns JSON data in `database_manager.py` to th
 ```python
 from flask import jsonify
 import sqlite3 as sql
-import json
 from jsonschema import validate
 from flask import current_app
 
@@ -428,7 +426,7 @@ This is a simple footer that provides a link to the privacy page.
 </div>
 ```
 
-### Step 4: Setup the menu.html and add some advanced features
+### Step 4: Setup the menu.html and add some UX/accessibility advanced features using JS.
 
 > [!note]
 > This is an adaption of the basic [Bootstrap Navbar](https://getbootstrap.com/docs/5.3/components/navbar/).
@@ -481,7 +479,7 @@ Insert the HTML structure for the Navbar
 </nav>
 ```
 
-Add a script that toggles the active menu and the `aria-current="page"` attribute for the current URL to the app.js.
+Add a script that toggles the active class and the `aria-current="page"` attribute for the current URL to the app.js. The active class improves UX by styling the current page in the menu differently and adding the [aria-current attribute](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-current) to the current page improves the context understanding of screen readers.
 
 ```js
 document.addEventListener("DOMContentLoaded", function () {

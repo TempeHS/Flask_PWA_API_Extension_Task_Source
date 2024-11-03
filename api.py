@@ -1,12 +1,15 @@
 from flask import Flask
 from flask import request
-from flask import jsonify
-from flask_cors import CORS, cross_origin
+from flask_cors import CORS
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 import logging
 
 import database_manager as dbHandler
+
+
+# Code snippet for logging a message
+# api.logger.critical("message")
 
 
 app_log = logging.getLogger(__name__)

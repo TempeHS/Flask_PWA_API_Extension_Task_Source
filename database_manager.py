@@ -1,6 +1,5 @@
 from flask import jsonify
 import sqlite3 as sql
-import json
 from jsonschema import validate
 from flask import current_app
 

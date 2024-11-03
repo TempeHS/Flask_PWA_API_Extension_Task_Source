@@ -1,26 +1,80 @@
-{% extends 'layout.html' %}
-{% block content %}
+{% extends 'layout.html' %} {% block content %}
 <div class="container">
   <div class="row">
-    <h1>Sample Secure Form</h1>
+    <h1>Add an Extension</h1>
+    <div class="error"><h5>{{ data.error }}{{ data.message }}</h5></div>
   </div>
 </div>
 <div class="container">
   <div class="row">
-    <form action="/form.html" method="POST" class="box">
+    <form action="/add.html" method="POST" class="box">
       <div class="col-auto">
-        <label name="exampleFormControlInput1" class="form-label">Email address</label>
-        <input name="email" type="email" class="form-control" id="exampleFormControlInput1" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" placeholder="name@example.com">
+        <label for="ExtensionName" class="form-label">Extension name</label>
+        <textarea
+          class="form-control"
+          name="name"
+          id="name"
+          rows="1"
+        ></textarea>
       </div>
       <div class="col-auto">
-        <label for="exampleFormControlTextarea1" class="form-label">Example text area</label>
-        <textarea class="form-control" name="text" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <label name="hyperlink" class="form-label"
+          >Hyperlink to extension</label
+        >
+        <input
+          name="hyperlink"
+          type="url"
+          class="form-control"
+          id="hyperlink"
+          placeholder="https://marketplace.visualstudio.com/items?itemName="
+          pattern="^https:\/\/marketplace\.visualstudio\.com\/items\?itemName=(?!.*[<>])[a-zA-Z0-9\-\._~:\/\?#\[\]@!$&'\(\)\*\+,;\=]*$"
+        />
       </div>
-      <br/>
+      <div class="col-auto">
+        <label for="about" class="form-label">About</label>
+        <textarea
+          class="form-control"
+          name="about"
+          id="about"
+          rows="3"
+          placeholder="A brief description of the extension"
+        ></textarea>
+      </div>
+      <div class="col-auto">
+        <label name="image" class="form-label">URL to Icon</label>
+        <input
+          name="image"
+          type="url"
+          class="form-control"
+          id="image"
+          pattern="^(ht|f)tp(s?)\:\/\/[0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*(:(0-9)*)*(\/?)(?!.*[<>])([a-zA-Z0-9\-\.\?\,'\/\\\+&amp;%\$#_]*)?$"
+          placeholder="https://"
+        />
+      </div>
+      <div class="col-auto">
+        <label name="exampleFormControlInput1" class="form-label"
+          >Programming language</label
+        >
+        <select
+          name="language"
+          id="language"
+          class="form-select"
+          aria-label="Default select language"
+        >
+          <option selected>Select a language from this menu</option>
+          <option value="1">Python</option>
+          <option value="2">Bash</option>
+          <option value="3">SQL</option>
+          <option value="4">HTML/option></option>
+          <option value="5">CSS</option>
+          <option value="6">JAVASCRIPT</option>
+        </select>
+      </div>
+      <br />
       <div class="col-auto">
         <button type="submit" class="btn btn-primary mb-3">Submit</button>
       </div>
-      <input type="hidden" name="csrf_token" value = "{{ csrf_token() }}" />
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
     </form>
   </div>
 </div>
