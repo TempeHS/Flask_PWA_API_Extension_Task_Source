@@ -1,9 +1,9 @@
 # Flask PWA - API Extension Task
 
-This task is to build a safe API that extends the [Flask PWA - Programming for the Web Task](https://github.com/TempeHS/Flask_PWA_Programming_For_The_Web_Task_Template). From the parent task students will abstract the database and management to an API. The PWA will then be retooled to GET request the data from the API and POST request data to to API. The PWA will also use the [Bootstrap](https://getbootstrap.com/) frontend framework.
+This task is to build a safe API that extends the [Flask PWA - Programming for the Web Task](https://github.com/TempeHS/Flask_PWA_Programming_For_The_Web_Task_Template). From the parent task, students will abstract the database and management to an API. The PWA will then be retooled to GET request the data from the API and POST request data to to API. The PWA will also use the [Bootstrap](https://getbootstrap.com/) frontend framework.
 
 > [!note]
-> The template for this project has been pre-populated with assets from the Flask PWA task including the logo, icons and .database. Students can migrate their own assets if they wish.
+> The template for this project has been pre-populated with assets from the Flask PWA task, including the logo, icons and .database. Students can migrate their own assets if they wish.
 
 ## Dependencies
 
@@ -24,7 +24,7 @@ This task is to build a safe API that extends the [Flask PWA - Programming for t
 ```
 
 > [!Important]
-> These instructions are not as verbose as the parent task because students are expected to be familiar with Bash, Flask & SQLite3. The focus of the API instructions are to model how to incrementally build and test an API. The focus of the PWA instructions are how to use the [Bootstrap](https://getbootstrap.com/) frontend framework to rapidly prototype an enhanced UI/UX frontend.
+> These instructions are less verbose than the parent task because students are expected to be familiar with Bash, Flask & SQLite3. The focus of the API instructions is to model how to build and test an API incrementally. The focus of the PWA instructions is how to use the [Bootstrap](https://getbootstrap.com/) frontend framework to prototype an enhanced UI/UX frontend rapidly.
 
 ## Instructions for building the API
 
@@ -37,7 +37,7 @@ Watch: [Build a Flask API in 12 Minutes](https://www.youtube.com/watch?v=zsYIw6R
 
 ### Step 2: Create the Directory Structure
 
-Students can create files as they are needed. This structure defines the correct directory structure for all files. As students `touch` each file they should refer to this structure to ensure the file path is correct.
+Students can create files as they are needed. This structure defines the correct directory structure for all files. As students `touch` each file, they should refer to this structure to ensure the file path is correct.
 
 ```text
 ├── .database
@@ -74,15 +74,15 @@ Students can create files as they are needed. This structure defines the correct
 └── main.py
 ```
 
-### Step 3 setup a basic API in api.py
+### Step 3: Setup a basic API in api.py
 
 This Python implementation in 'api.py':
 
-1. Imports all the required dependencies for the whole project
-2. Configures the 'Cross Origin Request' policy
-3. Configures the rate limiter
-4. Configure a route for the root `/` with a GET method to return stub data and 200 response
-5. Configure a route to /add_extension with a POST method to return stub data and a 201 response
+1. Imports all the required dependencies for the whole project.
+2. Configures the 'Cross Origin Request' policy.
+3. Configures the rate limiter.
+4. Configure a route for the root `/` with a GET method to return stub data and a 200 response.
+5. Configure a route to /add_extension with a POST method to return stub data and a 201 response.
 
 ```python
 from flask import Flask
@@ -129,7 +129,7 @@ if __name__ == "__main__":
 
 ### Step 4: Build a basic GET response
 
-Extend the `get():` method in `api.py` to get data from the database via the `dbHandler` and return it to the request with the status `200`.
+Extend the `get():` method in `api.py` to get data from the database via the `dbHandler` and return it to the request with a status `200`.
 
 ```python
 def get():
@@ -178,11 +178,11 @@ def extension_get():
 
 Extend the `get():` method in `api.py` to either get all data or data that matches a language parameter from the database by
 
-1. Validating the argument is "lang" and that the "lang" is only alpha characters for security
-2. Passing the language request to the dbHandler
-3. If no language is specified the wildcard `%` will be passed
-4. Return the data from dbHandler to the request
-5. Return the status `200`
+1. Validating the argument is "lang" and that the "lang" is only alpha characters for security.
+2. Passing the language request to the dbHandler.
+3. If no language is specified, the wildcard `%` will be passed.
+4. Return the data from dbHandler to the request.
+5. Return a status `200`.
 
 ```python
 def get():
@@ -198,8 +198,8 @@ def get():
 
 Extend the database query in the `extension_get():` method in the `database_manager.py` to filter the SQL query based on the argument parameter and return it as JSON data where:
 
-1. If no valid parameter is passed the function will return the entire database in a JSON format because of the `%` wildcard.
-2. If a valid parameter is passed the database will be queried with with a `WHERE language LIKE' SQL query so all matching languages (if any) will be returned in a JSON format.
+1. If no valid parameter is passed, the function will return the entire database in a JSON format because of the `%` wildcard.
+2. If a valid parameter is passed, the database will be queried with a `WHERE language LIKE' SQL query, and all matching languages (if any) will be returned in JSON format.
 
 ```python
 def extension_get(lang):
@@ -226,7 +226,7 @@ def extension_get(lang):
 
 ### Step 8: Setup your basic POST response
 
-Extend `/add_extension` route in `api.py` to pass the POST data to the 'dbHandler' and setup a driver to return the response with a 201 status code.
+Extend the `/add_extension` route in api.py to pass the POST data to the 'dbHandler' and set up a driver to return the response with a 201 status code.
 
 ```python
 def post():
@@ -235,7 +235,7 @@ def post():
     return response
 ```
 
-Extend the `extension_add():` method in the `database_manager.py` to be a driver that returns the received data back to the POST request.
+Extend the `extension_add():` method in the `database_manager.py` to be a driver that returns the received data to the POST request.
 
 ```python
 def extension_add(response):
@@ -253,13 +253,13 @@ Update the `extension_add():` method in `database_manager.py` to validate the JS
 
 1. All 5 properties are required.
 2. No extra properties are allowed.
-3. The data type for all 5 properties are string.
-4. The hyperlink pattern enforces the URL to start with `https://marketplace.visualstudio.com/items?itemName=` and the characters `<` and `>` are not allowed to prevent XXS attacks.
+3. The data type for all 5 properties is string.
+4. The hyperlink pattern enforces the URL to start with `https://marketplace.visualstudio.com/items?itemName=`, and the characters `<` and `>` are not allowed to prevent XXS attacks.
 5. The image pattern requires https but `<` and `>` are not allowed to prevent XXS attacks.
-6. Languages must enumerate with the list of languages.
+6. Languages must be enumerated with the list of languages.
 
 > [!Important]
-> You can use [https://regex101.com/](https://regex101.com/) to design and test patterns for your own database design. It is important to understand a regular expression may look slightly different between languages due to the way characters need to be escaped.
+> You can use [https://regex101.com/](https://regex101.com/) to design and test patterns for your database design. It is important to understand a regular expression may look slightly different between languages due to the way characters need to be escaped.
 
 ```python
     if validate_json(data):
@@ -316,9 +316,9 @@ Sample JSON data to test the API:
 
 ![Screen recording testing a API basic POST with Thunder Client](/docs/README_resources/test_basic_POST_API.gif "Follow these steps to test your basic POST API")
 
-### Step 11: Insert the POST data to the database
+### Step 11: Insert the POST data into the database
 
-Update the `extension_add():` method in database_manager.py`to INSERT the JSON data into the database. The`extID` is not required as it has been configured to auto increment in the database.
+Update the `extension_add():` method in database_manager.py` to INSERT the JSON data into the database. The `extID` is not required as it has been configured to auto increment in the database.
 
 ```python
 def extension_add(data):
@@ -344,7 +344,7 @@ def extension_add(data):
 
 ### 12: Configure the logger to log to api_security_log.log
 
-Extend the `api.py` with the below implementation that should inserted directly below the `imports`. This will to configure the logger to log to a log file for security analysis.
+Extend the `api.py` with the implementation below, which should be inserted directly below the `imports`. This will configure the logger to log to a file for security analysis.
 
 ```python
 app_log = logging.getLogger(__name__)
@@ -377,11 +377,11 @@ logging.basicConfig(
 
 This Jinga2/HTML implementation in layout.html:
 
-1. Security features are defined in the head
-2. The menu and footer is defined in a partial for easy maintenance
-3. The body will be defined by the block content when the `layout.html` is inherited
-4. Bootstrap components (CSS & JavaScript) are linked
-5. JS Components including the PWA service worker are linked
+1. Security features are defined in the head.
+2. The menu and footer are defined in a partial for easy maintenance.
+3. The body will be defined by the block content when the `layout.html` is inherited.
+4. Bootstrap components (CSS & JavaScript) are linked.
+5. JS Components, including the PWA service worker, are linked.
 
 ```html
 <!DOCTYPE html>
@@ -411,7 +411,7 @@ This Jinga2/HTML implementation in layout.html:
 
 ### Step 3: Setup the footer.html
 
-This HTML implementation provides full width horizontal rule and a Bootstrap column containing a link to the privacy page.
+This HTML implementation provides a full-width horizontal rule and a Bootstrap column containing a link to the privacy page.
 
 ```html
 <div class="container-fluid">
@@ -474,7 +474,7 @@ This HTML implementation is an adaption of the basic [Bootstrap Navbar](https://
 </nav>
 ```
 
-Extend the `app.js` with this script that toggles the active class and the `aria-current="page"` attribute for the current page menu item. The active class improves UX by styling the current page in the menu differently and adding the [aria-current attribute](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-current) to the current page which improves the context understanding of screen readers for enhanced accessibility.
+Extend the `app.js` with this script that toggles the active class and the `aria-current="page"` attribute for the current page menu item. The `active` class improves UX by styling the current page in the menu differently and adding the [`aria-current` attribute](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-current) to the current page which improves the context understanding of screen readers for enhanced accessibility.
 
 ```js
 document.addEventListener("DOMContentLoaded", function () {
@@ -567,9 +567,9 @@ Extend style.css to add the class required by the search script.
 }
 ```
 
-### Step 5: Inherit the layout to the /index.html and setup the app route.
+### Step 5: Inherit the layout to the /index.html and set up the app route.
 
-Insert the index HTML into index.html.
+Insert the basic HTML into index.html.
 
 ```html
 {% extends 'layout.html' %} {% block content %}
@@ -583,10 +583,10 @@ Insert the index HTML into index.html.
 This Python Flask implementation in `main.py`
 
 1. Imports all dependencies required for the whole project.
-2. Sets up CSRFProtect to provide asynchronous keys that protect the app from a CSRF attack. Students will need to generate a unique basic 16 secret key with [https://acte.ltd/utils/randomkeygen](https://acte.ltd/utils/randomkeygen.)
-3. Define a secure Content Secure Policy (CSP) head
-4. Configures the flask APP
-5. Redirects the /index.html to the domain root for a consistent user experience
+2. Sets up CSRFProtect to provide asynchronous keys that protect the app from a CSRF attack. Students will need to generate a unique basic 16 secret key with [https://acte.ltd/utils/randomkeygen](https://acte.ltd/utils/randomkeygen).
+3. Define a secure Content Secure Policy (CSP) head.
+4. Configures the Flask app.
+5. Redirect /index.html to the domain root for a consistent user experience.
 6. Renders the index.html for a GET app route.
 
 ```python
@@ -669,15 +669,15 @@ def privacy():
 
 ![A render of the privacy.html](README_resources\privacy_search.png "The privacy index.html should load like this")
 
-Ensure your page renders correctly with the following features:
+Ensure your page renders correctly with the test cases:
 
-1. The page loads
+1. The page renders correctly
 2. The privacy menu item is darker than the other menu items
-3. A search for 'priv' highlights the correct letters in the main body.
+3. A search for "priv" highlights the correct letters in the main body.
 
 ### Step 10: Setup the cards and request the data from the API
 
-Extend the `index():` method in `main.py` so it requests data from the API and handles the exception that the API did not response with a error message.
+Extend the `index():` method in `main.py` so it requests data from the API and handles the exception that the API did not respond with an error message.
 
 ```python
 def index():
@@ -693,10 +693,10 @@ def index():
 
 Extend the html in 'index.html` template that:
 
-1. Implements a [Bootstrap jumbotron heading](https://getbootstrap.com/docs/5.3/examples/jumbotron/)
+1. Implements a [Bootstrap jumbotron heading](https://getbootstrap.com/docs/5.3/examples/jumbotron/).
 2. Implements a [Bootstrap button group](https://getbootstrap.com/docs/5.3/components/button-group/) that will later allow users to filter the extensions by language.
 3. Implements the database items as [Bootstrap cards](https://getbootstrap.com/docs/5.3/components/card/) in a responsive[Bootstrap Column Layout](https://getbootstrap.com/docs/5.3/layout/columns/).
-4. Provides API error feedback to the user
+4. Provides API error feedback to the user.
 
 ```html
 {% extends 'layout.html' %} {% block content %}
