@@ -12,7 +12,7 @@ This task is to build a safe API that extends the [Flask PWA - Programming for t
 - [SQLite3 Editor](https://marketplace.visualstudio.com/items?itemName=yy0931.vscode-sqlite3-editor)
 - [Start git-bash](https://marketplace.visualstudio.com/items?itemName=McCarter.start-git-bash)
 - [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client)
-- pip installs (or pip3 if macOS)
+- pip/pip3 installs
 
 ```bash
     pip install Flask
@@ -24,7 +24,7 @@ This task is to build a safe API that extends the [Flask PWA - Programming for t
 ```
 
 > [!Note]
-> These instructions are not as verbose as the parent task because students are expected to be familiar with Bash, Flask & SQLite3
+> These instructions are not as verbose as the parent task because students are expected to be familiar with Bash, Flask & SQLite3. The focus of the instructions is to model how to incrementally build and test an API and PWA.
 
 ## Instructions for building the API
 
