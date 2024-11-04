@@ -263,9 +263,9 @@ Update the `extension_add():` method in `database_manager.py` to validate the JS
 
 ```python
     if validate_json(data):
-        return jsonify({"message": "Extension added successfully"}), 201
+        return {"message": "Extension added successfully"}, 201
     else:
-        return jsonify({"error": "Invalid JSON"}), 400
+        return {"error": "Invalid JSON"}, 400
 
 
 schema = {
@@ -337,9 +337,9 @@ def extension_add(data):
         )
         con.commit()
         con.close()
-        return jsonify({"message": "Extension added successfully"}), 201
+        return {"message": "Extension added successfully"}, 201
     else:
-        return jsonify({"error": "Invalid JSON"}), 400
+        return {"error": "Invalid JSON"}, 400
 ```
 
 ### Step 12: Implement POST Authorisation
@@ -361,7 +361,7 @@ def post():
         response = dbHandler.extension_add(data)
         return response
     else:
-        return jsonify({"error": "Unauthorized"}), 401
+        return {"error": "Unauthorized"}, 401
 ```
 
 ### Step 13: Test your authorization for a POST response
@@ -610,10 +610,12 @@ This Python Flask implementation in `main.py`
 
 1. Imports all dependencies required for the whole project.
 2. Sets up CSRFProtect to provide asynchronous keys that protect the app from a CSRF attack. Students will need to generate a unique basic 16 secret key with [https://acte.ltd/utils/randomkeygen](https://acte.ltd/utils/randomkeygen).
-3. Define a secure Content Secure Policy (CSP) head.
-4. Configures the Flask app.
-5. Redirect /index.html to the domain root for a consistent user experience.
-6. Renders the index.html for a GET app route.
+3. Defines the head attribute for authorising a POST request to the API.
+4. Define a secure Content Secure Policy (CSP) head.
+5. Configures the Flask app.
+6. Redirect /index.html to the domain root for a consistent user experience.
+7. Renders the index.html for a GET app route.
+8. Provide an endpoint to log CSP violations for security analysis.
 
 ```python
 from flask import Flask
@@ -629,6 +631,8 @@ import logging
 app = Flask(__name__)
 csrf = CSRFProtect(app)
 app.secret_key = b"6HlQfWhu03PttohW;apl"
+
+app_header = {"Authorisation": "4L50v92nOgcDCYUM"}
 
 
 @app.route("/index.html", methods=["GET"])
@@ -654,6 +658,13 @@ def root():
 )
 def index():
     return render_template("/index.html")
+
+
+@app.route("/csp_report", methods=["POST"])
+def csp_report():
+    with open("csp_reports.log", "a") as fh:
+        fh.write(request.data.decode() + "\n")
+    return "done"
 
 
 if __name__ == "__main__":
@@ -722,7 +733,7 @@ Extend the html in 'index.html` template that:
 1. Implements a [Bootstrap jumbotron heading](https://getbootstrap.com/docs/5.3/examples/jumbotron/).
 2. Implements a [Bootstrap button group](https://getbootstrap.com/docs/5.3/components/button-group/) that will later allow users to filter the extensions by language.
 3. Implements the database items as [Bootstrap cards](https://getbootstrap.com/docs/5.3/components/card/) in a responsive[Bootstrap Column Layout](https://getbootstrap.com/docs/5.3/layout/columns/).
-4. Provides API error feedback to the user.
+4. Provides API error feedback to the user that is styled by the [Bootstrap color utility](https://getbootstrap.com/docs/5.3/utilities/colors/).
 
 ```html
 {% extends 'layout.html' %} {% block content %}
@@ -753,23 +764,25 @@ Extend the html in 'index.html` template that:
 </div>
 <div class="container p-4">
   <div class="row">
-    <div class="error"><h5>{{ data.error }}</h5></div>
-    {% for row in data %}
-    <div class="col-sm-12 col-lg-4">
-      <div class="card" style="width: 18rem">
-        <img
-          src="{{ row.image }}"
-          class="card-img-top"
-          alt="Product image for the {{ row.name }} VSCode extension."
-        />
-        <div class="card-body">
-          <h5 class="card-title">{{ row.name }}</h5>
-          <p class="card-text">{{ row.about }}</p>
-          <a href="{{ row.hyperlink }}" class="btn btn-primary">Read More</a>
+    <div class="error"><h2 class="text-danger">{{ data.error }}</h2></div>
+    {% if data.error is not defined %}
+      {% for row in data %}
+      <div class="col-sm-12 col-lg-4">
+        <div class="card" style="width: 18rem">
+          <img
+            src="{{ row.image }}"
+            class="card-img-top"
+            alt="Product image for the {{ row.name }} VSCode extension."
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ row.name }}</h5>
+            <p class="card-text">{{ row.about }}</p>
+            <a href="{{ row.hyperlink }}" class="btn btn-primary">Read More</a>
+          </div>
         </div>
       </div>
-    </div>
-    {% endfor %}
+      {% endfor %}
+    {% endif %}
   </div>
 </div>
 {% endblock %}
@@ -778,3 +791,136 @@ Extend the html in 'index.html` template that:
 ### Step 11: Test the index.html and API integration
 
 ![Screen recording testing a the index and the API integration](/docs/README_resources/test_index_and_API.gif "Follow these steps to test your index.html and API")
+
+### Step 12: Implement a form with attribute controls to POST a new extension to API.
+
+The HTML Implementation in `add.html`
+
+1. Provides error and message feedback to the user that is styled by the [Bootstrap color utility](https://getbootstrap.com/docs/5.3/utilities/colors/).
+2. Uses [Bootstrap Forms](https://getbootstrap.com/docs/5.3/forms/form-control/) to layout a data entry form.
+3. Uses Form attributes type, place holder & pattern to improve user experience in entering the correct data.
+
+```html
+{% extends 'layout.html' %} {% block content %}
+<div class="container">
+  <div class="row">
+    <h1>Add an Extension</h1>
+    <div class="error">
+      <h2>
+        <span class="text-danger">{{ data.error }}</span
+        ><span class="text-success">{{ data.message }}</span>
+      </h2>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <form action="/add.html" method="POST" class="box">
+      <div class="col-auto">
+        <label for="ExtensionName" class="form-label">Extension name</label>
+        <textarea
+          class="form-control"
+          name="name"
+          id="name"
+          rows="1"
+        ></textarea>
+      </div>
+      <div class="col-auto">
+        <label name="hyperlink" class="form-label"
+          >Hyperlink to extension</label
+        >
+        <input
+          name="hyperlink"
+          type="url"
+          class="form-control"
+          id="hyperlink"
+          placeholder="https://marketplace.visualstudio.com/items?itemName="
+          pattern="^https:\/\/marketplace\.visualstudio\.com\/items\?itemName=(?!.*[<>])[a-zA-Z0-9\-._~:\/?#\[\]@!$&'()*+,;=]*$"
+        />
+      </div>
+      <div class="col-auto">
+        <label for="about" class="form-label">About</label>
+        <textarea
+          class="form-control"
+          name="about"
+          id="about"
+          rows="3"
+          placeholder="A brief description of the extension"
+        ></textarea>
+      </div>
+      <div class="col-auto">
+        <label name="image" class="form-label">URL to Icon</label>
+        <input
+          name="image"
+          type="url"
+          class="form-control"
+          id="image"
+          pattern="^https:\/\/(?!.*[<>])[a-zA-Z0-9\-._~:\/?#\[\]@!$&'()*+,;=]*$"
+          placeholder="https://"
+        />
+      </div>
+      <div class="col-auto">
+        <label name="exampleFormControlInput1" class="form-label"
+          >Programming language</label
+        >
+        <select
+          name="language"
+          id="language"
+          class="form-select"
+          aria-label="Default select language"
+        >
+          <option selected>Select a language from this menu</option>
+          <option value="Python">PYTHON</option>
+          <option value="CPP">CPP</option>
+          <option value="BASH">BASH</option>
+          <option value="SQL">SQL</option>
+          <option value="HTML">HTML</option>
+          <option value="CSS">CSS</option>
+          <option value="JAVASCRIPT">JAVASCRIPT</option>
+        </select>
+      </div>
+      <br />
+      <div class="col-auto">
+        <button type="submit" class="btn btn-primary mb-3">Submit</button>
+      </div>
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+    </form>
+  </div>
+</div>
+{% endblock %}
+```
+
+Extend `main.py' to provide a route with POST and GET methods for `add.html` that
+
+1. Render `add.html` on GET request with any errors or messages passed as data.
+2.
+
+```python
+@app.route("/add.html", methods=["POST", "GET"])
+def form():
+    if request.method == "POST":
+        name = request.form["name"]
+        hyperlink = request.form["hyperlink"]
+        about = request.form["about"]
+        image = request.form["image"]
+        language = request.form["language"]
+        data = {
+            "name": name,
+            "hyperlink": hyperlink,
+            "about": about,
+            "image": image,
+            "language": language,
+        }
+        try:
+            response = requests.post(
+                "http://127.0.0.1:1000/add_extension",
+                json=data,
+                headers=app_header,
+            )
+            data = response.json()
+        except requests.exceptions.RequestException as e:
+            data = {"error": "Failed to retrieve data from the API"}
+        return render_template("/add.html", data=data)
+    else:
+        return render_template("/add.html", data={})
+```

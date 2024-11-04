@@ -2,7 +2,6 @@ from flask import Flask
 from flask import redirect
 from flask import render_template
 from flask import request
-from flask import jsonify
 import requests
 from flask_wtf import CSRFProtect
 from flask_csp.csp import csp_header
@@ -73,7 +72,6 @@ def form():
             "image": image,
             "language": language,
         }
-        app.logger.critical(data)
         try:
             response = requests.post(
                 "http://127.0.0.1:1000/add_extension",
@@ -90,7 +88,7 @@ def form():
 
 @app.route("/csp_report", methods=["POST"])
 def csp_report():
-    with open("csp_reports", "a") as fh:
+    with open("csp_reports.log", "a") as fh:
         fh.write(request.data.decode() + "\n")
     return "done"
 

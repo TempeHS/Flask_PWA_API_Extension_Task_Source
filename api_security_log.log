@@ -85,3 +85,41 @@
 2024-11-04 11:49:10,468  * Debugger is active!
 2024-11-04 11:49:10,470  * Debugger PIN: 117-256-700
 2024-11-04 11:49:12,239 127.0.0.1 - - [04/Nov/2024 11:49:12] "GET / HTTP/1.1" 200 -
+2024-11-04 12:16:19,648 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:1000
+ * Running on http://10.185.241.29:1000
+2024-11-04 12:16:19,648 [33mPress CTRL+C to quit[0m
+2024-11-04 12:16:19,648  * Restarting with stat
+2024-11-04 12:16:20,031  * Debugger is active!
+2024-11-04 12:16:20,041  * Debugger PIN: 141-552-686
+2024-11-04 12:17:13,090  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
+2024-11-04 12:17:13,118  * Restarting with stat
+2024-11-04 12:17:13,515  * Debugger is active!
+2024-11-04 12:17:13,516  * Debugger PIN: 141-552-686
+2024-11-04 12:41:46,209  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
+2024-11-04 12:41:46,238  * Restarting with stat
+2024-11-04 12:41:47,083  * Debugger is active!
+2024-11-04 12:41:47,085  * Debugger PIN: 141-552-686
+2024-11-04 12:43:00,414  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
+2024-11-04 12:43:00,438  * Restarting with stat
+2024-11-04 12:43:00,808  * Debugger is active!
+2024-11-04 12:43:00,810  * Debugger PIN: 141-552-686
+2024-11-04 12:43:26,319  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
+2024-11-04 12:43:26,346  * Restarting with stat
+2024-11-04 12:43:26,729  * Debugger is active!
+2024-11-04 12:43:26,729  * Debugger PIN: 141-552-686
+2024-11-04 12:48:27,457  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
+2024-11-04 12:48:27,492  * Restarting with stat
+2024-11-04 12:48:27,876  * Debugger is active!
+2024-11-04 12:48:27,876  * Debugger PIN: 141-552-686
+2024-11-04 12:57:41,056 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:1000
+ * Running on http://10.185.241.29:1000
+2024-11-04 12:57:41,056 [33mPress CTRL+C to quit[0m
+2024-11-04 12:57:41,056  * Restarting with stat
+2024-11-04 12:57:41,419  * Debugger is active!
+2024-11-04 12:57:41,419  * Debugger PIN: 141-552-686
+2024-11-04 12:59:09,656 127.0.0.1 - - [04/Nov/2024 12:59:09] "GET / HTTP/1.1" 200 -
+2024-11-04 12:59:54,239 127.0.0.1 - - [04/Nov/2024 12:59:54] "[35m[1mPOST /add_extension HTTP/1.1[0m" 201 -
