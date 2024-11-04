@@ -120,7 +120,7 @@ def post():
 
 
 if __name__ == "__main__":
-    api.run(debug=True, host="0.0.0.0", port=1000)
+    api.run(debug=True, host="0.0.0.0", port=3000)
 ```
 
 ### Step 3: Test your basic API with Thunder Client
