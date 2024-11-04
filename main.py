@@ -11,6 +11,14 @@ import logging
 # Code snippet for logging a message
 # app.logger.critical("message")
 
+app_log = logging.getLogger(__name__)
+logging.basicConfig(
+    filename="main_security_log.log",
+    encoding="utf-8",
+    level=logging.DEBUG,
+    format="%(asctime)s %(message)s",
+)
+
 
 # Generate a unique basic 16 key: https://acte.ltd/utils/randomkeygen
 app = Flask(__name__)
@@ -43,6 +51,9 @@ def root():
 )
 def index():
     url = "http://127.0.0.1:3000"
+    if request.args.get("lang") and request.args.get("lang").isalpha():
+        lang = request.args.get("lang")
+        url += f"?lang={lang}"
     try:
         response = requests.get(url)
         response.raise_for_status()  # Raise an exception for HTTP errors
