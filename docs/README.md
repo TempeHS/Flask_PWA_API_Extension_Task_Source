@@ -318,7 +318,7 @@ Sample JSON data to test the API:
 
 ### Step 11: Insert the POST data into the database
 
-Update the `extension_add():` method in database_manager.py` to INSERT the JSON data into the database. The `extID` is not required as it has been configured to auto increment in the database.
+Update the `extension_add():` method in database_manager.py`to INSERT the JSON data into the database. The`extID` is not required as it has been configured to auto increment in the database.
 
 ```python
 def extension_add(data):
@@ -342,7 +342,33 @@ def extension_add(data):
         return jsonify({"error": "Invalid JSON"}), 400
 ```
 
-### 12: Configure the logger to log to api_security_log.log
+### Step 12: Implement POST Authorisation
+
+API Key Authorisation is a common and secure method to authorise an application or site as the API is not authorising a specific user. This is a very simple implementation of API Key Authorisation.
+
+Extend the `api.py` to store teh key as a variable. Students will need to generate a unique basic 16 secret key with [https://acte.ltd/utils/randomkeygen](https://acte.ltd/utils/randomkeygen).
+
+```python
+auth_key = "4L50v92nOgcDCYUM"
+```
+
+Extend the `def post():` method in `app.py` to request the `authorisation` attribute from the post head compare it to the `auth_key` then process the appropriate response.
+
+```python
+def post():
+    if request.headers.get("Authorisation") == auth_key:
+        data = request.get_json()
+        response = dbHandler.extension_add(data)
+        return response
+    else:
+        return jsonify({"error": "Unauthorized"}), 401
+```
+
+### Step 13: Test your authorization for a POST response
+
+![Screen recording testing a API basic POST with Thunder Client](/docs/README_resources/test_POST_API_Auth.gif "Follow these steps to test your POST API Authorisation")
+
+### 14: Configure the logger to log to api_security_log.log
 
 Extend the `api.py` with the implementation below, which should be inserted directly below the `imports`. This will configure the logger to log to a file for security analysis.
 

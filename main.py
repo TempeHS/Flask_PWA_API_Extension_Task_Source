@@ -17,6 +17,8 @@ app = Flask(__name__)
 csrf = CSRFProtect(app)
 app.secret_key = b"6HlQfWhu03PttohW;apl"
 
+app_header = {"Authorization": "Bearer 4L50v92nOgcDCYUM"}
+
 
 @app.route("/index.html", methods=["GET"])
 def root():
@@ -71,7 +73,9 @@ def form():
             "language": language,
         }
         try:
-            response = requests.post("http://127.0.0.1/add_extension", json=data)
+            response = requests.post(
+                "http://127.0.0.1/add_extension", json=data, headers=app_header
+            )
             response.raise_for_status()
             return jsonify(response.json()), response.status_code
         except requests.exceptions.RequestException as e:

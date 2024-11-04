@@ -1,5 +1,6 @@
 from flask import Flask
 from flask import request
+from flask import jsonify
 from flask_cors import CORS
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
@@ -20,6 +21,7 @@ logging.basicConfig(
     format="%(asctime)s %(message)s",
 )
 
+auth_key = "4L50v92nOgcDCYUM"
 
 api = Flask(__name__)
 cors = CORS(api)
@@ -47,9 +49,12 @@ def get():
 @api.route("/add_extension", methods=["POST"])
 @limiter.limit("1/second", override_defaults=False)
 def post():
-    data = request.get_json()
-    response = dbHandler.extension_add(data)
-    return response
+    if request.headers.get("Authorisation") == auth_key:
+        data = request.get_json()
+        response = dbHandler.extension_add(data)
+        return response
+    else:
+        return jsonify({"error": "Unauthorized"}), 401
 
 
 if __name__ == "__main__":
