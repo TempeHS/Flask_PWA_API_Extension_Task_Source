@@ -42,7 +42,7 @@ def root():
     }
 )
 def index():
-    url = "http://127.0.0.1:2000"
+    url = "http://127.0.0.1:3000"
     try:
         response = requests.get(url)
         response.raise_for_status()  # Raise an exception for HTTP errors
@@ -74,7 +74,7 @@ def form():
         }
         try:
             response = requests.post(
-                "http://127.0.0.1:2000/add_extension",
+                "http://127.0.0.1:3000/add_extension",
                 json=data,
                 headers=app_header,
             )
