@@ -1,6 +1,6 @@
 # Flask PWA - API Extension Task
 
-This task is to build a safe API that extends the [Flask PWA - Programming for the Web Task](https://github.com/TempeHS/Flask_PWA_Programming_For_The_Web_Task_Template). From the parent task, students will abstract the database and management to an API. The PWA will then be retooled to GET request the data from the API and POST request data to to API. The PWA will also use the [Bootstrap](https://getbootstrap.com/) frontend framework.
+This task is to build a safe API that extends the [Flask PWA - Programming for the Web Task](https://github.com/TempeHS/Flask_PWA_Programming_For_The_Web_Task_Template). From the parent task, students will abstract the database and management to an API. The PWA will then be retooled to GET request the data from the API and POST request data to to API. The PWA UI for the API will be rapidly prototyped using the [Bootstrap](https://getbootstrap.com/) frontend framework.
 
 > [!note]
 > The template for this project has been pre-populated with assets from the Flask PWA task, including the logo, icons and .database. Students can migrate their own assets if they wish.
@@ -24,7 +24,7 @@ This task is to build a safe API that extends the [Flask PWA - Programming for t
 ```
 
 > [!Important]
-> These instructions are less verbose than the parent task because students are expected to be familiar with Bash, Flask & SQLite3. The focus of the API instructions is to model how to build and test an API incrementally. The focus of the PWA instructions is how to use the [Bootstrap](https://getbootstrap.com/) frontend framework to prototype an enhanced UI/UX frontend rapidly.
+> These instructions are less verbose than the parent task because students are expected to now be familiar with Bash, Flask & SQLite3. The focus of the API instructions is to model how to build and test an API incrementally. The focus of the PWA instructions is how to use the [Bootstrap](https://getbootstrap.com/) frontend framework to prototype an enhanced UI/UX frontend rapidly.
 
 ## Instructions for building the API
 
