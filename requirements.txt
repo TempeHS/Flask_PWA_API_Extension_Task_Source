@@ -1,3 +1,5 @@
 Flask
 flask_wtf
 flask-csp
+jsonschema
+requests
