@@ -718,7 +718,7 @@ Extend the `index():` method in `main.py` so it requests data from the API and h
 
 ```python
 def index():
-    url = "http://127.0.0.1:1000"
+    url = "http://127.0.0.1:2000"
     try:
         response = requests.get(url)
         response.raise_for_status()  # Raise an exception for HTTP errors
@@ -913,7 +913,7 @@ def form():
         }
         try:
             response = requests.post(
-                "http://127.0.0.1:1000/add_extension",
+                "http://127.0.0.1:2000/add_extension",
                 json=data,
                 headers=app_header,
             )
