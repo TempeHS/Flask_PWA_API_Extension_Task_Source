@@ -7,7 +7,7 @@ This task is to build a safe API that extends the [Flask PWA - Programming for t
 
 ## Dependencies
 
-- VSCode, docker, or GitHub Codespaces
+- VSCode or GitHub Codespaces
 - Python 3+
 - [SQLite3 Editor](https://marketplace.visualstudio.com/items?itemName=yy0931.vscode-sqlite3-editor)
 - [Start git-bash](https://marketplace.visualstudio.com/items?itemName=McCarter.start-git-bash)
@@ -133,7 +133,7 @@ Extend the `get():` method in `api.py` to get data from the database via the `db
 
 ```python
 def get():
-    content = dbHandler.extension_get("*")
+    content = dbHandler.extension_get("%")
     return (content), 200
 ```
 
@@ -152,7 +152,7 @@ from jsonschema import validate
 from flask import current_app
 
 
-def extension_get():
+def extension_get(lang):
     con = sql.connect(".database/data_source.db")
     cur = con.cursor()
     cur.execute("SELECT * FROM extension")
