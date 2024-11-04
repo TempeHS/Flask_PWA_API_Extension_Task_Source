@@ -2,7 +2,12 @@
 <div class="container">
   <div class="row">
     <h1>Add an Extension</h1>
-    <div class="error"><h5>{{ data.error }}{{ data.message }}</h5></div>
+    <div class="error">
+      <h2>
+        <span class="text-danger">{{ data.error }}</span
+        ><span class="text-success">{{ data.message }}</span>
+      </h2>
+    </div>
   </div>
 </div>
 <div class="container">
@@ -62,13 +67,13 @@
           aria-label="Default select language"
         >
           <option selected>Select a language from this menu</option>
-          <option value="1">Python</option>
-          <option value="2">CPP</option>
-          <option value="2">Bash</option>
-          <option value="3">SQL</option>
-          <option value="4">HTML/option></option>
-          <option value="5">CSS</option>
-          <option value="6">JAVASCRIPT</option>
+          <option value="Python">PYTHON</option>
+          <option value="CPP">CPP</option>
+          <option value="BASH">BASH</option>
+          <option value="SQL">SQL</option>
+          <option value="HTML">HTML</option>
+          <option value="CSS">CSS</option>
+          <option value="JAVASCRIPT">JAVASCRIPT</option>
         </select>
       </div>
       <br />

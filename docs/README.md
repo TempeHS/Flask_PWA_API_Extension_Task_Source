@@ -344,7 +344,7 @@ def extension_add(data):
 
 ### Step 12: Implement POST Authorisation
 
-API Key Authorisation is a common and secure method to authorise an application or site as the API is not authorising a specific user. This is a very simple implementation of API Key Authorisation.
+[API Key Authorisation](https://cloud.google.com/endpoints/docs/openapi/when-why-api-key) is a common method to authorise an application, site or project as in this scenario the API is not authorising a specific user. This is a very simple implementation of API Key Authorisation.
 
 Extend the `api.py` to store teh key as a variable. Students will need to generate a unique basic 16 secret key with [https://acte.ltd/utils/randomkeygen](https://acte.ltd/utils/randomkeygen).
 

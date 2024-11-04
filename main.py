@@ -2,6 +2,7 @@ from flask import Flask
 from flask import redirect
 from flask import render_template
 from flask import request
+from flask import jsonify
 import requests
 from flask_wtf import CSRFProtect
 from flask_csp.csp import csp_header
@@ -17,7 +18,7 @@ app = Flask(__name__)
 csrf = CSRFProtect(app)
 app.secret_key = b"6HlQfWhu03PttohW;apl"
 
-app_header = {"Authorization": "Bearer 4L50v92nOgcDCYUM"}
+app_header = {"Authorisation": "4L50v92nOgcDCYUM"}
 
 
 @app.route("/index.html", methods=["GET"])
@@ -72,17 +73,19 @@ def form():
             "image": image,
             "language": language,
         }
+        app.logger.critical(data)
         try:
             response = requests.post(
-                "http://127.0.0.1/add_extension", json=data, headers=app_header
+                "http://127.0.0.1:1000/add_extension",
+                json=data,
+                headers=app_header,
             )
-            response.raise_for_status()
-            return jsonify(response.json()), response.status_code
+            data = response.json()
         except requests.exceptions.RequestException as e:
-            return jsonify({"error": str(e)}), 400
-        return render_template("/add.html")
+            data = {"error": "Failed to retrieve data from the API"}
+        return render_template("/add.html", data=data)
     else:
-        return render_template("/add.html")
+        return render_template("/add.html", data={})
 
 
 @app.route("/csp_report", methods=["POST"])

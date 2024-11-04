@@ -26,23 +26,25 @@
 </div>
 <div class="container p-4">
   <div class="row">
-    <div class="error"><h5>{{ data.error }}</h5></div>
-    {% for row in data %}
-    <div class="col-sm-12 col-lg-4">
-      <div class="card" style="width: 18rem">
-        <img
-          src="{{ row.image }}"
-          class="card-img-top"
-          alt="Product image for the {{ row.name }} VSCode extension."
-        />
-        <div class="card-body">
-          <h5 class="card-title">{{ row.name }}</h5>
-          <p class="card-text">{{ row.about }}</p>
-          <a href="{{ row.hyperlink }}" class="btn btn-primary">Read More</a>
+    <div class="error"><h2 class="text-danger">{{ data.error }}</h2></div>
+    {% if data.error is not defined %}
+      {% for row in data %}
+      <div class="col-sm-12 col-lg-4">
+        <div class="card" style="width: 18rem">
+          <img
+            src="{{ row.image }}"
+            class="card-img-top"
+            alt="Product image for the {{ row.name }} VSCode extension."
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ row.name }}</h5>
+            <p class="card-text">{{ row.about }}</p>
+            <a href="{{ row.hyperlink }}" class="btn btn-primary">Read More</a>
+          </div>
         </div>
       </div>
-    </div>
-    {% endfor %}
+      {% endfor %}
+    {% endif %}
   </div>
 </div>
 {% endblock %}

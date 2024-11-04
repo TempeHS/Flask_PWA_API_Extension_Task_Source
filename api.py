@@ -54,7 +54,7 @@ def post():
         response = dbHandler.extension_add(data)
         return response
     else:
-        return jsonify({"error": "Unauthorized"}), 401
+        return {"error": "Unauthorized"}, 401
 
 
 if __name__ == "__main__":
