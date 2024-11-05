@@ -15,7 +15,7 @@
     <div class="btn-group" role="group" aria-label="Filter by language">
       <button type="button" class="btn btn-primary" id="all">All</button>
       <button type="button" class="btn btn-primary" id="python">Python</button>
-      <button type="button" class="btn btn-primary" id="c++">C++</button>
+      <button type="button" class="btn btn-primary" id="cpp">CPP</button>
       <button type="button" class="btn btn-primary" id="bash">BASH</button>
       <button type="button" class="btn btn-primary" id="sql">SQL</button>
       <button type="button" class="btn btn-primary" id="html">HTML</button>
@@ -30,7 +30,7 @@
     {% if data.error is not defined %}
       {% for row in data %}
       <div class="col-sm-12 col-lg-4">
-        <div class="card" style="width: 18rem">
+        <div class="card">
           <img
             src="{{ row.image }}"
             class="card-img-top"

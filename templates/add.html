@@ -14,23 +14,24 @@
   <div class="row">
     <form action="/add.html" method="POST" class="box">
       <div class="col-auto">
-        <label for="ExtensionName" class="form-label">Extension name</label>
+        <label for="name" class="form-label">Extension name</label>
         <textarea
-          class="form-control"
-          name="name"
           id="name"
+          name="name"
+          class="form-control"
           rows="1"
+          autocomplete="off"
         ></textarea>
       </div>
       <div class="col-auto">
-        <label name="hyperlink" class="form-label"
+        <label for="hyperlink" name="hyperlink" class="form-label"
           >Hyperlink to extension</label
         >
         <input
+          id="hyperlink"
           name="hyperlink"
           type="url"
           class="form-control"
-          id="hyperlink"
           placeholder="https://marketplace.visualstudio.com/items?itemName="
           pattern="^https:\/\/marketplace\.visualstudio\.com\/items\?itemName=(?!.*[<>])[a-zA-Z0-9\-._~:\/?#\[\]@!$&'()*+,;=]*$"
         />
@@ -38,31 +39,31 @@
       <div class="col-auto">
         <label for="about" class="form-label">About</label>
         <textarea
-          class="form-control"
-          name="about"
           id="about"
+          name="about"
+          class="form-control"
           rows="3"
           placeholder="A brief description of the extension"
         ></textarea>
       </div>
       <div class="col-auto">
-        <label name="image" class="form-label">URL to Icon</label>
+        <label for="name" name="image" class="form-label">URL to Icon</label>
         <input
+          id="image"
           name="image"
           type="url"
           class="form-control"
-          id="image"
           pattern="^https:\/\/(?!.*[<>])[a-zA-Z0-9\-._~:\/?#\[\]@!$&'()*+,;=]*$"
           placeholder="https://"
         />
       </div>
       <div class="col-auto">
-        <label name="exampleFormControlInput1" class="form-label"
+        <label for="language" name="language" class="form-label"
           >Programming language</label
         >
         <select
-          name="language"
           id="language"
+          name="language"
           class="form-select"
           aria-label="Default select language"
         >

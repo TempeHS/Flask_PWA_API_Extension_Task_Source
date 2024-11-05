@@ -83,81 +83,25 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const allButton = document.getElementById("all");
+  if (window.location.pathname === "/") {
+    const buttons = [
+      { id: "all", url: "/" },
+      { id: "python", url: "?lang=python" },
+      { id: "cpp", url: "?lang=cpp" },
+      { id: "bash", url: "?lang=bash" },
+      { id: "sql", url: "?lang=sql" },
+      { id: "html", url: "?lang=html" },
+      { id: "css", url: "?lang=css" },
+      { id: "js", url: "?lang=javascript" },
+    ];
 
-  allButton.addEventListener("click", function () {
-    window.location.href = "/";
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const allButton = document.getElementById("python");
-
-  allButton.addEventListener("click", function () {
-    window.location.href = "?lang=python";
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const allButton = document.getElementById("all");
-
-  allButton.addEventListener("click", function () {
-    window.location.href = "/";
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const allButton = document.getElementById("python");
-
-  allButton.addEventListener("click", function () {
-    window.location.href = "?lang=python";
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const allButton = document.getElementById("c++");
-
-  allButton.addEventListener("click", function () {
-    window.location.href = "?lang=cpp";
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const allButton = document.getElementById("bash");
-
-  allButton.addEventListener("click", function () {
-    window.location.href = "?lang=bash";
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const allButton = document.getElementById("sql");
-
-  allButton.addEventListener("click", function () {
-    window.location.href = "?lang=sql";
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const allButton = document.getElementById("html");
-
-  allButton.addEventListener("click", function () {
-    window.location.href = "?lang=html";
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const allButton = document.getElementById("css");
-
-  allButton.addEventListener("click", function () {
-    window.location.href = "?lang=css";
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const allButton = document.getElementById("js");
-
-  allButton.addEventListener("click", function () {
-    window.location.href = "?lang=javascript";
-  });
+    buttons.forEach((button) => {
+      const element = document.getElementById(button.id);
+      if (element) {
+        element.addEventListener("click", function () {
+          window.location.href = button.url;
+        });
+      }
+    });
+  }
 });
