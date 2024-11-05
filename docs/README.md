@@ -363,7 +363,7 @@ Extend the `api.py` to store the key as a variable. Students will need to genera
 auth_key = "4L50v92nOgcDCYUM"
 ```
 
-Extend the `def post():` method in `app.py` to request the `authorisation` attribute from the post head compare it to the `auth_key` then process the appropriate response.
+Extend the `def post():` method in `api.py` to request the `authorisation` attribute from the post head compare it to the `auth_key` then process the appropriate response.
 
 ```python
 def post():
