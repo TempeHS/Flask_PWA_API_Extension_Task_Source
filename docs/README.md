@@ -903,8 +903,10 @@ The HTML Implementation in `add.html`
 
 Extend `main.py' to provide a route with POST and GET methods for `add.html` that
 
-1. Render `add.html` on GET request with any errors or messages passed as data.
-2.
+1. Renders `add.html` on GET requests.
+2. On a POST method reads the form in add.html and constructs a JSON.
+3. Then posts the JSON with the header that includes the Authentication key to the API.
+4. Renders `add/html` with any errors or messages from the API.
 
 ```python
 @app.route("/add.html", methods=["POST", "GET"])
@@ -935,3 +937,11 @@ def form():
     else:
         return render_template("/add.html", data={})
 ```
+
+### Step 13: Add event listeners to the `/` page for the buttons to filter the extensions by language.
+
+## Extension activities to improve the API and PWA.
+
+1. Create a get_languages method the returns all the languages in the database.
+2. Improve exception handling of the `add_extension` endpoint to give more detailed feedback to the user.
+3. Use the new get-languages method to define the content that renders in the PWA.

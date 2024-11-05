@@ -98,9 +98,9 @@ def form():
 
 
 @app.route("/csp_report", methods=["POST"])
+@csrf.exempt
 def csp_report():
-    with open("csp_reports.log", "a") as fh:
-        fh.write(request.data.decode() + "\n")
+    app.logger.critical(request.data.decode())
     return "done"
 
 
