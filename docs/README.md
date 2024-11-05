@@ -309,7 +309,6 @@ schema = {
     "additionalProperties": False,
 }
 
-
 def validate_json(json_data):
     try:
         validate(instance=json_data, schema=schema)
@@ -326,7 +325,7 @@ Sample JSON data for you to test the API:
 
 ### Step 10: Test your validation POST response
 
-![Screen recording testing a API basic POST with Thunder Client](/docs/README_resources/test_basic_POST_API.gif "Follow these steps to test your basic POST API")
+![Screen recording testing a API basic POST with Thunder Client](/docs/README_resources/test_POST_API_Auth.gif "Follow these steps to test your basic POST API")
 
 ### Step 11: Insert the POST data into the database
 
