@@ -1,18 +1,22 @@
 # Flask PWA - API Extension Task
 
-This task is to build a safe API that extends the [Flask PWA - Programming for the Web Task](https://github.com/TempeHS/Flask_PWA_Programming_For_The_Web_Task_Template). From the parent task, students will abstract the database and management to an API. The PWA will then be retooled to GET request the data from the API and POST request data to to API. The PWA UI for the API will be rapidly prototyped using the [Bootstrap](https://getbootstrap.com/) frontend framework.
+This task is to build a safe API that extends the [Flask PWA - Programming for the Web Task](https://github.com/TempeHS/Flask_PWA_Programming_For_The_Web_Task_Template). From the parent task, students will abstract the database and management to an API with key authentication. The PWA will then be retooled to GET request the data from the API and POST request data to to API. The PWA UI for the API will be rapidly prototyped using the [Bootstrap](https://getbootstrap.com/) frontend framework.
+
+The focus of the API instructions are to model how to build and test an API incrementally. The focus of the PWA instructions are how to use the [Bootstrap](https://getbootstrap.com/) frontend framework to prototype an enhanced UI/UX frontend rapidly use [Bootstrap](https://getbootstrap.com/) components and classes.
 
 > [!note]
 > The template for this project has been pre-populated with assets from the Flask PWA task, including the logo, icons and .database. Students can migrate their own assets if they wish.
 
 ## Dependencies
 
-- VSCode or GitHub Codespaces
-- Python 3+
-- [SQLite3 Editor](https://marketplace.visualstudio.com/items?itemName=yy0931.vscode-sqlite3-editor)
-- [Start git-bash](https://marketplace.visualstudio.com/items?itemName=McCarter.start-git-bash)
-- [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client)
-- pip/pip3 installs
+## Requirements
+
+1. [VSCode](https://code.visualstudio.com/download) or [GitHub Codespaces](https://github.com/features/codespaces)
+2. [Python 3.x](https://www.python.org/downloads/)
+3. [GIT 2.x.x +](https://git-scm.com/downloads)
+4. [SQLite3 Editor](https://marketplace.visualstudio.com/items?itemName=yy0931.vscode-sqlite3-editor)
+5. [Start git-bash](https://marketplace.visualstudio.com/items?itemName=McCarter.start-git-bash) 6.[Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client)
+6. pip/pip3 installs
 
 ```bash
     pip install Flask
@@ -24,9 +28,17 @@ This task is to build a safe API that extends the [Flask PWA - Programming for t
 ```
 
 > [!Important]
-> These instructions are less verbose than the parent task because students are expected to now be familiar with Bash, Flask & SQLite3. The focus of the API instructions is to model how to build and test an API incrementally. The focus of the PWA instructions is how to use the [Bootstrap](https://getbootstrap.com/) frontend framework to prototype an enhanced UI/UX frontend rapidly.
+> MacOS and Linux users may have a `pip3` soft link instead of `pip`, run the below commands to see what path your system is configured with and use that command through the project. If neither command returns a version, then likely [Python 3.x](https://www.python.org/downloads/) needs to be installed.
+>
+> ```bash
+> pip show pip
+> pip3 show pip
+> ```
 
 ## Instructions for building the API
+
+> [!Warning]
+> These instructions are less verbose than the parent task because students are expected to now be familiar with Bash, Flask & SQLite3.
 
 ### Step 1: Learn the basics of implementing an API in Flask
 
@@ -306,7 +318,7 @@ def validate_json(json_data):
         return False
 ```
 
-Sample JSON data to test the API:
+Sample JSON data for you to test the API:
 
 ```text
 {"name": "test", "hyperlink": "https://marketplace.visualstudio.com/items?itemName=123.html", "about": "This is a test", "image": "https://test.jpg", "language": "BASH"}
@@ -318,7 +330,7 @@ Sample JSON data to test the API:
 
 ### Step 11: Insert the POST data into the database
 
-Update the `extension_add():` method in database_manager.py`to INSERT the JSON data into the database. The`extID` is not required as it has been configured to auto increment in the database.
+Update the `extension_add():` method in database_manager.py`to INSERT the JSON data into the database. The`extID` is not required as it has been configured to auto increment in the database table.
 
 ```python
 def extension_add(data):
@@ -346,7 +358,7 @@ def extension_add(data):
 
 [API Key Authorisation](https://cloud.google.com/endpoints/docs/openapi/when-why-api-key) is a common method to authorise an application, site or project as in this scenario the API is not authorising a specific user. This is a very simple implementation of API Key Authorisation.
 
-Extend the `api.py` to store teh key as a variable. Students will need to generate a unique basic 16 secret key with [https://acte.ltd/utils/randomkeygen](https://acte.ltd/utils/randomkeygen).
+Extend the `api.py` to store the key as a variable. Students will need to generate a unique basic 16 secret key with [https://acte.ltd/utils/randomkeygen](https://acte.ltd/utils/randomkeygen).
 
 ```python
 auth_key = "4L50v92nOgcDCYUM"
@@ -361,10 +373,10 @@ def post():
         response = dbHandler.extension_add(data)
         return response
     else:
-        return {"error": "Unauthorized"}, 401
+        return {"error": "Unauthorised"}, 401
 ```
 
-### Step 13: Test your authorization for a POST response
+### Step 13: Test your authorisation for a POST response
 
 ![Screen recording testing a API basic POST with Thunder Client](/docs/README_resources/test_POST_API_Auth.gif "Follow these steps to test your POST API Authorisation")
 
@@ -373,7 +385,7 @@ def post():
 Extend the `api.py` with the implementation below, which should be inserted directly below the `imports`. This will configure the logger to log to a file for security analysis.
 
 ```python
-app_log = logging.getLogger(__name__)
+api_log = logging.getLogger(__name__)
 logging.basicConfig(
     filename="api_security_log.log",
     encoding="utf-8",
