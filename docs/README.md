@@ -294,12 +294,12 @@ schema = {
         "name": {"type": "string"},
         "hyperlink": {
             "type": "string",
-            "pattern": "^https:\\/\\/marketplace\\.visualstudio\\.com\\/items\\?itemName=(?!.*[<>])[a-zA-Z0-9\\-._~:\/?#\\[\\]@!$&'()*+,;=]*$",
+            "pattern": "^https:\\/\\/marketplace\\.visualstudio\\.com\\/items\\?itemName=(?!.*[<>])[a-zA-Z0-9-._~:\/?#\\[\\]@!$&'()*\\+,;=]*$",
         },
         "about": {"type": "string"},
         "image": {
             "type": "string",
-            "pattern": "^https:\\/\\/(?!.*[<>])[a-zA-Z0-9\\-._~:\/?#\\[\\]@!$&'()*+,;=]*$",
+            "pattern": "^https:\\/\\/(?!.*[<>])[a-zA-Z0-9-._~:\/?#\\[\\]@!$&'()*\\+,;=]*$",
         },
         "language": {
             "type": "string",
@@ -329,7 +329,7 @@ Sample JSON data for you to test the API:
 
 ### Step 11: Insert the POST data into the database
 
-Update the `extension_add():` method in database_manager.py` to INSERT the JSON data into the database. The `extID` is not required as it has been configured to auto increment in the database table.
+Update the `extension_add():` method in database_manager.py`to INSERT the JSON data into the database. The`extID` is not required as it has been configured to auto increment in the database table.
 
 ```python
 def extension_add(data):
@@ -740,7 +740,7 @@ def index():
     return render_template("index.html", data=data)
 ```
 
-Extend the html in 'index.html` template that:
+Replace the test html in 'index.html` template that:
 
 1. Implements a [Bootstrap jumbotron heading](https://getbootstrap.com/docs/5.3/examples/jumbotron/).
 2. Implements a [Bootstrap button group](https://getbootstrap.com/docs/5.3/components/button-group/) that will later allow users to filter the extensions by language.
