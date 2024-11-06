@@ -1,5 +1,6 @@
 from flask import Flask
 from flask import request
+from flask import jsonify
 from flask_cors import CORS
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
@@ -54,7 +55,7 @@ def post():
         response = dbHandler.extension_add(data)
         return response
     else:
-        return {"error": "Unauthorised"}, 401
+        return jsonify({"error": "Unauthorised"}), 401
 
 
 if __name__ == "__main__":

@@ -437,8 +437,9 @@ This Jinga2/HTML implementation in layout.html:
     <link href="static/css/bootstrap.min.css" rel="stylesheet" />
   </head>
   <body>
-    {% include "partials/menu.html" %} {% block content %}{% endblock %} {%
-    include "partials/footer.html" %}
+    {% include "partials/menu.html" %}
+    <main>{% block content %}{% endblock %}</main>
+    {% include "partials/footer.html" %}
     <script src="static/js/bootstrap.bundle.min.js"></script>
     <script src="static/js/serviceWorker.js"></script>
     <script src="static/js/app.js"></script>
@@ -672,9 +673,9 @@ def index():
 
 
 @app.route("/csp_report", methods=["POST"])
+@csrf.exempt
 def csp_report():
-    with open("csp_reports.log", "a") as fh:
-        fh.write(request.data.decode() + "\n")
+    app.logger.critical(request.data.decode())
     return "done"
 
 
@@ -828,23 +829,24 @@ The HTML Implementation in `add.html`
   <div class="row">
     <form action="/add.html" method="POST" class="box">
       <div class="col-auto">
-        <label for="ExtensionName" class="form-label">Extension name</label>
+        <label for="name" class="form-label">Extension name</label>
         <textarea
-          class="form-control"
-          name="name"
           id="name"
+          name="name"
+          class="form-control"
           rows="1"
+          autocomplete="off"
         ></textarea>
       </div>
       <div class="col-auto">
-        <label name="hyperlink" class="form-label"
+        <label for="hyperlink" name="hyperlink" class="form-label"
           >Hyperlink to extension</label
         >
         <input
+          id="hyperlink"
           name="hyperlink"
           type="url"
           class="form-control"
-          id="hyperlink"
           placeholder="https://marketplace.visualstudio.com/items?itemName="
           pattern="^https:\/\/marketplace\.visualstudio\.com\/items\?itemName=(?!.*[<>])[a-zA-Z0-9\-._~:\/?#\[\]@!$&'()*+,;=]*$"
         />
@@ -852,36 +854,36 @@ The HTML Implementation in `add.html`
       <div class="col-auto">
         <label for="about" class="form-label">About</label>
         <textarea
-          class="form-control"
-          name="about"
           id="about"
+          name="about"
+          class="form-control"
           rows="3"
           placeholder="A brief description of the extension"
         ></textarea>
       </div>
       <div class="col-auto">
-        <label name="image" class="form-label">URL to Icon</label>
+        <label for="name" name="image" class="form-label">URL to Icon</label>
         <input
+          id="image"
           name="image"
           type="url"
           class="form-control"
-          id="image"
           pattern="^https:\/\/(?!.*[<>])[a-zA-Z0-9\-._~:\/?#\[\]@!$&'()*+,;=]*$"
           placeholder="https://"
         />
       </div>
       <div class="col-auto">
-        <label name="exampleFormControlInput1" class="form-label"
+        <label for="language" name="language" class="form-label"
           >Programming language</label
         >
         <select
-          name="language"
           id="language"
+          name="language"
           class="form-select"
           aria-label="Default select language"
         >
           <option selected>Select a language from this menu</option>
-          <option value="Python">PYTHON</option>
+          <option value="PYTHON">PYTHON</option>
           <option value="CPP">CPP</option>
           <option value="BASH">BASH</option>
           <option value="SQL">SQL</option>
@@ -924,6 +926,7 @@ def form():
             "image": image,
             "language": language,
         }
+        app.logger.critical(data)
         try:
             response = requests.post(
                 "http://127.0.0.1:3000/add_extension",
@@ -940,8 +943,64 @@ def form():
 
 ### Step 13: Add event listeners to the `/` page for the buttons to filter the extensions by language.
 
+Extend `app.js` with a script to provide functionality to the home page buttons.
+
+```js
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.location.pathname === "/") {
+    const buttons = [
+      { id: "all", url: "/" },
+      { id: "python", url: "?lang=python" },
+      { id: "cpp", url: "?lang=cpp" },
+      { id: "bash", url: "?lang=bash" },
+      { id: "sql", url: "?lang=sql" },
+      { id: "html", url: "?lang=html" },
+      { id: "css", url: "?lang=css" },
+      { id: "js", url: "?lang=javascript" },
+    ];
+
+    buttons.forEach((button) => {
+      const element = document.getElementById(button.id);
+      if (element) {
+        element.addEventListener("click", function () {
+          window.location.href = button.url;
+        });
+      }
+    });
+  }
+});
+```
+
+### Step 14: Forward the GET request argument to the API to filter extensions by language.
+
+```python
+    url = "http://127.0.0.1:3000"
+    if request.args.get("lang") and request.args.get("lang").isalpha():
+        lang = request.args.get("lang")
+        url += f"?lang={lang}"
+```
+
+### 15: Configure the logger to log to main_security_log.log
+
+Extend the `main.py` with the implementation below, which should be inserted directly below the `imports`. This will configure the logger to log to a file for security analysis.
+
+```python
+app_log = logging.getLogger(__name__)
+logging.basicConfig(
+    filename="main_security_log.log",
+    encoding="utf-8",
+    level=logging.DEBUG,
+    format="%(asctime)s %(message)s",
+)
+```
+
 ## Extension activities to improve the API and PWA.
 
 1. Create a get_languages method the returns all the languages in the database.
 2. Improve exception handling of the `add_extension` endpoint to give more detailed feedback to the user.
 3. Use the new get-languages method to define the content that renders in the PWA.
+4. Implement a sort extension by function
+
+```
+
+```

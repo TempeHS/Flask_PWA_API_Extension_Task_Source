@@ -1,305 +1,111 @@
-2024-11-06 10:09:50,845 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2024-11-06 14:26:27,920  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
+2024-11-06 14:26:27,967  * Restarting with stat
+2024-11-06 14:26:28,486  * Debugger is active!
+2024-11-06 14:26:28,486  * Debugger PIN: 141-552-686
+2024-11-06 14:27:30,642  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
+2024-11-06 14:27:30,673  * Restarting with stat
+2024-11-06 14:27:31,159  * Debugger is active!
+2024-11-06 14:27:31,162  * Debugger PIN: 141-552-686
+2024-11-06 14:27:33,981 127.0.0.1 - - [06/Nov/2024 14:27:33] "GET /add.html HTTP/1.1" 200 -
+2024-11-06 14:27:34,134 127.0.0.1 - - [06/Nov/2024 14:27:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-06 14:27:34,136 127.0.0.1 - - [06/Nov/2024 14:27:34] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2024-11-06 14:27:34,138 127.0.0.1 - - [06/Nov/2024 14:27:34] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2024-11-06 14:27:34,138 127.0.0.1 - - [06/Nov/2024 14:27:34] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2024-11-06 14:27:34,143 127.0.0.1 - - [06/Nov/2024 14:27:34] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2024-11-06 14:27:34,144 127.0.0.1 - - [06/Nov/2024 14:27:34] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2024-11-06 14:27:34,182 127.0.0.1 - - [06/Nov/2024 14:27:34] "[36mGET /static/manifest.json HTTP/1.1[0m" 304 -
+2024-11-06 14:27:59,745 <Response 428 bytes [200 OK]>
+2024-11-06 14:27:59,756 127.0.0.1 - - [06/Nov/2024 14:27:59] "[35m[1mPOST /add.html HTTP/1.1[0m" 500 -
+2024-11-06 14:27:59,772 127.0.0.1 - - [06/Nov/2024 14:27:59] "[36mGET /add.html?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-11-06 14:27:59,772 127.0.0.1 - - [06/Nov/2024 14:27:59] "[36mGET /add.html?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-11-06 14:27:59,781 127.0.0.1 - - [06/Nov/2024 14:27:59] "GET /add.html?__debugger__=yes&cmd=resource&f=console.png&s=vndWEHybE2NCWIyak0d7 HTTP/1.1" 200 -
+2024-11-06 14:27:59,817 127.0.0.1 - - [06/Nov/2024 14:27:59] "[36mGET /add.html?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-11-06 14:31:52,334  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
+2024-11-06 14:31:52,349  * Restarting with stat
+2024-11-06 14:38:19,541 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
  * Running on http://10.185.241.29:5000
-2024-11-06 10:09:50,845 [33mPress CTRL+C to quit[0m
-2024-11-06 10:09:50,845  * Restarting with stat
-2024-11-06 10:09:51,312  * Debugger is active!
-2024-11-06 10:09:51,312  * Debugger PIN: 141-552-686
-2024-11-06 10:09:56,008 Starting new HTTP connection (1): 127.0.0.1:3000
-2024-11-06 10:09:58,074 127.0.0.1 - - [06/Nov/2024 10:09:58] "GET / HTTP/1.1" 200 -
-2024-11-06 10:09:58,220 127.0.0.1 - - [06/Nov/2024 10:09:58] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
-2024-11-06 10:09:58,220 127.0.0.1 - - [06/Nov/2024 10:09:58] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
-2024-11-06 10:09:58,246 127.0.0.1 - - [06/Nov/2024 10:09:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2024-11-06 10:09:58,252 127.0.0.1 - - [06/Nov/2024 10:09:58] "GET /static/js/app.js HTTP/1.1" 200 -
-2024-11-06 10:09:58,261 127.0.0.1 - - [06/Nov/2024 10:09:58] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
-2024-11-06 10:09:58,264 127.0.0.1 - - [06/Nov/2024 10:09:58] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
-2024-11-06 10:09:58,326 127.0.0.1 - - [06/Nov/2024 10:09:58] "[36mGET /static/manifest.json HTTP/1.1[0m" 304 -
-2024-11-06 10:10:01,860 127.0.0.1 - - [06/Nov/2024 10:10:01] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
-2024-11-06 10:10:01,860 127.0.0.1 - - [06/Nov/2024 10:10:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2024-11-06 10:10:01,860 127.0.0.1 - - [06/Nov/2024 10:10:01] "[36mGET /static/manifest.json HTTP/1.1[0m" 304 -
-2024-11-06 10:10:01,934 127.0.0.1 - - [06/Nov/2024 10:10:01] "[33mGET /static/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
-2024-11-06 10:10:01,943 127.0.0.1 - - [06/Nov/2024 10:10:01] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
-2024-11-06 10:10:29,682 Starting new HTTP connection (1): 127.0.0.1:3000
-2024-11-06 10:10:31,718 127.0.0.1 - - [06/Nov/2024 10:10:31] "GET / HTTP/1.1" 200 -
-2024-11-06 10:11:05,633 Starting new HTTP connection (1): 127.0.0.1:3000
-2024-11-06 10:11:07,657 127.0.0.1 - - [06/Nov/2024 10:11:07] "GET / HTTP/1.1" 200 -
-2024-11-06 10:11:07,686 127.0.0.1 - - [06/Nov/2024 10:11:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2024-11-06 10:11:07,688 127.0.0.1 - - [06/Nov/2024 10:11:07] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
-2024-11-06 10:11:07,688 127.0.0.1 - - [06/Nov/2024 10:11:07] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
-2024-11-06 10:11:07,691 127.0.0.1 - - [06/Nov/2024 10:11:07] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
-2024-11-06 10:11:07,717 127.0.0.1 - - [06/Nov/2024 10:11:07] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
-2024-11-06 10:11:07,717 127.0.0.1 - - [06/Nov/2024 10:11:07] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
-2024-11-06 10:11:07,727 127.0.0.1 - - [06/Nov/2024 10:11:07] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
-2024-11-06 10:11:07,729 The CSRF token is missing.
-2024-11-06 10:11:07,731 127.0.0.1 - - [06/Nov/2024 10:11:07] "[31m[1mPOST /csp_report HTTP/1.1[0m" 400 -
-2024-11-06 10:11:07,735 127.0.0.1 - - [06/Nov/2024 10:11:07] "[33mGET /static/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
-2024-11-06 10:11:07,795 127.0.0.1 - - [06/Nov/2024 10:11:07] "[36mGET /static/manifest.json HTTP/1.1[0m" 304 -
-2024-11-06 10:11:07,796 127.0.0.1 - - [06/Nov/2024 10:11:07] "GET /static/images/favicon.png HTTP/1.1" 200 -
-2024-11-06 10:11:47,789  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
-2024-11-06 10:11:47,824  * Restarting with stat
-2024-11-06 10:11:48,288  * Debugger is active!
-2024-11-06 10:11:48,289  * Debugger PIN: 141-552-686
-2024-11-06 10:11:50,295 Starting new HTTP connection (1): 127.0.0.1:3000
-2024-11-06 10:11:52,329 127.0.0.1 - - [06/Nov/2024 10:11:52] "GET / HTTP/1.1" 200 -
-2024-11-06 10:11:52,459 127.0.0.1 - - [06/Nov/2024 10:11:52] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
-2024-11-06 10:11:52,462 The CSRF token is missing.
-2024-11-06 10:11:52,462 127.0.0.1 - - [06/Nov/2024 10:11:52] "[31m[1mPOST /csp_report HTTP/1.1[0m" 400 -
-2024-11-06 10:11:52,463 127.0.0.1 - - [06/Nov/2024 10:11:52] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
-2024-11-06 10:11:52,466 127.0.0.1 - - [06/Nov/2024 10:11:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2024-11-06 10:11:52,467 127.0.0.1 - - [06/Nov/2024 10:11:52] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
-2024-11-06 10:11:52,478 127.0.0.1 - - [06/Nov/2024 10:11:52] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
-2024-11-06 10:11:52,478 127.0.0.1 - - [06/Nov/2024 10:11:52] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
-2024-11-06 10:11:52,484 127.0.0.1 - - [06/Nov/2024 10:11:52] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
-2024-11-06 10:11:52,486 127.0.0.1 - - [06/Nov/2024 10:11:52] "[33mGET /static/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
-2024-11-06 10:11:52,566 127.0.0.1 - - [06/Nov/2024 10:11:52] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
-2024-11-06 10:11:52,566 127.0.0.1 - - [06/Nov/2024 10:11:52] "[36mGET /static/manifest.json HTTP/1.1[0m" 304 -
-2024-11-06 10:12:44,661  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
-2024-11-06 10:12:44,688  * Restarting with stat
-2024-11-06 10:12:45,146  * Debugger is active!
-2024-11-06 10:12:45,148  * Debugger PIN: 141-552-686
-2024-11-06 10:13:41,458  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
-2024-11-06 10:13:41,483  * Restarting with stat
-2024-11-06 10:13:41,929  * Debugger is active!
-2024-11-06 10:13:41,929  * Debugger PIN: 141-552-686
-2024-11-06 10:14:04,315  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
-2024-11-06 10:14:04,343  * Restarting with stat
-2024-11-06 10:14:04,813  * Debugger is active!
-2024-11-06 10:14:04,814  * Debugger PIN: 141-552-686
-2024-11-06 10:14:09,168  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
-2024-11-06 10:14:09,195  * Restarting with stat
-2024-11-06 10:14:09,676  * Debugger is active!
-2024-11-06 10:14:09,676  * Debugger PIN: 141-552-686
-2024-11-06 10:14:13,263 Starting new HTTP connection (1): 127.0.0.1:3000
-2024-11-06 10:14:15,291 127.0.0.1 - - [06/Nov/2024 10:14:15] "GET / HTTP/1.1" 200 -
-2024-11-06 10:14:15,438 127.0.0.1 - - [06/Nov/2024 10:14:15] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
-2024-11-06 10:14:15,438 127.0.0.1 - - [06/Nov/2024 10:14:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2024-11-06 10:14:15,440 127.0.0.1 - - [06/Nov/2024 10:14:15] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
-2024-11-06 10:14:15,441 The CSRF token is missing.
-2024-11-06 10:14:15,441 127.0.0.1 - - [06/Nov/2024 10:14:15] "[31m[1mPOST /csp_report HTTP/1.1[0m" 400 -
-2024-11-06 10:14:15,443 127.0.0.1 - - [06/Nov/2024 10:14:15] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
-2024-11-06 10:14:15,453 127.0.0.1 - - [06/Nov/2024 10:14:15] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
-2024-11-06 10:14:15,454 127.0.0.1 - - [06/Nov/2024 10:14:15] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
-2024-11-06 10:14:15,458 127.0.0.1 - - [06/Nov/2024 10:14:15] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
-2024-11-06 10:14:15,461 127.0.0.1 - - [06/Nov/2024 10:14:15] "[33mGET /static/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
-2024-11-06 10:14:15,540 127.0.0.1 - - [06/Nov/2024 10:14:15] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
-2024-11-06 10:14:15,540 127.0.0.1 - - [06/Nov/2024 10:14:15] "[36mGET /static/manifest.json HTTP/1.1[0m" 304 -
-2024-11-06 10:16:23,623  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
-2024-11-06 10:16:23,647  * Restarting with stat
-2024-11-06 10:16:24,113  * Debugger is active!
-2024-11-06 10:16:24,113  * Debugger PIN: 141-552-686
-2024-11-06 10:16:32,710  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
-2024-11-06 10:16:32,746  * Restarting with stat
-2024-11-06 10:16:33,193  * Debugger is active!
-2024-11-06 10:16:33,198  * Debugger PIN: 141-552-686
-2024-11-06 10:16:35,127 Starting new HTTP connection (1): 127.0.0.1:3000
-2024-11-06 10:16:37,148 127.0.0.1 - - [06/Nov/2024 10:16:37] "GET / HTTP/1.1" 200 -
-2024-11-06 10:16:37,290 127.0.0.1 - - [06/Nov/2024 10:16:37] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
-2024-11-06 10:16:37,295 127.0.0.1 - - [06/Nov/2024 10:16:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2024-11-06 10:16:37,295 The CSRF token is missing.
-2024-11-06 10:16:37,295 127.0.0.1 - - [06/Nov/2024 10:16:37] "[31m[1mPOST /csp_report HTTP/1.1[0m" 400 -
-2024-11-06 10:16:37,298 127.0.0.1 - - [06/Nov/2024 10:16:37] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
-2024-11-06 10:16:37,302 127.0.0.1 - - [06/Nov/2024 10:16:37] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
-2024-11-06 10:16:37,303 127.0.0.1 - - [06/Nov/2024 10:16:37] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
-2024-11-06 10:16:37,303 127.0.0.1 - - [06/Nov/2024 10:16:37] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
-2024-11-06 10:16:37,303 127.0.0.1 - - [06/Nov/2024 10:16:37] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
-2024-11-06 10:16:37,315 127.0.0.1 - - [06/Nov/2024 10:16:37] "[33mGET /static/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
-2024-11-06 10:16:37,403 127.0.0.1 - - [06/Nov/2024 10:16:37] "[36mGET /static/manifest.json HTTP/1.1[0m" 304 -
-2024-11-06 10:16:37,403 127.0.0.1 - - [06/Nov/2024 10:16:37] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
-2024-11-06 10:16:53,521  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
-2024-11-06 10:16:53,551  * Restarting with stat
-2024-11-06 10:16:53,984  * Debugger is active!
-2024-11-06 10:16:53,984  * Debugger PIN: 141-552-686
-2024-11-06 10:17:48,715  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
-2024-11-06 10:17:48,747  * Restarting with stat
-2024-11-06 10:17:49,222  * Debugger is active!
-2024-11-06 10:17:49,222  * Debugger PIN: 141-552-686
-2024-11-06 10:17:53,091 Starting new HTTP connection (1): 127.0.0.1:3000
-2024-11-06 10:17:55,144 127.0.0.1 - - [06/Nov/2024 10:17:55] "GET / HTTP/1.1" 200 -
-2024-11-06 10:17:55,283 127.0.0.1 - - [06/Nov/2024 10:17:55] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
-2024-11-06 10:17:55,285 127.0.0.1 - - [06/Nov/2024 10:17:55] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
-2024-11-06 10:17:55,287 The CSRF token is missing.
-2024-11-06 10:17:55,288 127.0.0.1 - - [06/Nov/2024 10:17:55] "[31m[1mPOST /csp_report HTTP/1.1[0m" 400 -
-2024-11-06 10:17:55,289 127.0.0.1 - - [06/Nov/2024 10:17:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2024-11-06 10:17:55,289 127.0.0.1 - - [06/Nov/2024 10:17:55] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
-2024-11-06 10:17:55,298 127.0.0.1 - - [06/Nov/2024 10:17:55] "[33mGET /static/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
-2024-11-06 10:17:55,299 127.0.0.1 - - [06/Nov/2024 10:17:55] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
-2024-11-06 10:17:55,300 127.0.0.1 - - [06/Nov/2024 10:17:55] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
-2024-11-06 10:17:55,310 127.0.0.1 - - [06/Nov/2024 10:17:55] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
-2024-11-06 10:17:55,402 127.0.0.1 - - [06/Nov/2024 10:17:55] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
-2024-11-06 10:17:55,403 127.0.0.1 - - [06/Nov/2024 10:17:55] "[36mGET /static/manifest.json HTTP/1.1[0m" 304 -
-2024-11-06 10:18:45,872  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
-2024-11-06 10:18:45,896  * Restarting with stat
-2024-11-06 10:18:46,351  * Debugger is active!
-2024-11-06 10:18:46,351  * Debugger PIN: 141-552-686
-2024-11-06 10:18:48,676 Starting new HTTP connection (1): 127.0.0.1:3000
-2024-11-06 10:18:50,710 127.0.0.1 - - [06/Nov/2024 10:18:50] "GET / HTTP/1.1" 200 -
-2024-11-06 10:18:50,850 127.0.0.1 - - [06/Nov/2024 10:18:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2024-11-06 10:18:50,851 127.0.0.1 - - [06/Nov/2024 10:18:50] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
-2024-11-06 10:18:50,854 127.0.0.1 - - [06/Nov/2024 10:18:50] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
-2024-11-06 10:18:50,854 127.0.0.1 - - [06/Nov/2024 10:18:50] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
-2024-11-06 10:18:50,854 The CSRF token is missing.
-2024-11-06 10:18:50,856 127.0.0.1 - - [06/Nov/2024 10:18:50] "[31m[1mPOST /csp_report HTTP/1.1[0m" 400 -
-2024-11-06 10:18:50,864 127.0.0.1 - - [06/Nov/2024 10:18:50] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
-2024-11-06 10:18:50,865 127.0.0.1 - - [06/Nov/2024 10:18:50] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
-2024-11-06 10:18:50,871 127.0.0.1 - - [06/Nov/2024 10:18:50] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
-2024-11-06 10:18:50,874 127.0.0.1 - - [06/Nov/2024 10:18:50] "[33mGET /static/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
-2024-11-06 10:18:50,951 127.0.0.1 - - [06/Nov/2024 10:18:50] "[36mGET /static/manifest.json HTTP/1.1[0m" 304 -
-2024-11-06 10:18:50,954 127.0.0.1 - - [06/Nov/2024 10:18:50] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
-2024-11-06 10:20:34,251  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
-2024-11-06 10:20:34,272  * Restarting with stat
-2024-11-06 10:20:34,713  * Debugger is active!
-2024-11-06 10:20:34,713  * Debugger PIN: 141-552-686
-2024-11-06 10:20:57,195  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
-2024-11-06 10:20:57,220  * Restarting with stat
-2024-11-06 10:21:43,361 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:5000
- * Running on http://10.185.241.29:5000
-2024-11-06 10:21:43,362 [33mPress CTRL+C to quit[0m
-2024-11-06 10:21:43,363  * Restarting with stat
-2024-11-06 10:21:43,797  * Debugger is active!
-2024-11-06 10:21:43,797  * Debugger PIN: 141-552-686
-2024-11-06 10:21:48,728 Starting new HTTP connection (1): 127.0.0.1:3000
-2024-11-06 10:21:50,762 127.0.0.1 - - [06/Nov/2024 10:21:50] "GET / HTTP/1.1" 200 -
-2024-11-06 10:21:50,908 127.0.0.1 - - [06/Nov/2024 10:21:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2024-11-06 10:21:50,910 127.0.0.1 - - [06/Nov/2024 10:21:50] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
-2024-11-06 10:21:50,911 The CSRF token is missing.
-2024-11-06 10:21:50,911 127.0.0.1 - - [06/Nov/2024 10:21:50] "[31m[1mPOST /csp_report HTTP/1.1[0m" 400 -
-2024-11-06 10:21:50,912 127.0.0.1 - - [06/Nov/2024 10:21:50] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
-2024-11-06 10:21:50,915 127.0.0.1 - - [06/Nov/2024 10:21:50] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
-2024-11-06 10:21:50,926 127.0.0.1 - - [06/Nov/2024 10:21:50] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
-2024-11-06 10:21:50,927 127.0.0.1 - - [06/Nov/2024 10:21:50] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
-2024-11-06 10:21:50,930 127.0.0.1 - - [06/Nov/2024 10:21:50] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
-2024-11-06 10:21:50,934 127.0.0.1 - - [06/Nov/2024 10:21:50] "[33mGET /static/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
-2024-11-06 10:21:51,008 127.0.0.1 - - [06/Nov/2024 10:21:51] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
-2024-11-06 10:21:51,009 127.0.0.1 - - [06/Nov/2024 10:21:51] "[36mGET /static/manifest.json HTTP/1.1[0m" 304 -
-2024-11-06 10:24:37,916  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
-2024-11-06 10:24:37,935  * Restarting with stat
-2024-11-06 10:24:38,437  * Debugger is active!
-2024-11-06 10:24:38,438  * Debugger PIN: 141-552-686
-2024-11-06 10:24:42,071 Starting new HTTP connection (1): 127.0.0.1:3000
-2024-11-06 10:24:44,100 127.0.0.1 - - [06/Nov/2024 10:24:44] "GET / HTTP/1.1" 200 -
-2024-11-06 10:24:44,234 127.0.0.1 - - [06/Nov/2024 10:24:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2024-11-06 10:24:44,235 127.0.0.1 - - [06/Nov/2024 10:24:44] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
-2024-11-06 10:24:44,238 The CSRF token is missing.
-2024-11-06 10:24:44,238 127.0.0.1 - - [06/Nov/2024 10:24:44] "[31m[1mPOST /csp_report HTTP/1.1[0m" 400 -
-2024-11-06 10:24:44,238 127.0.0.1 - - [06/Nov/2024 10:24:44] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
-2024-11-06 10:24:44,239 127.0.0.1 - - [06/Nov/2024 10:24:44] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
-2024-11-06 10:24:44,246 127.0.0.1 - - [06/Nov/2024 10:24:44] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
-2024-11-06 10:24:44,246 127.0.0.1 - - [06/Nov/2024 10:24:44] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
-2024-11-06 10:24:44,255 127.0.0.1 - - [06/Nov/2024 10:24:44] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
-2024-11-06 10:24:44,255 127.0.0.1 - - [06/Nov/2024 10:24:44] "[33mGET /static/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
-2024-11-06 10:24:44,342 127.0.0.1 - - [06/Nov/2024 10:24:44] "[36mGET /static/manifest.json HTTP/1.1[0m" 304 -
-2024-11-06 10:24:44,342 127.0.0.1 - - [06/Nov/2024 10:24:44] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
-2024-11-06 10:29:40,126  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
-2024-11-06 10:29:40,160  * Restarting with stat
-2024-11-06 10:29:40,628  * Debugger is active!
-2024-11-06 10:29:40,628  * Debugger PIN: 141-552-686
-2024-11-06 10:29:50,321  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
-2024-11-06 10:29:50,363  * Restarting with stat
-2024-11-06 10:29:50,828  * Debugger is active!
-2024-11-06 10:29:50,829  * Debugger PIN: 141-552-686
-2024-11-06 10:29:56,330 Starting new HTTP connection (1): 127.0.0.1:3000
-2024-11-06 10:29:58,352 127.0.0.1 - - [06/Nov/2024 10:29:58] "GET / HTTP/1.1" 200 -
-2024-11-06 10:29:58,493 127.0.0.1 - - [06/Nov/2024 10:29:58] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
-2024-11-06 10:29:58,495 127.0.0.1 - - [06/Nov/2024 10:29:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2024-11-06 10:29:58,497 127.0.0.1 - - [06/Nov/2024 10:29:58] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
-2024-11-06 10:29:58,499 127.0.0.1 - - [06/Nov/2024 10:29:58] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
-2024-11-06 10:29:58,513 127.0.0.1 - - [06/Nov/2024 10:29:58] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
-2024-11-06 10:29:58,514 127.0.0.1 - - [06/Nov/2024 10:29:58] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
-2024-11-06 10:29:58,515 127.0.0.1 - - [06/Nov/2024 10:29:58] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
-2024-11-06 10:29:58,516 127.0.0.1 - - [06/Nov/2024 10:29:58] "[33mGET /static/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
-2024-11-06 10:29:58,522 127.0.0.1 - - [06/Nov/2024 10:29:58] "[35m[1mPOST /csp_report HTTP/1.1[0m" 500 -
-2024-11-06 10:29:58,592 127.0.0.1 - - [06/Nov/2024 10:29:58] "[36mGET /static/manifest.json HTTP/1.1[0m" 304 -
-2024-11-06 10:29:58,593 127.0.0.1 - - [06/Nov/2024 10:29:58] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
-2024-11-06 10:30:45,133  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
-2024-11-06 10:30:45,165  * Restarting with stat
-2024-11-06 10:30:45,612  * Debugger is active!
-2024-11-06 10:30:45,612  * Debugger PIN: 141-552-686
-2024-11-06 10:30:48,789 Starting new HTTP connection (1): 127.0.0.1:3000
-2024-11-06 10:30:50,815 127.0.0.1 - - [06/Nov/2024 10:30:50] "GET / HTTP/1.1" 200 -
-2024-11-06 10:30:50,948 127.0.0.1 - - [06/Nov/2024 10:30:50] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
-2024-11-06 10:30:50,950 127.0.0.1 - - [06/Nov/2024 10:30:50] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
-2024-11-06 10:30:50,951 127.0.0.1 - - [06/Nov/2024 10:30:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2024-11-06 10:30:50,952 127.0.0.1 - - [06/Nov/2024 10:30:50] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
-2024-11-06 10:30:50,953 127.0.0.1 - - [06/Nov/2024 10:30:50] "POST /csp_report HTTP/1.1" 200 -
-2024-11-06 10:30:50,965 127.0.0.1 - - [06/Nov/2024 10:30:50] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
-2024-11-06 10:30:50,966 127.0.0.1 - - [06/Nov/2024 10:30:50] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
-2024-11-06 10:30:50,968 127.0.0.1 - - [06/Nov/2024 10:30:50] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
-2024-11-06 10:30:50,969 127.0.0.1 - - [06/Nov/2024 10:30:50] "[33mGET /static/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
-2024-11-06 10:30:51,060 127.0.0.1 - - [06/Nov/2024 10:30:51] "[36mGET /static/manifest.json HTTP/1.1[0m" 304 -
-2024-11-06 10:30:51,063 127.0.0.1 - - [06/Nov/2024 10:30:51] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
-2024-11-06 10:32:22,428  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
-2024-11-06 10:32:22,458  * Restarting with stat
-2024-11-06 10:32:22,934  * Debugger is active!
-2024-11-06 10:32:22,934  * Debugger PIN: 141-552-686
-2024-11-06 10:35:15,045  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\api.py', reloading
-2024-11-06 10:35:15,070  * Restarting with stat
-2024-11-06 10:35:15,536  * Debugger is active!
-2024-11-06 10:35:15,549  * Debugger PIN: 141-552-686
-2024-11-06 10:35:53,035 Starting new HTTP connection (1): 127.0.0.1:3000
-2024-11-06 10:35:55,082 127.0.0.1 - - [06/Nov/2024 10:35:55] "GET / HTTP/1.1" 200 -
-2024-11-06 10:35:55,229 127.0.0.1 - - [06/Nov/2024 10:35:55] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
-2024-11-06 10:35:55,230 127.0.0.1 - - [06/Nov/2024 10:35:55] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
-2024-11-06 10:35:55,234 127.0.0.1 - - [06/Nov/2024 10:35:55] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
-2024-11-06 10:35:55,235 127.0.0.1 - - [06/Nov/2024 10:35:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2024-11-06 10:35:55,246 127.0.0.1 - - [06/Nov/2024 10:35:55] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
-2024-11-06 10:35:55,247 127.0.0.1 - - [06/Nov/2024 10:35:55] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
-2024-11-06 10:35:55,253 127.0.0.1 - - [06/Nov/2024 10:35:55] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
-2024-11-06 10:35:55,256 127.0.0.1 - - [06/Nov/2024 10:35:55] "[33mGET /static/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
-2024-11-06 10:35:55,361 127.0.0.1 - - [06/Nov/2024 10:35:55] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
-2024-11-06 10:35:55,362 127.0.0.1 - - [06/Nov/2024 10:35:55] "[36mGET /static/manifest.json HTTP/1.1[0m" 304 -
-2024-11-06 10:53:34,174 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:5000
- * Running on http://10.185.241.29:5000
-2024-11-06 10:53:34,174 [33mPress CTRL+C to quit[0m
-2024-11-06 10:53:34,175  * Restarting with stat
-2024-11-06 10:53:34,616  * Debugger is active!
-2024-11-06 10:53:34,616  * Debugger PIN: 141-552-686
-2024-11-06 10:53:36,994 Starting new HTTP connection (1): 127.0.0.1:3000
-2024-11-06 10:53:39,027 127.0.0.1 - - [06/Nov/2024 10:53:39] "GET / HTTP/1.1" 200 -
-2024-11-06 10:53:39,162 127.0.0.1 - - [06/Nov/2024 10:53:39] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
-2024-11-06 10:53:39,165 127.0.0.1 - - [06/Nov/2024 10:53:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2024-11-06 10:53:39,165 127.0.0.1 - - [06/Nov/2024 10:53:39] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
-2024-11-06 10:53:39,171 127.0.0.1 - - [06/Nov/2024 10:53:39] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
-2024-11-06 10:53:39,184 127.0.0.1 - - [06/Nov/2024 10:53:39] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
-2024-11-06 10:53:39,184 127.0.0.1 - - [06/Nov/2024 10:53:39] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
-2024-11-06 10:53:39,244 127.0.0.1 - - [06/Nov/2024 10:53:39] "[36mGET /static/manifest.json HTTP/1.1[0m" 304 -
-2024-11-06 10:53:39,244 127.0.0.1 - - [06/Nov/2024 10:53:39] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
-2024-11-06 10:54:55,504  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
-2024-11-06 10:54:55,531  * Restarting with stat
-2024-11-06 10:54:56,011  * Debugger is active!
-2024-11-06 10:54:56,020  * Debugger PIN: 141-552-686
-2024-11-06 10:55:17,462 127.0.0.1 - - [06/Nov/2024 10:55:17] "[33mGET /static/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
-2024-11-06 10:55:17,469 127.0.0.1 - - [06/Nov/2024 10:55:17] "[36mGET /static/manifest.json HTTP/1.1[0m" 304 -
-2024-11-06 10:55:17,469 127.0.0.1 - - [06/Nov/2024 10:55:17] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
-2024-11-06 10:55:17,469 127.0.0.1 - - [06/Nov/2024 10:55:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2024-11-06 10:55:17,484 127.0.0.1 - - [06/Nov/2024 10:55:17] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
-2024-11-06 10:55:18,668 Starting new HTTP connection (1): 127.0.0.1:3000
-2024-11-06 10:55:20,710 127.0.0.1 - - [06/Nov/2024 10:55:20] "GET / HTTP/1.1" 200 -
-2024-11-06 10:55:20,728 127.0.0.1 - - [06/Nov/2024 10:55:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2024-11-06 10:55:20,730 127.0.0.1 - - [06/Nov/2024 10:55:20] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
-2024-11-06 10:55:20,730 127.0.0.1 - - [06/Nov/2024 10:55:20] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
-2024-11-06 10:55:20,730 127.0.0.1 - - [06/Nov/2024 10:55:20] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
-2024-11-06 10:55:20,756 127.0.0.1 - - [06/Nov/2024 10:55:20] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
-2024-11-06 10:55:20,756 127.0.0.1 - - [06/Nov/2024 10:55:20] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
-2024-11-06 10:55:20,767 127.0.0.1 - - [06/Nov/2024 10:55:20] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
-2024-11-06 10:55:20,770 {"csp-report":{"document-uri":"http://127.0.0.1:5000/","referrer":"","violated-directive":"style-src-attr","effective-directive":"style-src-attr","original-policy":"script-src 'self'; img-src http: https: data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; report-uri /csp_report; frame-ancestors none","disposition":"enforce","blocked-uri":"inline","line-number":63,"source-file":"http://127.0.0.1:5000/","status-code":200,"script-sample":""}}
-2024-11-06 10:55:20,770 127.0.0.1 - - [06/Nov/2024 10:55:20] "POST /csp_report HTTP/1.1" 200 -
-2024-11-06 10:55:20,777 127.0.0.1 - - [06/Nov/2024 10:55:20] "[33mGET /static/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
-2024-11-06 10:55:20,836 127.0.0.1 - - [06/Nov/2024 10:55:20] "[36mGET /static/manifest.json HTTP/1.1[0m" 304 -
-2024-11-06 10:55:20,837 127.0.0.1 - - [06/Nov/2024 10:55:20] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
-2024-11-06 10:56:35,368 Starting new HTTP connection (1): 127.0.0.1:3000
-2024-11-06 10:56:37,398 127.0.0.1 - - [06/Nov/2024 10:56:37] "GET / HTTP/1.1" 200 -
-2024-11-06 10:56:37,427 127.0.0.1 - - [06/Nov/2024 10:56:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2024-11-06 10:56:37,428 127.0.0.1 - - [06/Nov/2024 10:56:37] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
-2024-11-06 10:56:37,429 127.0.0.1 - - [06/Nov/2024 10:56:37] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
-2024-11-06 10:56:37,430 127.0.0.1 - - [06/Nov/2024 10:56:37] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
-2024-11-06 10:56:37,458 127.0.0.1 - - [06/Nov/2024 10:56:37] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
-2024-11-06 10:56:37,458 127.0.0.1 - - [06/Nov/2024 10:56:37] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
-2024-11-06 10:56:37,468 127.0.0.1 - - [06/Nov/2024 10:56:37] "[33mGET /static/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
-2024-11-06 10:56:37,471 127.0.0.1 - - [06/Nov/2024 10:56:37] "[33mGET /static/js/bootstrap.bundle.min.js.map HTTP/1.1[0m" 404 -
-2024-11-06 10:56:37,533 127.0.0.1 - - [06/Nov/2024 10:56:37] "[36mGET /static/manifest.json HTTP/1.1[0m" 304 -
-2024-11-06 10:56:37,533 127.0.0.1 - - [06/Nov/2024 10:56:37] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2024-11-06 14:38:19,541 [33mPress CTRL+C to quit[0m
+2024-11-06 14:38:19,544  * Restarting with stat
+2024-11-06 14:38:19,972  * Debugger is active!
+2024-11-06 14:38:19,974  * Debugger PIN: 141-552-686
+2024-11-06 14:38:23,662 127.0.0.1 - - [06/Nov/2024 14:38:23] "GET /add.html HTTP/1.1" 200 -
+2024-11-06 14:38:23,785 127.0.0.1 - - [06/Nov/2024 14:38:23] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2024-11-06 14:38:23,798 127.0.0.1 - - [06/Nov/2024 14:38:23] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2024-11-06 14:38:23,800 127.0.0.1 - - [06/Nov/2024 14:38:23] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2024-11-06 14:38:23,801 127.0.0.1 - - [06/Nov/2024 14:38:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-06 14:38:23,816 127.0.0.1 - - [06/Nov/2024 14:38:23] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2024-11-06 14:38:23,816 127.0.0.1 - - [06/Nov/2024 14:38:23] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2024-11-06 14:38:23,891 127.0.0.1 - - [06/Nov/2024 14:38:23] "[36mGET /static/manifest.json HTTP/1.1[0m" 304 -
+2024-11-06 14:38:23,891 127.0.0.1 - - [06/Nov/2024 14:38:23] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2024-11-06 14:38:50,155 <Response 428 bytes [200 OK]>
+2024-11-06 14:38:50,165 127.0.0.1 - - [06/Nov/2024 14:38:50] "[35m[1mPOST /add.html HTTP/1.1[0m" 500 -
+2024-11-06 14:38:50,181 127.0.0.1 - - [06/Nov/2024 14:38:50] "[36mGET /add.html?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-11-06 14:38:50,182 127.0.0.1 - - [06/Nov/2024 14:38:50] "[36mGET /add.html?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-11-06 14:38:50,194 127.0.0.1 - - [06/Nov/2024 14:38:50] "GET /add.html?__debugger__=yes&cmd=resource&f=console.png&s=wVeqCOQqpJ2lqE4trNQk HTTP/1.1" 200 -
+2024-11-06 14:38:50,240 127.0.0.1 - - [06/Nov/2024 14:38:50] "[36mGET /add.html?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-11-06 14:40:28,270  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
+2024-11-06 14:40:28,295  * Restarting with stat
+2024-11-06 14:40:28,750  * Debugger is active!
+2024-11-06 14:40:28,750  * Debugger PIN: 141-552-686
+2024-11-06 14:41:26,880  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
+2024-11-06 14:41:26,913  * Restarting with stat
+2024-11-06 14:41:27,432  * Debugger is active!
+2024-11-06 14:41:27,434  * Debugger PIN: 141-552-686
+2024-11-06 14:41:39,405 127.0.0.1 - - [06/Nov/2024 14:41:39] "GET /add.html HTTP/1.1" 200 -
+2024-11-06 14:41:39,526 127.0.0.1 - - [06/Nov/2024 14:41:39] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2024-11-06 14:41:39,542 127.0.0.1 - - [06/Nov/2024 14:41:39] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2024-11-06 14:41:39,543 127.0.0.1 - - [06/Nov/2024 14:41:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-06 14:41:39,549 127.0.0.1 - - [06/Nov/2024 14:41:39] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2024-11-06 14:41:39,550 127.0.0.1 - - [06/Nov/2024 14:41:39] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2024-11-06 14:41:39,551 127.0.0.1 - - [06/Nov/2024 14:41:39] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2024-11-06 14:41:39,587 127.0.0.1 - - [06/Nov/2024 14:41:39] "[36mGET /static/manifest.json HTTP/1.1[0m" 304 -
+2024-11-06 14:42:04,754 {'name': 'Flask8', 'hyperlink': 'https://marketplace.visualstudio.com/items?itemName=ms-python.flake8', 'about': 'The Flake8 extension provides features to improve your productivity while working on Python code in Visual Studio Code.', 'image': 'https://ms-python.gallerycdn.vsassets.io/extensions/ms-python/flake8/2023.13.12291011/1723803434860/Microsoft.VisualStudio.Services.Icons.Default', 'language': 'PYTHON'}
+2024-11-06 14:42:04,757 Starting new HTTP connection (1): 127.0.0.1:3000
+2024-11-06 14:42:04,767 http://127.0.0.1:3000 "POST /add_extension HTTP/11" 201 48
+2024-11-06 14:42:04,768 127.0.0.1 - - [06/Nov/2024 14:42:04] "POST /add.html HTTP/1.1" 200 -
+2024-11-06 14:42:04,783 127.0.0.1 - - [06/Nov/2024 14:42:04] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2024-11-06 14:42:04,784 127.0.0.1 - - [06/Nov/2024 14:42:04] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2024-11-06 14:42:04,784 127.0.0.1 - - [06/Nov/2024 14:42:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-06 14:42:04,784 127.0.0.1 - - [06/Nov/2024 14:42:04] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2024-11-06 14:42:04,789 127.0.0.1 - - [06/Nov/2024 14:42:04] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2024-11-06 14:42:04,790 127.0.0.1 - - [06/Nov/2024 14:42:04] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2024-11-06 14:42:04,822 127.0.0.1 - - [06/Nov/2024 14:42:04] "[36mGET /static/manifest.json HTTP/1.1[0m" 304 -
+2024-11-06 14:42:58,067 {'name': 'Black Formatter', 'hyperlink': 'https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter', 'about': 'The Black extension for Visual Studio Code provides formatting support for your Python files.', 'image': 'https://ms-python.gallerycdn.vsassets.io/extensions/ms-python/black-formatter/2024.5.12841012/1728555480692/Microsoft.VisualStudio.Services.Icons.Default', 'language': 'PYTHON'}
+2024-11-06 14:42:58,067 Starting new HTTP connection (1): 127.0.0.1:3000
+2024-11-06 14:42:58,078 http://127.0.0.1:3000 "POST /add_extension HTTP/11" 201 48
+2024-11-06 14:42:58,079 127.0.0.1 - - [06/Nov/2024 14:42:58] "POST /add.html HTTP/1.1" 200 -
+2024-11-06 14:42:58,095 127.0.0.1 - - [06/Nov/2024 14:42:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-06 14:42:58,095 127.0.0.1 - - [06/Nov/2024 14:42:58] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2024-11-06 14:42:58,096 127.0.0.1 - - [06/Nov/2024 14:42:58] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2024-11-06 14:42:58,098 127.0.0.1 - - [06/Nov/2024 14:42:58] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2024-11-06 14:42:58,118 127.0.0.1 - - [06/Nov/2024 14:42:58] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2024-11-06 14:42:58,118 127.0.0.1 - - [06/Nov/2024 14:42:58] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2024-11-06 14:42:58,194 127.0.0.1 - - [06/Nov/2024 14:42:58] "[36mGET /static/manifest.json HTTP/1.1[0m" 304 -
+2024-11-06 14:44:11,845 {'name': 'indent-rainbow', 'hyperlink': 'https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow', 'about': 'A simple extension to make indentation more readable', 'image': 'https://oderwat.gallerycdn.vsassets.io/extensions/oderwat/indent-rainbow/8.3.1/1649543509070/Microsoft.VisualStudio.Services.Icons.Default', 'language': 'HTML'}
+2024-11-06 14:44:11,845 Starting new HTTP connection (1): 127.0.0.1:3000
+2024-11-06 14:44:11,856 http://127.0.0.1:3000 "POST /add_extension HTTP/11" 201 48
+2024-11-06 14:44:11,856 127.0.0.1 - - [06/Nov/2024 14:44:11] "POST /add.html HTTP/1.1" 200 -
+2024-11-06 14:44:11,872 127.0.0.1 - - [06/Nov/2024 14:44:11] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2024-11-06 14:44:11,872 127.0.0.1 - - [06/Nov/2024 14:44:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-06 14:44:11,872 127.0.0.1 - - [06/Nov/2024 14:44:11] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2024-11-06 14:44:11,872 127.0.0.1 - - [06/Nov/2024 14:44:11] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2024-11-06 14:44:11,894 127.0.0.1 - - [06/Nov/2024 14:44:11] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2024-11-06 14:44:11,895 127.0.0.1 - - [06/Nov/2024 14:44:11] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2024-11-06 14:44:11,954 127.0.0.1 - - [06/Nov/2024 14:44:11] "[36mGET /static/manifest.json HTTP/1.1[0m" 304 -
+2024-11-06 14:44:49,523 {'name': 'Prettier', 'hyperlink': 'https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode', 'about': 'Prettier is an opinionated code formatter. It enforces a consistent style by parsing your code and re-printing it with its own rules that take the maximum line length into account, wrapping code when necessary.', 'image': 'https://esbenp.gallerycdn.vsassets.io/extensions/esbenp/prettier-vscode/11.0.0/1723648421534/Microsoft.VisualStudio.Services.Icons.Default', 'language': 'JAVASCRIPT'}
+2024-11-06 14:44:49,524 Starting new HTTP connection (1): 127.0.0.1:3000
+2024-11-06 14:44:49,527 http://127.0.0.1:3000 "POST /add_extension HTTP/11" 201 48
+2024-11-06 14:44:49,536 127.0.0.1 - - [06/Nov/2024 14:44:49] "POST /add.html HTTP/1.1" 200 -
+2024-11-06 14:44:49,555 127.0.0.1 - - [06/Nov/2024 14:44:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-11-06 14:44:49,555 127.0.0.1 - - [06/Nov/2024 14:44:49] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2024-11-06 14:44:49,558 127.0.0.1 - - [06/Nov/2024 14:44:49] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2024-11-06 14:44:49,559 127.0.0.1 - - [06/Nov/2024 14:44:49] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2024-11-06 14:44:49,562 127.0.0.1 - - [06/Nov/2024 14:44:49] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2024-11-06 14:44:49,563 127.0.0.1 - - [06/Nov/2024 14:44:49] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2024-11-06 14:44:49,594 127.0.0.1 - - [06/Nov/2024 14:44:49] "[36mGET /static/manifest.json HTTP/1.1[0m" 304 -
+2024-11-06 14:45:10,755  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\database_manager.py', reloading
+2024-11-06 14:45:10,790  * Restarting with stat
+2024-11-06 14:45:11,371  * Debugger is active!
+2024-11-06 14:45:11,371  * Debugger PIN: 141-552-686

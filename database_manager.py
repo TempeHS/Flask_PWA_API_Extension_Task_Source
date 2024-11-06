@@ -42,9 +42,9 @@ def extension_add(data):
         )
         con.commit()
         con.close()
-        return {"message": "Extension added successfully"}, 201
+        return jsonify({"message": "Extension added successfully"}), 201
     else:
-        return {"error": "Invalid JSON"}, 400
+        return jsonify({"error": "Invalid JSON"}), 400
 
 
 schema = {

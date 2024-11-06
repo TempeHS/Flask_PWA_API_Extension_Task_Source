@@ -2,6 +2,7 @@ from flask import Flask
 from flask import redirect
 from flask import render_template
 from flask import request
+from flask import jsonify
 import requests
 from flask_wtf import CSRFProtect
 from flask_csp.csp import csp_header
@@ -57,7 +58,7 @@ def index():
     try:
         response = requests.get(url)
         response.raise_for_status()  # Raise an exception for HTTP errors
-        data = response.json()
+        data = jsonify(response.json())
     except requests.exceptions.RequestException as e:
         data = {"error": "Failed to retrieve data from the API"}
     return render_template("index.html", data=data)
@@ -83,6 +84,7 @@ def form():
             "image": image,
             "language": language,
         }
+        app.logger.critical(data)
         try:
             response = requests.post(
                 "http://127.0.0.1:3000/add_extension",
