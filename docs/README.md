@@ -424,9 +424,10 @@ This Jinga2/HTML implementation in layout.html:
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv=”Content-Security-Policy” content=” default-src 'self' ;
-    style-src 'self' ; script-src 'self' ; media-src 'self' ; font-src *;
-    frame-src 'self' ; connect-src * ; img-src 'self' ; ”>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="base-uri 'self'; default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' *; media-src 'self'; font-src 'self'; connect-src 'self'; object-src 'self'; worker-src 'self'; frame-src 'none'; form-action 'self'; manifest-src 'self'"
+    />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="static/css/style.css" />
@@ -654,19 +655,23 @@ def root():
 
 @app.route("/", methods=["GET"])
 @csp_header(
-    {
+        {
+        "base-uri": "self",
         "default-src": "'self'",
-        "script-src": "'self'",
-        "img-src": "http: https: data:",
-        "object-src": "'self'",
         "style-src": "'self'",
+        "script-src": "'self'",
+        "img-src": "*",
         "media-src": "'self'",
+        "font-src": "self",
+        "object-src": "'self'",
         "child-src": "'self'",
         "connect-src": "'self'",
-        "base-uri": "",
+        "worker-src": "'self'",
         "report-uri": "/csp_report",
-        "frame-ancestors": "none",
-    }
+        "frame-ancestors": "'none'",
+        "form-action": "'self'",
+        "frame-src": "'none'",
+        }
 )
 def index():
     return render_template("/index.html")

@@ -37,17 +37,21 @@ def root():
 @app.route("/", methods=["GET"])
 @csp_header(
     {
+        "base-uri": "self",
         "default-src": "'self'",
-        "script-src": "'self'",
-        "img-src": "http: https: data:",
-        "object-src": "'self'",
         "style-src": "'self'",
+        "script-src": "'self'",
+        "img-src": "*",
         "media-src": "'self'",
+        "font-src": "self",
+        "object-src": "'self'",
         "child-src": "'self'",
         "connect-src": "'self'",
-        "base-uri": "",
+        "worker-src": "'self'",
         "report-uri": "/csp_report",
-        "frame-ancestors": "none",
+        "frame-ancestors": "'none'",
+        "form-action": "'self'",
+        "frame-src": "'none'",
     }
 )
 def index():
@@ -58,7 +62,7 @@ def index():
     try:
         response = requests.get(url)
         response.raise_for_status()  # Raise an exception for HTTP errors
-        data = jsonify(response.json())
+        data = response.json()
     except requests.exceptions.RequestException as e:
         data = {"error": "Failed to retrieve data from the API"}
     return render_template("index.html", data=data)

@@ -155,3 +155,115 @@
 2024-11-06 14:45:10,801  * Restarting with stat
 2024-11-06 14:45:11,277  * Debugger is active!
 2024-11-06 14:45:11,277  * Debugger PIN: 141-552-686
+2024-11-07 12:01:33,607 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://10.185.241.29:3000
+2024-11-07 12:01:33,608 [33mPress CTRL+C to quit[0m
+2024-11-07 12:01:33,609  * Restarting with stat
+2024-11-07 12:01:34,013  * Debugger is active!
+2024-11-07 12:01:34,015  * Debugger PIN: 141-552-686
+2024-11-07 12:01:46,272 127.0.0.1 - - [07/Nov/2024 12:01:46] "GET / HTTP/1.1" 200 -
+2024-11-07 12:02:24,491 127.0.0.1 - - [07/Nov/2024 12:02:24] "GET / HTTP/1.1" 200 -
+2024-11-07 12:02:47,400 127.0.0.1 - - [07/Nov/2024 12:02:47] "GET / HTTP/1.1" 200 -
+2024-11-07 12:02:47,443 127.0.0.1 - - [07/Nov/2024 12:02:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-11-07 12:03:03,625 127.0.0.1 - - [07/Nov/2024 12:03:03] "GET / HTTP/1.1" 200 -
+2024-11-07 12:03:29,366  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
+2024-11-07 12:03:29,406  * Restarting with stat
+2024-11-07 12:03:29,808  * Debugger is active!
+2024-11-07 12:03:29,809  * Debugger PIN: 141-552-686
+2024-11-07 12:04:04,571 127.0.0.1 - - [07/Nov/2024 12:04:04] "[33mGET /privacy.html HTTP/1.1[0m" 404 -
+2024-11-07 12:04:08,914 127.0.0.1 - - [07/Nov/2024 12:04:08] "GET / HTTP/1.1" 200 -
+2024-11-07 12:04:10,815 127.0.0.1 - - [07/Nov/2024 12:04:10] "GET / HTTP/1.1" 200 -
+2024-11-07 12:05:22,053  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
+2024-11-07 12:05:22,087  * Restarting with stat
+2024-11-07 12:05:22,509  * Debugger is active!
+2024-11-07 12:05:22,511  * Debugger PIN: 141-552-686
+2024-11-07 12:05:23,923 127.0.0.1 - - [07/Nov/2024 12:05:23] "GET / HTTP/1.1" 200 -
+2024-11-07 12:08:24,682 127.0.0.1 - - [07/Nov/2024 12:08:24] "GET / HTTP/1.1" 200 -
+2024-11-07 12:09:32,318  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
+2024-11-07 12:09:32,355  * Restarting with stat
+2024-11-07 12:09:32,779  * Debugger is active!
+2024-11-07 12:09:32,781  * Debugger PIN: 141-552-686
+2024-11-07 12:09:57,553  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
+2024-11-07 12:09:57,592  * Restarting with stat
+2024-11-07 12:09:57,992  * Debugger is active!
+2024-11-07 12:09:57,993  * Debugger PIN: 141-552-686
+2024-11-07 12:10:12,947 127.0.0.1 - - [07/Nov/2024 12:10:12] "GET / HTTP/1.1" 200 -
+2024-11-07 12:11:16,738 127.0.0.1 - - [07/Nov/2024 12:11:16] "GET / HTTP/1.1" 200 -
+2024-11-07 12:11:49,262 127.0.0.1 - - [07/Nov/2024 12:11:49] "GET / HTTP/1.1" 200 -
+2024-11-07 12:14:12,361 127.0.0.1 - - [07/Nov/2024 12:14:12] "GET / HTTP/1.1" 200 -
+2024-11-07 12:14:42,013 127.0.0.1 - - [07/Nov/2024 12:14:42] "GET / HTTP/1.1" 200 -
+2024-11-07 12:19:32,156 127.0.0.1 - - [07/Nov/2024 12:19:32] "GET / HTTP/1.1" 200 -
+2024-11-07 12:21:08,626 127.0.0.1 - - [07/Nov/2024 12:21:08] "GET / HTTP/1.1" 200 -
+2024-11-07 12:22:17,446  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
+2024-11-07 12:22:17,480  * Restarting with stat
+2024-11-07 12:22:17,895  * Debugger is active!
+2024-11-07 12:22:17,897  * Debugger PIN: 141-552-686
+2024-11-07 12:22:21,508 127.0.0.1 - - [07/Nov/2024 12:22:21] "GET / HTTP/1.1" 200 -
+2024-11-07 12:22:32,017  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
+2024-11-07 12:22:32,056  * Restarting with stat
+2024-11-07 12:22:32,469  * Debugger is active!
+2024-11-07 12:22:32,471  * Debugger PIN: 141-552-686
+2024-11-07 12:22:34,230 127.0.0.1 - - [07/Nov/2024 12:22:34] "GET / HTTP/1.1" 200 -
+2024-11-07 12:23:37,175 127.0.0.1 - - [07/Nov/2024 12:23:37] "GET / HTTP/1.1" 200 -
+2024-11-07 12:23:54,065 127.0.0.1 - - [07/Nov/2024 12:23:54] "GET / HTTP/1.1" 200 -
+2024-11-07 12:25:10,833 127.0.0.1 - - [07/Nov/2024 12:25:10] "GET / HTTP/1.1" 200 -
+2024-11-07 12:28:29,019  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
+2024-11-07 12:28:29,060  * Restarting with stat
+2024-11-07 12:28:29,473  * Debugger is active!
+2024-11-07 12:28:29,474  * Debugger PIN: 141-552-686
+2024-11-07 12:29:19,664  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
+2024-11-07 12:29:19,697  * Restarting with stat
+2024-11-07 12:29:20,088  * Debugger is active!
+2024-11-07 12:29:20,089  * Debugger PIN: 141-552-686
+2024-11-07 12:29:52,117  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
+2024-11-07 12:29:52,145  * Restarting with stat
+2024-11-07 12:29:52,520  * Debugger is active!
+2024-11-07 12:29:52,522  * Debugger PIN: 141-552-686
+2024-11-07 12:30:26,705  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
+2024-11-07 12:30:26,751  * Restarting with stat
+2024-11-07 12:30:27,163  * Debugger is active!
+2024-11-07 12:30:27,164  * Debugger PIN: 141-552-686
+2024-11-07 12:30:45,978 127.0.0.1 - - [07/Nov/2024 12:30:45] "GET / HTTP/1.1" 200 -
+2024-11-07 12:31:04,847 127.0.0.1 - - [07/Nov/2024 12:31:04] "GET / HTTP/1.1" 200 -
+2024-11-07 12:31:57,971  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
+2024-11-07 12:31:58,002  * Restarting with stat
+2024-11-07 12:31:58,383  * Debugger is active!
+2024-11-07 12:31:58,385  * Debugger PIN: 141-552-686
+2024-11-07 12:32:00,424 127.0.0.1 - - [07/Nov/2024 12:32:00] "GET / HTTP/1.1" 200 -
+2024-11-07 12:32:46,920  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
+2024-11-07 12:32:46,950  * Restarting with stat
+2024-11-07 12:32:47,347  * Debugger is active!
+2024-11-07 12:32:47,348  * Debugger PIN: 141-552-686
+2024-11-07 12:33:10,921  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
+2024-11-07 12:33:10,952  * Restarting with stat
+2024-11-07 12:33:11,357  * Debugger is active!
+2024-11-07 12:33:11,359  * Debugger PIN: 141-552-686
+2024-11-07 12:33:19,065 127.0.0.1 - - [07/Nov/2024 12:33:19] "GET / HTTP/1.1" 200 -
+2024-11-07 12:34:17,505  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
+2024-11-07 12:34:17,536  * Restarting with stat
+2024-11-07 12:34:17,942  * Debugger is active!
+2024-11-07 12:34:17,944  * Debugger PIN: 141-552-686
+2024-11-07 12:34:22,651 127.0.0.1 - - [07/Nov/2024 12:34:22] "GET / HTTP/1.1" 200 -
+2024-11-07 12:35:02,089 127.0.0.1 - - [07/Nov/2024 12:35:02] "GET / HTTP/1.1" 200 -
+2024-11-07 12:35:16,014 127.0.0.1 - - [07/Nov/2024 12:35:16] "GET / HTTP/1.1" 200 -
+2024-11-07 12:35:44,503 127.0.0.1 - - [07/Nov/2024 12:35:44] "GET / HTTP/1.1" 200 -
+2024-11-07 12:36:57,093  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
+2024-11-07 12:36:57,129  * Restarting with stat
+2024-11-07 12:36:57,582  * Debugger is active!
+2024-11-07 12:36:57,583  * Debugger PIN: 141-552-686
+2024-11-07 12:38:46,341  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
+2024-11-07 12:38:46,373  * Restarting with stat
+2024-11-07 12:38:46,821  * Debugger is active!
+2024-11-07 12:38:46,823  * Debugger PIN: 141-552-686
+2024-11-07 12:38:48,457 127.0.0.1 - - [07/Nov/2024 12:38:48] "GET / HTTP/1.1" 200 -
+2024-11-07 12:39:00,798  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
+2024-11-07 12:39:00,837  * Restarting with stat
+2024-11-07 12:39:01,231  * Debugger is active!
+2024-11-07 12:39:01,232  * Debugger PIN: 141-552-686
+2024-11-07 12:39:31,320  * Detected change in 'C:\\Users\\bjones67\\Documents\\GitHub\\Flask_PWA_API_Extension_Task_Source\\main.py', reloading
+2024-11-07 12:39:31,357  * Restarting with stat
+2024-11-07 12:39:31,773  * Debugger is active!
+2024-11-07 12:39:31,774  * Debugger PIN: 141-552-686
+2024-11-07 12:39:34,049 127.0.0.1 - - [07/Nov/2024 12:39:34] "GET / HTTP/1.1" 200 -
