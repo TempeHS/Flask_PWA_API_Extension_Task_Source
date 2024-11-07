@@ -751,6 +751,7 @@ Replace the test html in 'index.html` template that:
 2. Implements a [Bootstrap button group](https://getbootstrap.com/docs/5.3/components/button-group/) that will later allow users to filter the extensions by language.
 3. Implements the database items as [Bootstrap cards](https://getbootstrap.com/docs/5.3/components/card/) in a responsive[Bootstrap Column Layout](https://getbootstrap.com/docs/5.3/layout/columns/).
 4. Provides API error feedback to the user that is styled by the [Bootstrap color utility](https://getbootstrap.com/docs/5.3/utilities/colors/).
+5. Apply [Bootstrap sizing](https://getbootstrap.com/docs/5.3/utilities/sizing/) and [Bootstrap spacing](https://getbootstrap.com/docs/5.3/utilities/spacing/) utilities to layout the cards.
 
 ```html
 {% extends 'layout.html' %} {% block content %}
@@ -779,13 +780,13 @@ Replace the test html in 'index.html` template that:
     </div>
   </div>
 </div>
-<div class="container p-4">
+<div class="container pt-4">
   <div class="row">
     <div class="error"><h2 class="text-danger">{{ data.error }}</h2></div>
     {% if data.error is not defined %}
       {% for row in data %}
-      <div class="col-sm-12 col-lg-4">
-        <div class="card" style="width: 18rem">
+      <div class="col-sm-12 col-lg-4 mb-4">
+        <div class="card h-100" style="width: 18rem">
           <img
             src="{{ row.image }}"
             class="card-img-top"
@@ -1006,6 +1007,4 @@ logging.basicConfig(
 3. Use the new get-languages method to define the content that renders in the PWA.
 4. Implement a sort extension by function
 
-```
-
-```
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/TempeHS/Flask_PWA_API_Extension_Task_Source">Flask PWA API Extension Task Source</a> and <a property="dct:title" rel="cc:attributionURL" href="https://github.com/TempeHS/Flask_PWA_API_Extension_Task_Template">Flask PWA API Extension Task Template</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/benpaddlejones">Ben Jones</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block; ">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International<img style="height:22px!important; margin-left:3px; vertical-align:text-bottom; " src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important; margin-left:3px; vertical-align:text-bottom; " src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important; margin-left:3px; vertical-align:text-bottom; " src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important; margin-left:3px; vertical-align:text-bottom; " src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>

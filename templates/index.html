@@ -24,13 +24,13 @@
     </div>
   </div>
 </div>
-<div class="container p-4">
+<div class="container pt-4">
   <div class="row">
     <div class="error"><h2 class="text-danger">{{ data.error }}</h2></div>
     {% if data.error is not defined %}
       {% for row in data %}
-      <div class="col-sm-12 col-lg-4">
-        <div class="card">
+      <div class="col-sm-12 col-lg-4 mb-4">
+        <div class="card h-100">
           <img
             src="{{ row.image }}"
             class="card-img-top"

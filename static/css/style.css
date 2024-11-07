@@ -8,6 +8,9 @@ body {
 .row {
 }
 
+.card {
+  margin-bottom: 12px !important;
+}
 .highlight {
   background-color: yellow;
   border-radius: 20px;
