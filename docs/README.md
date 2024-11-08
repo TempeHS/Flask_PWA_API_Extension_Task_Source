@@ -271,7 +271,7 @@ Update the `extension_add():` method in `database_manager.py` to validate the JS
 6. Languages must be enumerated with the list of languages.
 
 > [!Important]
-> You can use [https://regex101.com/](https://regex101.com/) to design and test patterns for your database design. It is important to understand a regular expression may look slightly different between languages due to the way characters need to be escaped.
+> You can use [https://regex101.com/](https://regex101.com/) to design and test patterns for your database design. Regular expressions in Python require a raw string (with the r prefix) due to the way characters need to be escaped.
 
 ```python
     if validate_json(data):
