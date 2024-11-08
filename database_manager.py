@@ -61,12 +61,12 @@ schema = {
         "name": {"type": "string"},
         "hyperlink": {
             "type": "string",
-            "pattern": "^https:\\/\\/marketplace\\.visualstudio\\.com\\/items\\?itemName=(?!.*[<>])[a-zA-Z0-9\\-._~:\/?#\\[\\]@!$&'()*+,;=]*$",
+            "pattern": r"^https:\/\/marketplace\.visualstudio\.com\/items\?itemName=(?!.*[<>])[a-zA-Z0-9\-._~:\/?#\[\]@!$&'()*+,;=]*$",
         },
         "about": {"type": "string"},
         "image": {
             "type": "string",
-            "pattern": "^https:\\/\\/(?!.*[<>])[a-zA-Z0-9\\-._~:\/?#\\[\\]@!$&'()*+,;=]*$",
+            "pattern": r"^https:\/\/(?!.*[<>])[a-zA-Z0-9\-._~:\/?#\[\]@!$&'()*+,;=]*$",
         },
         "language": {
             "type": "string",
