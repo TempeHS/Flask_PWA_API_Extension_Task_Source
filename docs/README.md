@@ -634,6 +634,7 @@ This Python Flask implementation in `main.py`
 from flask import Flask
 from flask import redirect
 from flask import render_template
+from flask import request
 import requests
 from flask_wtf import CSRFProtect
 from flask_csp.csp import csp_header
