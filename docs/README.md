@@ -1,6 +1,6 @@
 # Flask PWA - API Extension Task
 
-This task is to build a safe API that extends the [Flask PWA - Programming for the Web Task](https://github.com/TempeHS/Flask_PWA_Programming_For_The_Web_Task_Template). From the parent task, students will abstract the database and management to an API with key authentication. The PWA will then be retooled to GET request the data from the API and POST request data to the API. The PWA UI for the API will be rapidly prototyped using the [Bootstrap](https://getbootstrap.com/) frontend framework.
+This task is to build a safe [RESTful API](https://blog.hubspot.com/website/what-is-rest-api) that extends the [Flask PWA - Programming for the Web Task](https://github.com/TempeHS/Flask_PWA_Programming_For_The_Web_Task_Template). From the parent task, students will abstract the database and management to an REST API with key authentication. The PWA will then be retooled to GET request the data from the REST API and POST request data to the REST API. The PWA UI for the API will be rapidly prototyped using the [Bootstrap](https://getbootstrap.com/) frontend framework.
 
 The API instructions focus on modelling how to build and test an API incrementally. The PWA instructions focus on using the [Bootstrap](https://getbootstrap.com/) frontend framework to prototype an enhanced UI/UX frontend rapidly using [Bootstrap](https://getbootstrap.com/) components and classes.
 
