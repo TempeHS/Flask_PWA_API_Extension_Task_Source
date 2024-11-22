@@ -5,7 +5,7 @@ This task is to build a safe [RESTful API](https://blog.hubspot.com/website/what
 The API instructions focus on modelling how to build and test an API incrementally. The PWA instructions focus on using the [Bootstrap](https://getbootstrap.com/) frontend framework to prototype an enhanced UI/UX frontend rapidly using [Bootstrap](https://getbootstrap.com/) components and classes.
 
 > [!note]
-> The template for this project has been pre-populated with assets from the Flask PWA task, including the logo, icons and .database. Students can migrate their own assets if they wish.
+> The template for this project has been pre-populated with assets from the Flask PWA task, including the logo, icons and database. Students can migrate their own assets if they wish.
 
 ## Dependencies
 
@@ -52,7 +52,7 @@ Watch: [Build a Flask API in 12 Minutes](https://www.youtube.com/watch?v=zsYIw6R
 Students can create files as they are needed. This structure defines the correct directory structure for all files. As students `touch` each file, they should refer to this structure to ensure the file path is correct.
 
 ```text
-├── .database
+├── database
 │   └─── data_source.db
 ├── static
 │   ├── css
@@ -165,7 +165,7 @@ from flask import current_app
 
 
 def extension_get(lang):
-    con = sql.connect(".database/data_source.db")
+    con = sql.connect("database/data_source.db")
     cur = con.cursor()
     cur.execute("SELECT * FROM extension")
     migrate_data = [
@@ -215,7 +215,7 @@ Extend the database query in the `extension_get():` method in the `database_mana
 
 ```python
 def extension_get(lang):
-    con = sql.connect(".database/data_source.db")
+    con = sql.connect("database/data_source.db")
     cur = con.cursor()
     cur.execute("SELECT * FROM extension WHERE language LIKE ?;", [lang])
     migrate_data = [
@@ -332,7 +332,7 @@ Update the `extension_add():` method in database_manager.py`to INSERT the JSON d
 ```python
 def extension_add(data):
     if validate_json(data):
-        con = sql.connect(".database/data_source.db")
+        con = sql.connect("database/data_source.db")
         cur = con.cursor()
         cur.execute(
             "INSERT INTO extension (name, hyperlink, about, image, language) VALUES (?, ?, ?, ?, ?);",

@@ -9,7 +9,7 @@ from flask import current_app
 
 
 def extension_get(lang):
-    con = sql.connect(".database/data_source.db")
+    con = sql.connect("database/data_source.db")
     cur = con.cursor()
     cur.execute("SELECT * FROM extension WHERE language LIKE ?;", [lang])
     migrate_data = [
@@ -28,7 +28,7 @@ def extension_get(lang):
 
 def extension_add(data):
     if validate_json(data):
-        con = sql.connect(".database/data_source.db")
+        con = sql.connect("database/data_source.db")
         cur = con.cursor()
         cur.execute(
             "INSERT INTO extension (name, hyperlink, about, image, language) VALUES (?, ?, ?, ?, ?);",
