@@ -35,6 +35,292 @@ The API instructions focus on modelling how to build and test an API incremental
 > pip3 show pip
 > ```
 
+## Version Control Setup with Git
+
+> [!Important]
+> From now on, you should aim to run all Git commands from the CLI. You are discouraged from using GitHub Desktop or other GUI tools. You will find it feels slow at first, but through disciplined use, you will become much quicker and more accurate with CLI commands than GUI controls.
+
+### Setup your Git environment
+
+Before starting development, ensure Git is properly configured for your development environment.
+
+1. Configure your Git identity (replace with your actual name and email):
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+```
+
+2. Verify your Git configuration:
+
+```bash
+git config --list
+```
+
+3. Set your default branch name to main (modern Git standard):
+
+```bash
+git config --global init.defaultBranch main
+```
+
+### Initialise your Git repository
+
+1. Navigate to your project directory:
+
+```bash
+pwd
+```
+
+2. Initialise a new Git repository:
+
+```bash
+git init
+```
+
+3. Check the status of your repository:
+
+```bash
+git status
+```
+
+### Create your initial commit structure
+
+1. Create a `.gitignore` file to exclude unnecessary files:
+
+```bash
+touch .gitignore
+```
+
+2. Add common Python and Flask exclusions to `.gitignore`:
+
+```bash
+echo "# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# IDE files
+.vscode/settings.json
+.idea/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Flask specific
+instance/
+.env
+.flaskenv
+
+# Log files
+*.log
+
+# Database files (if you want to exclude your database)
+# database/data_source.db" > .gitignore
+```
+
+3. Add all files to staging area:
+
+```bash
+git add .
+```
+
+4. Create your initial commit:
+
+```bash
+git commit -m "Initial commit: Flask PWA API Extension project setup"
+```
+
+### Working with branches for development
+
+1. Create a new branch for API development:
+
+```bash
+git checkout -b feature/api-development
+```
+
+2. Verify you're on the correct branch:
+
+```bash
+git branch
+```
+
+3. Work on your API features, then stage and commit changes:
+
+```bash
+git add api.py database_manager.py
+git commit -m "Add basic API routes and database manager
+
+- Implement GET route for extensions
+- Add POST route for adding extensions
+- Configure CORS and rate limiting
+- Set up database connection and queries"
+```
+
+4. Switch back to main branch:
+
+```bash
+git checkout main
+```
+
+5. Create another branch for PWA development:
+
+```bash
+git checkout -b feature/pwa-interface
+```
+
+6. After completing PWA features, commit your changes:
+
+```bash
+git add templates/ static/
+git commit -m "Implement PWA user interface with Bootstrap
+
+- Add responsive layout with Jinja2 templates
+- Integrate Bootstrap framework for styling
+- Implement form validation and API communication
+- Add service worker for offline functionality"
+```
+
+### Merging branches and managing releases
+
+1. Switch to main branch and merge your API development:
+
+```bash
+git checkout main
+git merge feature/api-development
+```
+
+2. Merge your PWA development:
+
+```bash
+git merge feature/pwa-interface
+```
+
+3. Create a tag for your first release:
+
+```bash
+git tag -a v1.0.0 -m "Version 1.0.0: Complete Flask PWA API Extension
+
+Features:
+- RESTful API with authentication
+- Progressive Web App interface
+- Bootstrap responsive design
+- Offline functionality with service workers"
+```
+
+4. View your commit history:
+
+```bash
+git log --oneline --graph
+```
+
+### Collaborative workflow and remote repositories
+
+1. Add a remote repository (replace with your GitHub repository URL):
+
+```bash
+git remote add origin https://github.com/yourusername/flask-pwa-api-extension.git
+```
+
+2. Push your main branch to the remote repository:
+
+```bash
+git push -u origin main
+```
+
+3. Push your tags:
+
+```bash
+git push origin --tags
+```
+
+4. Create a new branch for additional features:
+
+```bash
+git checkout -b feature/api-enhancements
+```
+
+5. After making changes, push the feature branch:
+
+```bash
+git add .
+git commit -m "Add API key validation and improved error handling"
+git push origin feature/api-enhancements
+```
+
+### Best practices for commit messages
+
+Follow these conventions for clear, professional commit messages:
+
+1. **Type of change followed by brief description:**
+
+```bash
+git commit -m "feat: add language filtering to GET endpoint"
+git commit -m "fix: resolve CORS issue with POST requests"
+git commit -m "docs: update API documentation with examples"
+git commit -m "style: format code with consistent indentation"
+git commit -m "refactor: extract validation logic to separate function"
+git commit -m "test: add unit tests for database manager"
+```
+
+2. **Multi-line commit for complex changes:**
+
+```bash
+git commit -m "feat: implement comprehensive API authentication
+
+- Add API key generation and validation
+- Implement request rate limiting per user
+- Add security logging for failed authentication attempts
+- Update documentation with authentication examples
+
+Closes: #123
+Resolves: Security review requirements"
+```
+
+### Handling conflicts and cleanup
+
+1. If you encounter merge conflicts, resolve them manually then:
+
+```bash
+git add .
+git commit -m "resolve: merge conflicts in templates and API routes"
+```
+
+2. Clean up merged branches:
+
+```bash
+git branch -d feature/api-development
+git branch -d feature/pwa-interface
+```
+
+3. Remove remote tracking branches that no longer exist:
+
+```bash
+git remote prune origin
+```
+
+4. View repository status and recent activity:
+
+```bash
+git status
+git log --oneline -10
+```
+
+> [!Note]
+> Remember to commit frequently with descriptive messages. Each commit should represent a logical unit of work that could be reviewed independently. This practice is essential for collaborative development and maintaining a clean project history.
+
 ## Instructions for building the API
 
 > [!Warning]
