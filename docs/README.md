@@ -201,7 +201,7 @@ def get():
     # For security data is validated on entry
     if request.args.get("lang") and request.args.get("lang").isalpha():
         lang = request.args.get("lang")
-        lang = lang.upper()*
+        lang = lang.upper()
         content = dbHandler.extension_get(lang)
     else:
         content = dbHandler.extension_get("%")
@@ -292,7 +292,9 @@ schema = {
     ],
     "properties": {
         "name": {"type": "string"},
-                    "pattern": r"^https:\/\/marketplace\.visualstudio\.com\/items\?itemName=(?!.*[<>])[a-zA-Z0-9\-._~:\/?#\[\]@!$&'()*+,;=]*$",
+        "hyperlink": {
+                "type": "string",
+                "pattern": r"^https:\/\/marketplace\.visualstudio\.com\/items\?itemName=(?!.*[<>])[a-zA-Z0-9\-._~:\/?#\[\]@!$&'()*+,;=]*$",
         },
         "about": {"type": "string"},
         "image": {
