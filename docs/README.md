@@ -35,303 +35,133 @@ The API instructions focus on modelling how to build and test an API incremental
 > pip3 show pip
 > ```
 
-## Version Control Setup with Git
+## Using Git for Version Control
 
-> [!Important]
-> From now on, you should aim to run all Git commands from the CLI. You are discouraged from using GitHub Desktop or other GUI tools. You will find it feels slow at first, but through disciplined use, you will become much quicker and more accurate with CLI commands than GUI controls.
+> [!Note]
+> Your repository is already cloned and Git is configured. This section focuses on the essential Git workflow for tracking your development progress.
 
-### Setup your Git environment
+### Check your repository status
 
-Before starting development, ensure Git is properly configured for your development environment.
-
-1. Configure your Git identity (replace with your actual name and email):
-
-```bash
-git config --global user.name "Your Name"
-git config --global user.email "your.email@example.com"
-```
-
-2. Verify your Git configuration:
-
-```bash
-git config --list
-```
-
-3. Set your default branch name to main (modern Git standard):
-
-```bash
-git config --global init.defaultBranch main
-```
-
-### Initialise your Git repository
-
-1. Navigate to your project directory:
+1. Verify you're in the correct directory:
 
 ```bash
 pwd
 ```
 
-2. Initialise a new Git repository:
-
-```bash
-git init
-```
-
-3. Check the status of your repository:
+2. Check what files have changed:
 
 ```bash
 git status
 ```
 
-### Create your initial commit structure
+### Making commits as you work
 
-1. Create a `.gitignore` file to exclude unnecessary files:
+As you complete each step in the instructions, commit your changes:
 
-```bash
-touch .gitignore
-```
-
-2. Add common Python and Flask exclusions to `.gitignore`:
+1. Stage files you've modified:
 
 ```bash
-echo "# Python cache files
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
-
-# Virtual environment
-venv/
-env/
-ENV/
-
-# IDE files
-.vscode/settings.json
-.idea/
-
-# OS generated files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# Flask specific
-instance/
-.env
-.flaskenv
-
-# Log files
-*.log
-
-# Database files (if you want to exclude your database)
-# database/data_source.db" > .gitignore
+git add api.py
 ```
 
-3. Add all files to staging area:
-
-```bash
-git add .
-```
-
-4. Create your initial commit:
-
-```bash
-git commit -m "Initial commit: Flask PWA API Extension project setup"
-```
-
-### Working with branches for development
-
-1. Create a new branch for API development:
-
-```bash
-git checkout -b feature/api-development
-```
-
-2. Verify you're on the correct branch:
-
-```bash
-git branch
-```
-
-3. Work on your API features, then stage and commit changes:
+2. Or stage multiple files:
 
 ```bash
 git add api.py database_manager.py
-git commit -m "Add basic API routes and database manager
-
-- Implement GET route for extensions
-- Add POST route for adding extensions
-- Configure CORS and rate limiting
-- Set up database connection and queries"
 ```
 
-4. Switch back to main branch:
+3. Commit with a descriptive message:
+
+```bash
+git commit -m "Add basic API route for extensions"
+```
+
+### Working with branches (Optional)
+
+If you want to experiment without affecting your main code:
+
+1. Create and switch to a new branch:
+
+```bash
+git checkout -b feature/my-experiment
+```
+
+2. Work on your changes, then commit:
+
+```bash
+git add .
+git commit -m "Test new feature"
+```
+
+3. Switch back to main branch:
 
 ```bash
 git checkout main
 ```
 
-5. Create another branch for PWA development:
+4. If your experiment worked, merge it:
 
 ```bash
-git checkout -b feature/pwa-interface
+git merge feature/my-experiment
 ```
 
-6. After completing PWA features, commit your changes:
+### Pushing your work to GitHub
+
+1. Push your commits to GitHub:
 
 ```bash
-git add templates/ static/
-git commit -m "Implement PWA user interface with Bootstrap
-
-- Add responsive layout with Jinja2 templates
-- Integrate Bootstrap framework for styling
-- Implement form validation and API communication
-- Add service worker for offline functionality"
+git push
 ```
 
-### Merging branches and managing releases
-
-1. Switch to main branch and merge your API development:
+2. If pushing a new branch:
 
 ```bash
-git checkout main
-git merge feature/api-development
+git push -u origin feature/my-experiment
 ```
 
-2. Merge your PWA development:
+### Commit message best practices
+
+Use clear, descriptive commit messages:
 
 ```bash
-git merge feature/pwa-interface
+git commit -m "feat: add POST endpoint for new extensions"
+git commit -m "fix: resolve JSON validation error"
+git commit -m "docs: update README with API examples"
 ```
 
-3. Create a tag for your first release:
+For detailed commits, add a description:
 
 ```bash
-git tag -a v1.0.0 -m "Version 1.0.0: Complete Flask PWA API Extension
+git commit -m "feat: implement API authentication
 
-Features:
-- RESTful API with authentication
-- Progressive Web App interface
-- Bootstrap responsive design
-- Offline functionality with service workers"
+- Add API key validation
+- Configure rate limiting
+- Add security logging"
 ```
 
-4. View your commit history:
+### Viewing your history
+
+See what you've accomplished:
 
 ```bash
-git log --oneline --graph
+git log --oneline
 ```
 
-### Collaborative workflow and remote repositories
-
-1. Add a remote repository (replace with your GitHub repository URL):
+Or view the last 5 commits:
 
 ```bash
-git remote add origin https://github.com/yourusername/flask-pwa-api-extension.git
+git log --oneline -5
 ```
 
-2. Push your main branch to the remote repository:
-
-```bash
-git push -u origin main
-```
-
-3. Push your tags:
-
-```bash
-git push origin --tags
-```
-
-4. Create a new branch for additional features:
-
-```bash
-git checkout -b feature/api-enhancements
-```
-
-5. After making changes, push the feature branch:
-
-```bash
-git add .
-git commit -m "Add API key validation and improved error handling"
-git push origin feature/api-enhancements
-```
-
-### Best practices for commit messages
-
-Follow these conventions for clear, professional commit messages:
-
-1. **Type of change followed by brief description:**
-
-```bash
-git commit -m "feat: add language filtering to GET endpoint"
-git commit -m "fix: resolve CORS issue with POST requests"
-git commit -m "docs: update API documentation with examples"
-git commit -m "style: format code with consistent indentation"
-git commit -m "refactor: extract validation logic to separate function"
-git commit -m "test: add unit tests for database manager"
-```
-
-2. **Multi-line commit for complex changes:**
-
-```bash
-git commit -m "feat: implement comprehensive API authentication
-
-- Add API key generation and validation
-- Implement request rate limiting per user
-- Add security logging for failed authentication attempts
-- Update documentation with authentication examples
-
-Closes: #123
-Resolves: Security review requirements"
-```
-
-### Handling conflicts and cleanup
-
-1. If you encounter merge conflicts, resolve them manually then:
-
-```bash
-git add .
-git commit -m "resolve: merge conflicts in templates and API routes"
-```
-
-2. Clean up merged branches:
-
-```bash
-git branch -d feature/api-development
-git branch -d feature/pwa-interface
-```
-
-3. Remove remote tracking branches that no longer exist:
-
-```bash
-git remote prune origin
-```
-
-4. View repository status and recent activity:
-
-```bash
-git status
-git log --oneline -10
-```
-
-> [!Note]
-> Remember to commit frequently with descriptive messages. Each commit should represent a logical unit of work that could be reviewed independently. This practice is essential for collaborative development and maintaining a clean project history.
-
-## Instructions for building the API
-
-> [!Warning]
-> These instructions are less verbose than the parent task because students are expected to be now familiar with Bash, Flask & SQLite3.
+> [!Tip]
+> Commit regularly! A good rule is to commit whenever you complete a working feature or step in the instructions. This makes it easy to track your progress and undo changes if needed.## Instructions for building the API
 
 ### Step 1: Learn the basics of implementing an API in Flask
 
 Watch: [Build a Flask API in 12 Minutes](https://www.youtube.com/watch?v=zsYIw6RXjfM)
 
 > [!Note]
-> The video uses [Postman](https://www.postman.com/), this tutorial uses [Thunder Client](https://www.thunderclient.com/) a VS Code extension that has similar functionality.
+> The video uses [Postman](https://www.postman.com/), this tutorial uses [Thunder Client](https://www.thunderclient.com/) a VS Code extension that has similar functionality, it does not work in a Codespace, you will need to use it in desktop version of VS Code.
 
 ### Step 2: Create the Directory Structure
 
