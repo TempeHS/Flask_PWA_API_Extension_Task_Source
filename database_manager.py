@@ -9,39 +9,38 @@ from flask import current_app
 
 
 def extension_get(lang):
-    con = sql.connect("database/data_source.db")
-    cur = con.cursor()
-    cur.execute("SELECT * FROM extension WHERE language LIKE ?;", [lang])
-    migrate_data = [
-        dict(
-            extID=row[0],
-            name=row[1],
-            hyperlink=row[2],
-            about=row[3],
-            image=row[4],
-            language=row[5],
-        )
-        for row in cur.fetchall()
-    ]
+    with sql.connect("database/data_source.db") as con:
+        cur = con.cursor()
+        cur.execute("SELECT * FROM extension WHERE language LIKE ?;", [lang])
+        migrate_data = [
+            dict(
+                extID=row[0],
+                name=row[1],
+                hyperlink=row[2],
+                about=row[3],
+                image=row[4],
+                language=row[5],
+            )
+            for row in cur.fetchall()
+        ]
     return jsonify(migrate_data)
 
 
 def extension_add(data):
     if validate_json(data):
-        con = sql.connect("database/data_source.db")
-        cur = con.cursor()
-        cur.execute(
-            "INSERT INTO extension (name, hyperlink, about, image, language) VALUES (?, ?, ?, ?, ?);",
-            [
-                data["name"],
-                data["hyperlink"],
-                data["about"],
-                data["image"],
-                data["language"],
-            ],
-        )
-        con.commit()
-        con.close()
+        with sql.connect("database/data_source.db") as con:
+            cur = con.cursor()
+            cur.execute(
+                "INSERT INTO extension (name, hyperlink, about, image, language) VALUES (?, ?, ?, ?, ?);",
+                [
+                    data["name"],
+                    data["hyperlink"],
+                    data["about"],
+                    data["image"],
+                    data["language"],
+                ],
+            )
+            con.commit()
         return jsonify({"message": "Extension added successfully"}), 201
     else:
         return jsonify({"error": "Invalid JSON"}), 400
